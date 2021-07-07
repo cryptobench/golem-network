@@ -12,7 +12,7 @@
                 We announced a new product!
               </span>
               <span class="hidden md:inline">
-                Hey You! We're hosting a Chess tournament hosted on Golem very soon. Come join us!
+                Hey You! This is a notification to get your attention for breaking news. Come join us!
               </span>
             </p>
           </div>
