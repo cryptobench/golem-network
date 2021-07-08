@@ -1,5 +1,16 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div class="home">
+    <Timeline />
   </div>
 </template>
+
+<script>
+// @ is an alias to /src
+import Timeline from "@/components/Timeline.vue"
+export default {
+  name: "Home",
+  components: {
+    Timeline,
+  },
+}
+</script>

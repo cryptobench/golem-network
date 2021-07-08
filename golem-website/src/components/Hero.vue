@@ -1,5 +1,5 @@
 <template>
-  <div class="relative bg-white overflow-hidden">
+  <div class="relative bg-gray-50 overflow-hidden">
     <div class="hidden lg:block lg:absolute lg:inset-0" aria-hidden="true">
       <svg
         class="absolute top-0 left-1/2 transform translate-x-64 -translate-y-8"

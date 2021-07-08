@@ -7,7 +7,7 @@
           Join an ever growing network of computers
         </h2>
         <p class="mt-3 text-xl text-gray-500 sm:mt-4">
-          Many users from all over the world is already connected to the network.
+          Many users from all over the world are already connected to the network.
         </p>
       </div>
     </div>

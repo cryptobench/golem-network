@@ -38,13 +38,13 @@
                 <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                   <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2">
                     <a
-                      v-for="item in solutions"
+                      v-for="item in products"
                       :key="item.name"
                       :href="item.href"
                       class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                     >
                       <div
-                        class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-indigo-500 text-white sm:h-12 sm:w-12"
+                        class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-golemblue text-white sm:h-12 sm:w-12"
                       >
                         <component :is="item.icon" class="h-6 w-6" aria-hidden="true" />
                       </div>
@@ -56,23 +56,6 @@
                           {{ item.description }}
                         </p>
                       </div>
-                    </a>
-                  </div>
-                  <div class="p-5 bg-gray-50 sm:p-8">
-                    <a href="#" class="-m-3 p-3 flow-root rounded-md hover:bg-gray-100">
-                      <div class="flex items-center">
-                        <div class="text-base font-medium text-gray-900">
-                          Enterprise
-                        </div>
-                        <span
-                          class="ml-3 inline-flex items-center px-3 py-0.5 rounded-full text-xs font-medium leading-5 bg-indigo-100 text-indigo-800"
-                        >
-                          New
-                        </span>
-                      </div>
-                      <p class="mt-1 text-sm text-gray-500">
-                        Empower your entire team with even more advanced tools.
-                      </p>
                     </a>
                   </div>
                 </div>
@@ -99,13 +82,13 @@
                 <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                   <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2">
                     <a
-                      v-for="item in solutions"
+                      v-for="item in developers"
                       :key="item.name"
                       :href="item.href"
                       class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                     >
                       <div
-                        class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-indigo-500 text-white sm:h-12 sm:w-12"
+                        class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-golemblue text-white sm:h-12 sm:w-12"
                       >
                         <component :is="item.icon" class="h-6 w-6" aria-hidden="true" />
                       </div>
@@ -123,16 +106,16 @@
                     <a href="#" class="-m-3 p-3 flow-root rounded-md hover:bg-gray-100">
                       <div class="flex items-center">
                         <div class="text-base font-medium text-gray-900">
-                          Enterprise
+                          The recent beta 2 release introduced services!
                         </div>
                         <span
-                          class="ml-3 inline-flex items-center px-3 py-0.5 rounded-full text-xs font-medium leading-5 bg-indigo-100 text-indigo-800"
+                          class="ml-3 inline-flex items-center px-3 py-0.5 rounded-full text-xs font-medium leading-5 bg-red-600 text-white"
                         >
                           New
                         </span>
                       </div>
                       <p class="mt-1 text-sm text-gray-500">
-                        Empower your entire team with even more advanced tools.
+                        With the introduction of services we also announced bounties. Check them out!
                       </p>
                     </a>
                   </div>
@@ -160,13 +143,13 @@
                 <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                   <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2">
                     <a
-                      v-for="item in solutions"
+                      v-for="item in community"
                       :key="item.name"
                       :href="item.href"
                       class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                     >
                       <div
-                        class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-indigo-500 text-white sm:h-12 sm:w-12"
+                        class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-golemblue text-white sm:h-12 sm:w-12"
                       >
                         <component :is="item.icon" class="h-6 w-6" aria-hidden="true" />
                       </div>
@@ -181,19 +164,19 @@
                     </a>
                   </div>
                   <div class="p-5 bg-gray-50 sm:p-8">
-                    <a href="#" class="-m-3 p-3 flow-root rounded-md hover:bg-gray-100">
+                    <a href="https://chat.golem.network" class="-m-3 p-3 flow-root rounded-md hover:bg-gray-100">
                       <div class="flex items-center">
                         <div class="text-base font-medium text-gray-900">
-                          Enterprise
+                          Come chat with the community!
                         </div>
                         <span
                           class="ml-3 inline-flex items-center px-3 py-0.5 rounded-full text-xs font-medium leading-5 bg-indigo-100 text-indigo-800"
                         >
-                          New
+                          <img class="h-6 w-6 text-white" src="https://discord.com/assets/3437c10597c1526c3dbd98c737c2bcae.svg" />
                         </span>
                       </div>
                       <p class="mt-1 text-sm text-gray-500">
-                        Empower your entire team with even more advanced tools.
+                        Discord is where it usually goes down. Come join us!
                       </p>
                     </a>
                   </div>
@@ -220,14 +203,9 @@
               <PopoverPanel class="absolute z-10 -ml-4 mt-3 transform w-screen max-w-md lg:max-w-3xl">
                 <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                   <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2">
-                    <a
-                      v-for="item in solutions"
-                      :key="item.name"
-                      :href="item.href"
-                      class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
-                    >
+                    <a v-for="item in glm" :key="item.name" :href="item.href" class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
                       <div
-                        class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-indigo-500 text-white sm:h-12 sm:w-12"
+                        class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-golemblue text-white sm:h-12 sm:w-12"
                       >
                         <component :is="item.icon" class="h-6 w-6" aria-hidden="true" />
                       </div>
@@ -245,16 +223,16 @@
                     <a href="#" class="-m-3 p-3 flow-root rounded-md hover:bg-gray-100">
                       <div class="flex items-center">
                         <div class="text-base font-medium text-gray-900">
-                          Enterprise
+                          Exchange1 just created a GLM / BTC pair
                         </div>
                         <span
-                          class="ml-3 inline-flex items-center px-3 py-0.5 rounded-full text-xs font-medium leading-5 bg-indigo-100 text-indigo-800"
+                          class="ml-3 inline-flex items-center px-3 py-0.5 rounded-full text-xs font-medium leading-5 bg-red-600 text-white"
                         >
                           New
                         </span>
                       </div>
                       <p class="mt-1 text-sm text-gray-500">
-                        Empower your entire team with even more advanced tools.
+                        Click to start trading the new pair!
                       </p>
                     </a>
                   </div>
@@ -265,13 +243,10 @@
 
           <Popover class="relative" v-slot="{ open }">
             <PopoverButton
-              :class="[
-                open ? 'text-white' : 'text-white',
-                'group  rounded-md inline-flex items-center text-base font-medium focus:outline-none ',
-              ]"
+              :class="[open ? 'text-white' : 'text-white', 'group rounded-md inline-flex items-center text-base font-medium ']"
             >
               <span>About</span>
-              <ChevronDownIcon :class="[open ? 'text-white' : 'text-white', 'ml-2 h-5 w-5 ']" aria-hidden="true" />
+              <ChevronDownIcon :class="[open ? 'text-white' : 'text-white', 'ml-2 h-5 w-5 group-hover:text-gray-500']" aria-hidden="true" />
             </PopoverButton>
 
             <transition
@@ -282,15 +257,44 @@
               leave-from-class="opacity-100 translate-y-0"
               leave-to-class="opacity-0 translate-y-1"
             >
-              <PopoverPanel class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 px-2 w-screen max-w-xs sm:px-0">
+              <PopoverPanel class="absolute z-10 -ml-4 mt-3 transform w-screen max-w-md lg:max-w-3xl">
                 <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
-                  <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
-                    <a v-for="item in resources" :key="item.name" :href="item.href" class="-m-3 p-3 block rounded-md hover:bg-gray-50">
-                      <p class="text-base font-medium text-gray-900">
-                        {{ item.name }}
-                      </p>
+                  <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2">
+                    <a
+                      v-for="item in resources"
+                      :key="item.name"
+                      :href="item.href"
+                      class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
+                    >
+                      <div
+                        class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-golemblue text-white sm:h-12 sm:w-12"
+                      >
+                        <component :is="item.icon" class="h-6 w-6" aria-hidden="true" />
+                      </div>
+                      <div class="ml-4">
+                        <p class="text-base font-medium text-gray-900">
+                          {{ item.name }}
+                        </p>
+                        <p class="mt-1 text-sm text-gray-500">
+                          {{ item.description }}
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="p-5 bg-gray-50 sm:p-8">
+                    <a href="#" class="-m-3 p-3 flow-root rounded-md hover:bg-gray-100">
+                      <div class="flex items-center">
+                        <div class="text-base font-medium text-gray-900">
+                          We're hiring!
+                        </div>
+                        <span
+                          class="ml-3 inline-flex items-center px-3 py-0.5 rounded-full text-xs font-medium leading-5 bg-red-600 text-white"
+                        >
+                          New
+                        </span>
+                      </div>
                       <p class="mt-1 text-sm text-gray-500">
-                        {{ item.description }}
+                        Building a decentralized cloud is not easy, so we're looking for talented people like you!
                       </p>
                     </a>
                   </div>
@@ -341,7 +345,7 @@
                   :href="item.href"
                   class="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
                 >
-                  <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-indigo-500 text-white">
+                  <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-golemblue text-white">
                     <component :is="item.icon" class="h-6 w-6" aria-hidden="true" />
                   </div>
                   <div class="ml-4 text-base font-medium text-gray-900">
@@ -363,58 +367,110 @@ import { defineComponent, h } from "vue"
 
 import {
   ChartBarIcon,
-  CursorClickIcon,
-  DocumentReportIcon,
   MenuIcon,
-  RefreshIcon,
   ShieldCheckIcon,
-  ViewGridIcon,
   XIcon,
+  GlobeIcon,
+  DownloadIcon,
+  AcademicCapIcon,
+  BookOpenIcon,
+  FireIcon,
+  CurrencyDollarIcon,
+  CalendarIcon,
+  CollectionIcon,
+  UserGroupIcon,
+  SortDescendingIcon,
+  RefreshIcon,
+  EyeIcon,
+  InformationCircleIcon,
 } from "@heroicons/vue/outline"
 import { ChevronDownIcon } from "@heroicons/vue/solid"
 
-const solutions = [
+const community = [
   {
-    name: "Analytics",
-    description: "Get a better understanding of where your traffic is coming from.",
+    name: "Featured Projects",
+    description: "Selected projects built on Golem.",
     href: "#",
-    icon: ChartBarIcon,
+    icon: FireIcon,
   },
   {
-    name: "Engagement",
-    description: "Speak directly to your customers in a more meaningful way.",
+    name: "Awesome Golem",
+    description: "List of all things Golem",
     href: "#",
-    icon: CursorClickIcon,
+    icon: CollectionIcon,
   },
-  { name: "Security", description: "Your customers' data will be safe and secure.", href: "#", icon: ShieldCheckIcon },
+  { name: "GLM Rewards", description: "Our Community Incetives Program.", href: "#", icon: CurrencyDollarIcon },
   {
-    name: "Integrations",
-    description: "Connect with third-party tools that you're already using.",
+    name: "Upcoming Events",
+    description: "Meetups and Hackathons",
     href: "#",
-    icon: ViewGridIcon,
+    icon: CalendarIcon,
+  },
+]
+const developers = [
+  {
+    name: "SDK",
+    description: "Develop apps using our Software Development Kit.",
+    href: "#",
+    icon: AcademicCapIcon,
   },
   {
-    name: "Automations",
-    description: "Build strategic funnels that will drive your customers to convert",
+    name: "Requestors Docs",
+    description: "The official documentation for requestors.",
     href: "#",
-    icon: RefreshIcon,
+    icon: BookOpenIcon,
+  },
+  { name: "Test Harness", description: "Help with development process", href: "#", icon: ShieldCheckIcon },
+  {
+    name: "Github",
+    description: "Check out our Github Organizations profile..",
+    href: "#",
+    icon: defineComponent({
+      render: () =>
+        h("svg", { fill: "currentColor", viewBox: "0 0 24 24" }, [
+          h("path", {
+            "fill-rule": "evenodd",
+            d:
+              "M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z",
+            "clip-rule": "evenodd",
+          }),
+        ]),
+    }),
+  },
+]
+const products = [
+  {
+    name: "Platform",
+    description: "Golems Developer Preview.",
+    href: "#",
+    icon: GlobeIcon,
   },
   {
-    name: "Reports",
-    description: "Get detailed reports that will help you make more informed decisions ",
+    name: "Become a Provider",
+    description: "Earn tokens for providing your hardware to the network.",
     href: "#",
-    icon: DocumentReportIcon,
+    icon: DownloadIcon,
   },
+  { name: "Network Stats", description: "The official stats page for the Golem Network.", href: "#", icon: ChartBarIcon },
+  { name: "GLM Migration Tracker", description: "The official tracker for the GLM token", href: "#", icon: EyeIcon },
+]
+const glm = [
+  {
+    name: "About the token",
+    description: "GLM token info",
+    href: "#",
+    icon: InformationCircleIcon,
+  },
+  { name: "Migration", description: "How to migrate the token", href: "#", icon: RefreshIcon },
 ]
 const resources = [
   {
-    name: "Help Center",
-    description: "Get all of your questions answered in our forums or contact support.",
-    href: "#",
+    name: "Overview",
+    description: "An overview of Golem's history",
+    href: "/about",
+    icon: SortDescendingIcon,
   },
-  { name: "Guides", description: "Learn how to maximize our platform to get the most out of it.", href: "#" },
-  { name: "Events", description: "See what meet-ups and other events we might be planning near you.", href: "#" },
-  { name: "Security", description: "Understand how we take your privacy seriously.", href: "#" },
+  { name: "Team", description: "The minds behind the project.", href: "/about/team", icon: UserGroupIcon },
 ]
 
 const navigation = {
@@ -492,9 +548,12 @@ export default {
   },
   setup() {
     return {
-      solutions,
+      products,
       resources,
       navigation,
+      community,
+      developers,
+      glm,
     }
   },
 }

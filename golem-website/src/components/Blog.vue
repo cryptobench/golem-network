@@ -41,7 +41,7 @@
           Latest news from our blog
         </h2>
         <p class="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
-          We constantly update our blog with the latest news. Check out our latest articles.
+          We constantly update our blog with the latest news. Check out the latest articles.
         </p>
       </div>
       <div class="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
