@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Navigation></Navigation>
+    <Navigation class="z-50"></Navigation>
     <router-view />
     <Footer />
   </div>
@@ -18,6 +18,7 @@ export default {
 }
 </script>
 <style>
+/* Overflow-x causes extra scroll at bottom of page. Not sure why currently.
 html,
 body {
   width: 100%;
@@ -25,5 +26,5 @@ body {
   margin: 0px;
   padding: 0px;
   overflow-x: hidden;
-}
+} */
 </style>
