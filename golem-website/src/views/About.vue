@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="home bg-gray-50">
     <Timeline />
   </div>
 </template>
