@@ -149,7 +149,7 @@ import { defineComponent, h } from "vue"
 
 const navigation = {
   Products: [
-    { name: "Platform", href: "#" },
+    { name: "Platform", href: "/platform" },
     { name: "Become a Provider", href: "#" },
     { name: "Network Stats", href: "#" },
     { name: "Graphene", href: "#" },
@@ -161,7 +161,7 @@ const navigation = {
     { name: "Github", href: "#" },
   ],
   Community: [
-    { name: "Featured Projects", href: "#" },
+    { name: "Featured Projects", href: "/community" },
     { name: "Awesome Golem", href: "#" },
     { name: "GLM-Rewards", href: "#" },
     { name: "Upcoming Events", href: "#" },

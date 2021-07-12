@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <div class="hidden lg:block lg:absolute lg:inset-0" aria-hidden="true">
+    <div class="hidden lg:block lg:absolute lg:inset-0 z-0" aria-hidden="true">
       <svg
         class="absolute top-0 left-1/2 transform translate-x-64 -translate-y-8"
         width="640"
@@ -17,7 +17,7 @@
         <rect x="118" width="404" height="784" fill="url(#9ebea6f4-a1f5-4d96-8c4e-4c2abf658047)" />
       </svg>
     </div>
-    <Team />
+    <Team class="z-10 relative" />
     <JobBannerSticky />
   </div>
 </template>

@@ -3,8 +3,8 @@
   <Popover open="true" class="relative bg-golemblue">
     <div class="flex justify-between items-center px-4 py-6 sm:px-6 md:justify-start md:space-x-10">
       <div>
-        <a href="#" class="flex">
-          <span class="sr-only">Workflow</span>
+        <a href="/" class="flex">
+          <span class="sr-only">Golem</span>
           <img class="h-8 w-auto sm:h-10 ml-4" src="https://svgshare.com/i/YvJ.svg" alt="" />
         </a>
       </div>
@@ -390,7 +390,7 @@ const community = [
   {
     name: "Featured Projects",
     description: "Selected projects built on Golem.",
-    href: "#",
+    href: "/community",
     icon: FireIcon,
   },
   {
@@ -399,7 +399,7 @@ const community = [
     href: "#",
     icon: CollectionIcon,
   },
-  { name: "GLM Rewards", description: "Our Community Incetives Program.", href: "#", icon: CurrencyDollarIcon },
+  { name: "GLM Rewards", description: "Our Community Incetives Program.", href: "/community/rewards", icon: CurrencyDollarIcon },
   {
     name: "Upcoming Events",
     description: "Meetups and Hackathons",
@@ -440,9 +440,9 @@ const developers = [
 ]
 const products = [
   {
-    name: "Platform",
+    name: "The Platform",
     description: "Golems Developer Preview.",
-    href: "#",
+    href: "/platform",
     icon: GlobeIcon,
   },
   {
