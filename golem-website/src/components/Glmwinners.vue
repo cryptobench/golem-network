@@ -1,6 +1,6 @@
 <!-- This example requires Tailwind CSS v2.0+ -->
 <template>
-  <div class="bg-white">
+  <div class="bg-gray-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-2">
       <div class="lg:text-center">
         <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-golemblue sm:text-4xl">
@@ -29,12 +29,12 @@
           <div>
             <div class="-mt-px flex divide-x divide-gray-200">
               <div class="w-0 flex-1 flex">
-                <a
+                <p
                   class="relative -mr-px w-0 flex-1 inline-flex items-center justify-center py-4 text-sm text-gray-700 font-medium border border-transparent rounded-bl-lg hover:text-gray-500"
                 >
                   <StarIcon class="w-5 h-5 text-yellow-400" aria-hidden="true" />
                   <span class="ml-3 font-bold">{{ person.reward }} GLM</span>
-                </a>
+                </p>
               </div>
             </div>
           </div>

@@ -38,10 +38,10 @@
       </div>
       <div class="text-center">
         <h2 class="text-3xl tracking-tight font-extrabold text-golemblue sm:text-4xl">
-          Latest news from our blog
+          Latest news from the GLM Rewards Program
         </h2>
         <p class="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
-          We constantly update our blog with the latest news. Check out the latest articles.
+          Find the latest posts below and stay tuned!
         </p>
       </div>
       <div class="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">

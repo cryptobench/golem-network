@@ -22,7 +22,7 @@
             href="#"
             class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-gray-50 hover:bg-indigo-50"
           >
-            Javascript floats my boat
+            I want Javascript
           </a>
         </div>
       </div>
