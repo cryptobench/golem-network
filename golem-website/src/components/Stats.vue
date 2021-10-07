@@ -37,7 +37,7 @@
                   Providers
                 </dt>
                 <dd class="order-1 text-5xl font-extrabold text-golemblue">
-                  728
+                  {{ online }}
                 </dd>
               </div>
               <div class="flex flex-col border-b border-gray-100 p-6 text-center sm:border-0 sm:border-r">
@@ -45,23 +45,21 @@
                   Cores
                 </dt>
                 <dd class="order-1 text-5xl font-extrabold text-golemblue">
-                  8739
+                  {{ cores }}
                 </dd>
               </div>
               <div class="flex flex-col border-t border-b border-gray-100 p-6 text-center sm:border-0 sm:border-l sm:border-r">
                 <dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">
-                  Memory
+                  TB Memory
                 </dt>
-                <dd class="order-1 text-5xl font-extrabold text-golemblue">
-                  17 TB
-                </dd>
+                <dd class="order-1 text-5xl font-extrabold text-golemblue">{{ memory }}</dd>
               </div>
               <div class="flex flex-col border-t border-gray-100 p-6 text-center sm:border-0 sm:border-l">
                 <dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">
-                  Disk
+                  TB Disk
                 </dt>
                 <dd class="order-1 text-5xl font-extrabold text-golemblue">
-                  126 TB
+                  {{ disk }}
                 </dd>
               </div>
             </dl>
@@ -87,9 +85,41 @@
 
 <script>
 import { ArrowRightIcon } from "@heroicons/vue/outline"
+import axios from "axios"
 export default {
   components: {
     ArrowRightIcon,
+  },
+  data() {
+    return {
+      online: "",
+      cores: "",
+      memory: "",
+      disk: "",
+    }
+  },
+  created() {
+    this.fetchData()
+  },
+  mounted() {
+    this.timer = setInterval(() => {
+      this.fetchData()
+    }, 15000)
+  },
+  methods: {
+    floorFigure: function floorFigure(figure, decimals) {
+      if (!decimals) decimals = 2
+      const d = Math.pow(10, decimals)
+      return (parseInt(figure * d) / d).toFixed(decimals)
+    },
+    fetchData() {
+      axios.get("https://api.stats.golem.network/v1/network/online/stats").then((response) => {
+        this.online = response.data.online
+        this.cores = response.data.threads
+        this.memory = this.floorFigure(response.data.memory / 1024, 0)
+        this.disk = this.floorFigure(response.data.disk / 1024, 0)
+      })
+    },
   },
 }
 </script>

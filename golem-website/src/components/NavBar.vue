@@ -170,9 +170,9 @@
                           Come chat with the community!
                         </div>
                         <span
-                          class="ml-3 inline-flex items-center px-3 py-0.5 rounded-full text-xs font-medium leading-5 bg-indigo-100 text-indigo-800"
+                          class="ml-3 inline-flex items-center px-3 py-0.5 rounded-full text-xs font-medium leading-5 bg-indigo-400 text-indigo-800"
                         >
-                          <img class="h-6 w-6 text-white" src="https://discord.com/assets/3437c10597c1526c3dbd98c737c2bcae.svg" />
+                          <img class="h-6 w-6 text-white" src="https://svgur.com/i/_fp.svg" />
                         </span>
                       </div>
                       <p class="mt-1 text-sm text-gray-500">
@@ -219,11 +219,15 @@
                       </div>
                     </a>
                   </div>
-                  <div class="p-5 bg-gray-50 sm:p-8">
+                  <div v-if="this.latest_exchange" class="p-5 bg-gray-50 sm:p-8">
                     <a href="#" class="-m-3 p-3 flow-root rounded-md hover:bg-gray-100">
                       <div class="flex items-center">
                         <div class="text-base font-medium text-gray-900">
-                          Exchange1 just created a GLM / BTC pair
+                          <p class="mb-1 text-xs text-gray-500">Latest GLM Pair</p>
+                          <a v-if="this.latest_exchange.link" target="_blank" :href="latest_exchange.link"
+                            >{{ latest_exchange.exchange }} just launched a {{ latest_exchange.trading_pair }} pair</a
+                          >
+                          <a v-else>{{ latest_exchange.exchange }} just created a {{ latest_exchange.trading_pair }} pair</a>
                         </div>
                         <span
                           class="ml-3 inline-flex items-center px-3 py-0.5 rounded-full text-xs font-medium leading-5 bg-red-600 text-white"
@@ -364,6 +368,7 @@
 <script>
 import { Popover, PopoverButton, PopoverGroup, PopoverPanel } from "@headlessui/vue"
 import { defineComponent, h } from "vue"
+import axios from "axios"
 
 import {
   ChartBarIcon,
@@ -555,6 +560,27 @@ export default {
       developers,
       glm,
     }
+  },
+  data() {
+    return {
+      latest_exchange: {},
+    }
+  },
+  created() {
+    this.fetchData()
+  },
+
+  methods: {
+    floorFigure: function floorFigure(figure, decimals) {
+      if (!decimals) decimals = 2
+      var d = Math.pow(10, decimals)
+      return (parseInt(figure * d) / d).toFixed(decimals)
+    },
+    fetchData() {
+      axios.get("https://glm.golem.network/api/latest/pairs").then((response) => {
+        this.latest_exchange = response.data
+      })
+    },
   },
 }
 </script>
