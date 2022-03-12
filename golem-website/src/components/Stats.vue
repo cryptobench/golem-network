@@ -18,11 +18,13 @@
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="max-w-4xl mx-auto text-center">
-        <h2 class="text-3xl font-bold text-golemblue sm:text-4xl">
+        <h2 class="text-golemblue text-5xl tracking-tight font-extrabold relative">
+          <div class="absolute top-0 right-0 -mr-1 -mt-1 w-4 h-4 rounded-full bg-green-300 animate-ping"></div>
+          <div class="absolute top-0 right-0 -mr-1 -mt-1 w-4 h-4 rounded-full bg-green-300"></div>
           Join an ever growing network of computers
         </h2>
         <p class="mt-3 text-xl text-gray-500 sm:mt-4">
-          Many users from all over the world are already connected to the network.
+          Many users from all over the world have already deployed a Golem node!
         </p>
       </div>
     </div>
@@ -70,9 +72,9 @@
                 <a class="relative text-sm text-golemblue hover:text-gray-900 font-medium">
                   Explore our stats page
                 </a>
-                <button class="relative bg-white rounded-full focus:outline-none " type="button">
+                <button class="relative bg-white rounded-full focus:outline-none  " type="button">
                   <span class="sr-only">test</span>
-                  <ArrowRightIcon class="text-golemblue hover:text-blue-500 h-5 w-5" aria-hidden="true" />
+                  <ArrowRightIcon class="text-golemblue hover:text-blue-500 h-5 w-5 " aria-hidden="true" />
                 </button>
               </a>
             </div>
@@ -84,6 +86,8 @@
 </template>
 
 <script>
+import * as THREE from "three"
+
 import { ArrowRightIcon } from "@heroicons/vue/outline"
 import axios from "axios"
 export default {
@@ -105,6 +109,35 @@ export default {
     this.timer = setInterval(() => {
       this.fetchData()
     }, 15000)
+    let camera, scene, renderer
+    let geometry, material, mesh
+
+    init()
+
+    function init() {
+      camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 0.01, 10)
+      camera.position.z = 1
+
+      scene = new THREE.Scene()
+
+      geometry = new THREE.BoxGeometry(0.2, 0.2, 0.2)
+      material = new THREE.MeshNormalMaterial()
+
+      mesh = new THREE.Mesh(geometry, material)
+      scene.add(mesh)
+
+      renderer = new THREE.WebGLRenderer({ antialias: true })
+      renderer.setSize(window.innerWidth, window.innerHeight)
+      renderer.setAnimationLoop(animation)
+      document.body.appendChild(renderer.domElement)
+    }
+
+    function animation(time) {
+      mesh.rotation.x = time / 2000
+      mesh.rotation.y = time / 1000
+
+      renderer.render(scene, camera)
+    }
   },
   methods: {
     floorFigure: function floorFigure(figure, decimals) {
