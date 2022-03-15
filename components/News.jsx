@@ -1,7 +1,7 @@
 export default function Test() {
   return (
-    <section>
-      <div className="py-24 mx-auto max-w-7xl px-4 sm:px-6  w-full">
+    <section className="bg-white z-10 relative">
+      <div className="pt-24 mx-auto max-w-7xl px-4 sm:px-6  w-full ">
         <div className="grid grid-cols-12 gap-x-4">
           <span className="block text-sm font-semibold uppercase tracking-wide text-golemblue">News</span>
           <div className="col-span-12  text-black   text-4xl tracking-tight font-extrabold">Stay up to date with our work</div>
