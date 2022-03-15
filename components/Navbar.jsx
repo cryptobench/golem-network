@@ -63,7 +63,7 @@ function classNames(...classes) {
 
 const Navbar = () => {
   return (
-    <nav className="relative bggridbottom  w-full ">
+    <nav className="relative bggridbottom  w-full overflow-x-hidden ">
       <div className="hidden lg:block lg:absolute lg:inset-0 w-full" aria-hidden="true">
         <svg className="absolute w-full test" width="100%" height="100%" fill="none">
           <defs>
