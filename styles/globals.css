@@ -10,9 +10,6 @@
 .bggrid {
   background: linear-gradient(to right, #ffffff 0%, #ffffff 45%, #f1f4f7 53%, #f1f4f7 100%);
 }
-.bggrid {
-  background: linear-gradient(to right, #ffffff 0%, #ffffff 45%, #f1f4f7 53%, #f1f4f7 100%);
-}
 
 .test {
   animation: move_wave 15s infinite;
