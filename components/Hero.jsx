@@ -99,7 +99,7 @@ export default function Example() {
                 learning, CI/CD pipelines and much more at an instant.
               </p>
               <div className="mt-8  sm:mx-auto sm:text-center lg:text-left lg:mx-0">
-                <p className="text-base font-medium text-gray-900 mb-1">Let's get started</p>
+                <p className="text-base font-medium text-gray-900 mb-1">Let&apos;s get started</p>
 
                 <button
                   type="submit"
