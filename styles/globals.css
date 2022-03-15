@@ -117,7 +117,7 @@ article .article-image {
   height: 0.5px;
   background: linear-gradient(-45deg, rgba(0, 0, 255, 0), #ffffff, rgba(0, 0, 255, 0));
   border-radius: 100%;
-  transform: translateX(50%) rotateZ(45deg);
+  transform: translateX(50%) rotateZ(90deg);
   animation: shining 7s ease-in-out infinite;
 }
 
@@ -136,7 +136,7 @@ article .article-image {
 }
 
 .star::after {
-  transform: translateX(50%) rotateZ(-45deg);
+  transform: translateX(50%) rotateZ(20deg);
 }
 
 .star:nth-child(1) {
