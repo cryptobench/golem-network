@@ -41,7 +41,7 @@ export default function Example() {
     ],
   }))
   return (
-    <div className="relative bggridbottom overflow-hidden w-full ">
+    <div className="relative bggridbottom overflow-hidden w-full  ">
       <div className="hidden lg:block lg:absolute lg:inset-0 w-full" aria-hidden="true">
         <svg className="absolute w-full test" width="100%" height="100%" fill="none">
           <defs>
