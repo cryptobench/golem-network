@@ -84,30 +84,6 @@ article .article-image {
   filter: drop-shadow(0 0 6px #699bff);
 }
 
-@keyframes tail {
-  0% {
-    width: 0;
-  }
-
-  30% {
-    width: 100px;
-  }
-
-  100% {
-    width: 0;
-  }
-}
-
-@keyframes falling {
-  0% {
-    transform: translateX(0);
-  }
-
-  100% {
-    transform: translateX(300px);
-  }
-}
-
 .star::before,
 .star::after {
   content: "";
@@ -127,7 +103,7 @@ article .article-image {
   }
 
   50% {
-    width: 30px;
+    width: 25px;
   }
 
   100% {
