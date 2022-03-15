@@ -17,7 +17,6 @@ export default function Apps() {
         const animatedBoxOffsetTop = animatedBox.offsetTop
 
         if (windowOffsetTop >= animatedBoxOffsetTop) {
-          console.log("added class")
           addClass(fader, "fade-in")
           fader.classList.remove("opacity-0")
           Array.prototype.forEach.call(star, function (el) {

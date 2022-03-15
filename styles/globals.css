@@ -272,76 +272,76 @@ article .article-image {
 .star:nth-child(13) {
   top: calc(70%);
   left: calc(90%);
-  animation-delay: 1s;
+  animation-delay: 5.3s;
 }
 
 .star:nth-child(13)::before,
 .star:nth-child(13)::after {
-  animation-delay: 1s;
+  animation-delay: 5.3s;
 }
 
 .star:nth-child(14) {
   top: calc(70%);
   left: calc(80%);
-  animation-delay: 1s;
+  animation-delay: 3.8s;
 }
 
 .star:nth-child(14)::before,
 .star:nth-child(14)::after {
-  animation-delay: 1s;
+  animation-delay: 3.8s;
 }
 
 .star:nth-child(15) {
   top: calc(60%);
   left: calc(84%);
-  animation-delay: 1s;
+  animation-delay: 4.3s;
 }
 
 .star:nth-child(15)::before,
 .star:nth-child(15)::after {
-  animation-delay: 1s;
+  animation-delay: 4.3s;
 }
 
 .star:nth-child(16) {
   top: calc(40%);
   left: calc(76%);
-  animation-delay: 1s;
+  animation-delay: 0.4s;
 }
 
 .star:nth-child(16)::before,
 .star:nth-child(16)::after {
-  animation-delay: 1s;
+  animation-delay: 0.4s;
 }
 
 .star:nth-child(17) {
   top: calc(40%);
   left: calc(79%);
-  animation-delay: 1s;
+  animation-delay: 1.8s;
 }
 
 .star:nth-child(17)::before,
 .star:nth-child(17)::after {
-  animation-delay: 1s;
+  animation-delay: 1.8s;
 }
 
 .star:nth-child(18) {
   top: calc(8%);
   left: calc(96%);
-  animation-delay: 1s;
+  animation-delay: 2.3s;
 }
 
 .star:nth-child(18)::before,
 .star:nth-child(18)::after {
-  animation-delay: 1s;
+  animation-delay: 2.3s;
 }
 
 .star:nth-child(19) {
   top: calc(28%);
   left: calc(86%);
-  animation-delay: 1s;
+  animation-delay: 3.2s;
 }
 
 .star:nth-child(19)::before,
 .star:nth-child(19)::after {
-  animation-delay: 1s;
+  animation-delay: 3.2s;
 }
