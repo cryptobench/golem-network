@@ -36,12 +36,12 @@ export default function Example() {
               <h1>
                 <span className="block text-sm font-semibold uppercase tracking-wide text-golemblue">Explainer</span>
                 <span className="mt-1 block text-4xl tracking-tight font-extrabold sm:text-4xl xl:text-6xl">
-                  Here's a short introduction
+                  Here&apos;s a short introduction
                 </span>
               </h1>
               <p className="mt-3 text-xl text-slate-600 sm:mt-5 ">
-                Spend 2 minutes to learn the idea behind the Golem Network with our 2018 Promo Video. Don't worry, you don't need to be a
-                developer to understand - we've simplified it.
+                Spend 2 minutes to learn the idea behind the Golem Network with our 2018 Promo Video. Don&apos;t worry, you don&apos;t need
+                to be a developer to understand - we&apos;ve simplified it.
               </p>
             </div>
 
