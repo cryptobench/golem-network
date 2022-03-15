@@ -38,7 +38,7 @@ export default function Apps() {
               </div>
             </div>
           </div>
-          <div className=" shadow-lg col-span-8 bg-white px-4 py-2  grid grid-cols-12 gap-x-16 mt-4 rounded-r-lg rounded-bl-lg">
+          <div className="  col-span-8 bg-white px-4 py-2  grid grid-cols-12 gap-x-16 mt-4 rounded-r-lg rounded-bl-lg">
             <div className="col-span-2 py-4 justify-items-center grid ">
               <img
                 className="h-16 w-16 rounded-lg shadow-lg"
