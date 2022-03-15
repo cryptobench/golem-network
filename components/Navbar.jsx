@@ -63,7 +63,7 @@ function classNames(...classes) {
 
 const Navbar = () => {
   return (
-    <nav className="relative bggridbottom overflow-hidden w-full  ">
+    <nav className="relative bggridbottom  w-full ">
       <div className="hidden lg:block lg:absolute lg:inset-0 w-full" aria-hidden="true">
         <svg className="absolute w-full test" width="100%" height="100%" fill="none">
           <defs>
@@ -74,7 +74,7 @@ const Navbar = () => {
           <rect className="w-full" width="100%" height="100%" fill="url(#9ebea6f4-a1f5-4d96-8c4e-4c2abf658047)" />
         </svg>
       </div>
-      <Popover className="relative max-w-7xl mx-auto flex items-center justify-between">
+      <Popover className="relative max-w-7xl mx-auto flex items-center justify-between ">
         <div className="flex justify-between items-center px-4 py-6 sm:px-6 md:justify-start md:space-x-10">
           <div>
             <a href="#" className="flex">
