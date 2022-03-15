@@ -90,7 +90,7 @@ export default function Footer() {
               <p className="text-gray-500 text-sm leading-6 block  ">Telegram</p>
             </div>
           </div>
-          <div className="col-span-12 border-t mt-6"></div>
+          <div className="col-span-12 border-t mt-10"></div>
           <div className="col-span-12 grid grid-cols-12 mt-4 pb-6">
             <div className="col-span-3 text-gray-700">© 2022 Golem Factory Gmbh.</div>
             <div className="col-span-6 grid grid-cols-12 text-center">
