@@ -54,7 +54,7 @@ export default function Example() {
       </div>
 
       <div className="relative  ">
-        <main className="mt-40 mx-auto max-w-7xl px-4 sm:px-6">
+        <main className="mt-16 mx-auto max-w-7xl px-4 sm:px-6">
           <div className="lg:grid lg:grid-cols-12 lg:gap-8">
             <div className="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left">
               <h1>
