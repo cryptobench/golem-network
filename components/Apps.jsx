@@ -10,14 +10,16 @@ export default function Apps() {
     document.addEventListener("scroll", function (event) {
       const animatedBoxes = document.getElementsByClassName("apps")
 
-      const windowOffsetTop = window.innerHeight + window.scrollY - 500
-      var appsContainer = document.querySelector(".apps")
+      const windowOffsetTop = window.innerHeight + window.scrollY
+      var fader = document.querySelector(".fader")
       var star = document.getElementsByClassName("animate-me")
       Array.prototype.forEach.call(animatedBoxes, (animatedBox) => {
         const animatedBoxOffsetTop = animatedBox.offsetTop
 
         if (windowOffsetTop >= animatedBoxOffsetTop) {
           console.log("added class")
+          addClass(fader, "fade-in")
+          fader.classList.remove("opacity-0")
           Array.prototype.forEach.call(star, function (el) {
             addClass(el, "star")
           })
@@ -27,9 +29,23 @@ export default function Apps() {
   }
 
   return (
-    <section className="bg-black relative apps overflow-x-hidden">
-      <div className="absolute  top-0 w-full h-full bind-right">
-        <div className="night">
+    <section className="bg-black  shadow-black relative apps overflow-hidden ">
+      <div className="absolute w-full h-full ">
+        <div className="night ">
+          <div className="animate-me"></div>
+          <div className="animate-me"></div>
+          <div className="animate-me"></div>
+          <div className="animate-me"></div>
+          <div className="animate-me"></div>
+          <div className="animate-me"></div>
+          <div className="animate-me"></div>
+          <div className="animate-me"></div>
+          <div className="animate-me"></div>
+          <div className="animate-me"></div>
+          <div className="animate-me"></div>
+          <div className="animate-me"></div>
+          <div className="animate-me"></div>
+          <div className="animate-me"></div>
           <div className="animate-me"></div>
           <div className="animate-me"></div>
           <div className="animate-me"></div>
@@ -37,11 +53,11 @@ export default function Apps() {
           <div className="animate-me"></div>
         </div>
       </div>
-      <div className="py-24 mx-auto max-w-7xl px-4 sm:px-6  w-full z-40 relative">
+      <div className="py-24 mx-auto max-w-7xl px-4 sm:px-6 opacity-0 fader  w-full z-40 relative">
         <div className="grid grid-cols-12 ">
           <span className="block col-span-12 text-center text-sm font-semibold uppercase tracking-wide text-white opacity-70">Apps</span>
           <div className="col-span-12 text-center mt-1 text-3xl tracking-tight font-extrabold sm:text-3xl xl:text-5xl pb-4 text-white">
-            Explore the ecosystem of apps 🔥
+            Explore the ecosystem of apps
           </div>
 
           <div className="col-span-2  mt-4 rounded-l-lg text-center">
@@ -80,70 +96,70 @@ export default function Apps() {
                 className="h-16 w-16 rounded-lg shadow-lg"
                 src="https://dappimg.com/media/image/dapp/1924f1317b074d6e8a34ed8f21b4325b.blob"
               ></img>
-              <p className="block text-gray-500 text-lg tracking-tight font-light">App 1</p>
+              <p className="text-gray-900 text-md tracking-tight font-light">Blender</p>
             </div>
             <div className="col-span-2 py-4 justify-items-center grid ">
               <img
                 className="h-16 w-16 rounded-lg shadow-lg"
                 src="https://dappimg.com/media/image/dapp/4244a929e00d467cbb7f3acb66f07ce5.blob"
               ></img>
-              <p>App 1</p>
+              <p className="text-gray-900 text-md tracking-tight font-light">DeML</p>
             </div>
             <div className="col-span-2 py-4 justify-items-center grid ">
               <img
                 className="h-16 w-16 rounded-lg shadow-lg"
                 src="https://dappimg.com/media/image/app/cdb2d057b5694a2a90f0be82e26a01ed.jpg"
               ></img>
-              <p>App 1</p>
+              <p className="text-gray-900 text-md tracking-tight font-light">DeML</p>
             </div>
             <div className="col-span-2 py-4 justify-items-center grid ">
               <img
                 className="h-16 w-16 rounded-lg shadow-lg"
                 src="https://dappimg.com/media/image/dapp/c74121a543544389b5dcb5bc59a39905.jpg"
               ></img>
-              <p>App 1</p>
+              <p className="text-gray-900 text-md tracking-tight font-light">App 1</p>
             </div>
             <div className="col-span-2 py-4 justify-items-center grid ">
               <img
                 className="h-16 w-16 rounded-lg shadow-lg"
                 src="https://dappimg.com/media/image/dapp/4121556bcff4421ea18a427895cee2ee.blob"
               ></img>
-              <p>App 1</p>
+              <p className="text-gray-900 text-md tracking-tight font-light">App 1</p>
             </div>
             <div className="col-span-2 py-4 justify-items-center grid ">
               <img
                 className="h-16 w-16 rounded-lg shadow-lg"
                 src="https://dappimg.com/media/image/dapp/23c1f984fbf94d3b99c6ae6905ecb05d.blob"
               ></img>
-              <p>App 1</p>
+              <p className="text-gray-900 text-md tracking-tight font-light">App 1</p>
             </div>
             <div className="col-span-2 py-4 justify-items-center grid ">
               <img
                 className="h-16 w-16 rounded-lg shadow-lg"
                 src="https://dappimg.com/media/image/app/9f65c47c-8c39-460b-9e4b-6fe1ce447fac.png"
               ></img>
-              <p>App 1</p>
+              <p className="text-gray-900 text-md tracking-tight font-light">App 1</p>
             </div>
             <div className="col-span-2 py-4 justify-items-center grid ">
               <img
                 className="h-16 w-16 rounded-lg shadow-lg"
                 src="https://dappimg.com/media/image/dapp/8dc747fa286642acb1b7ccbff7a33a9d.blob"
               ></img>
-              <p>App 1</p>
+              <p className="text-gray-900 text-md tracking-tight font-light">App 1</p>
             </div>
             <div className="col-span-2 py-4 justify-items-center grid ">
               <img
                 className="h-16 w-16 rounded-lg shadow-lg"
                 src="https://dappimg.com/media/image/dapp/46ade934a4624ae0ae6a89a8726cc3f7.blob"
               ></img>
-              <p>App 1</p>
+              <p className="text-gray-900 text-md tracking-tight font-light">App 1</p>
             </div>
             <div className="col-span-2 py-4 justify-items-center grid ">
               <img
                 className="h-16 w-16 rounded-lg shadow-lg"
                 src="https://dappimg.com/media/image/dapp/c915ac1844814c0f92f7b38ec4fd7d03.jpg"
               ></img>
-              <p>App 1</p>
+              <p className="text-gray-900 text-md tracking-tight font-light">App 1</p>
             </div>
           </div>
           <span className="block col-span-12 text-center text-xs font-semibold tracking-wide text-white opacity-30 pt-4">
