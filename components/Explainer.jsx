@@ -18,17 +18,6 @@
 export default function Example() {
   return (
     <div className="relative bggridbottom overflow-hidden w-full pb-24">
-      <div className="hidden lg:block lg:absolute lg:inset-0 w-full" aria-hidden="true">
-        <svg className="absolute w-full test" width="100%" height="100%" fill="none">
-          <defs>
-            <pattern id="9ebea6f4-a1f5-4d96-8c4e-4c2abf658047" x={118} y={0} width={20} height={20} patternUnits="userSpaceOnUse">
-              <rect x={0} y={0} width={2} height={2} className="text-gray-200" fill="currentColor" />
-            </pattern>
-          </defs>
-          <rect className="w-full" width="100%" height="100%" fill="url(#9ebea6f4-a1f5-4d96-8c4e-4c2abf658047)" />
-        </svg>
-      </div>
-
       <div className="relative  ">
         <main className="mt-40 mx-auto max-w-7xl px-4 sm:px-6">
           <div className="lg:grid lg:grid-cols-12 lg:gap-8">
