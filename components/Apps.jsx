@@ -5,7 +5,7 @@ export default function Apps() {
         <div className="grid grid-cols-12 ">
           <span className="block col-span-12 text-center text-sm font-semibold uppercase tracking-wide text-white opacity-70">Apps</span>
           <div className="col-span-12 text-center mt-1 text-3xl tracking-tight font-extrabold sm:text-3xl xl:text-5xl pb-4 text-white">
-            Explore the ecosystem of apps
+            Explore the ecosystem of apps 🔥
           </div>
 
           <div className="col-span-2  mt-4 rounded-l-lg text-center">
@@ -110,6 +110,12 @@ export default function Apps() {
               <p>App 1</p>
             </div>
           </div>
+          <span className="block col-span-12 text-center text-xs font-semibold tracking-wide text-white opacity-30 pt-4">
+            *Note: These are highlighted apps and more are available{" "}
+            <a className="underline" href="#">
+              here
+            </a>
+          </span>
         </div>
       </div>
     </section>
