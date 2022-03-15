@@ -249,7 +249,7 @@ const Navbar = () => {
                       leaveFrom="opacity-100 translate-y-0"
                       leaveTo="opacity-0 translate-y-1"
                     >
-                      <Popover.Panel className="absolute z-10 -ml-4 mt-3 transform w-screen max-w-md lg:max-w-3xl">
+                      <Popover.Panel className="absolute z-10 bg-white -ml-4 mt-3 transform w-screen max-w-md lg:max-w-3xl">
                         <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                           <div className="relative grid gap-6  px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2">
                             {solutions.map((item) => (
