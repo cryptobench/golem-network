@@ -14,16 +14,12 @@
   }
   ```
 */
-
+import Head from "next/head"
 import Test from "../components/News"
 import Navbar from "../components/Navbar"
 import Hero from "../components/Hero"
 import Apps from "../components/Apps"
 import Explainer from "../components/Explainer"
-import { Fragment } from "react"
-import { Popover, Transition } from "@headlessui/react"
-import { MenuIcon, XIcon } from "@heroicons/react/outline"
-import Typewriter from "typewriter-effect"
 
 const navigation = [
   { name: "Products", href: "#" },
@@ -35,6 +31,9 @@ const navigation = [
 export default function Example() {
   return (
     <div>
+      <Head>
+        <meta name="google-site-verification" content="7TO2YTmVfu0A5AgihId9CSnSrQjFgHxAkZ-k_zIH18g" />
+      </Head>
       <Navbar></Navbar>
       <Hero></Hero>
       <Explainer></Explainer>
