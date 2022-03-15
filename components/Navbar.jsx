@@ -62,37 +62,18 @@ function classNames(...classes) {
 }
 
 const Navbar = () => {
-  const [show, setShow] = useState(true)
-  const [lastScrollY, setLastScrollY] = useState(0)
-
-  const controlNavbar = () => {
-    if (typeof window !== "undefined") {
-      if (window.scrollY > lastScrollY) {
-        // if scroll down hide the navbar
-        setShow(false)
-      } else {
-        // if scroll up show the navbar
-        setShow(true)
-      }
-
-      // remember current page location to use in the next move
-      setLastScrollY(window.scrollY)
-    }
-  }
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      window.addEventListener("scroll", controlNavbar)
-
-      // cleanup function
-      return () => {
-        window.removeEventListener("scroll", controlNavbar)
-      }
-    }
-  }, [lastScrollY])
-
   return (
-    <nav className={`activee bg-white shadow-lg ${show && "hiddene"}`}>
+    <nav className="relative bggridbottom overflow-hidden w-full  ">
+      <div className="hidden lg:block lg:absolute lg:inset-0 w-full" aria-hidden="true">
+        <svg className="absolute w-full test" width="100%" height="100%" fill="none">
+          <defs>
+            <pattern id="9ebea6f4-a1f5-4d96-8c4e-4c2abf658047" x={118} y={0} width={20} height={20} patternUnits="userSpaceOnUse">
+              <rect x={0} y={0} width={2} height={2} className="text-gray-200" fill="currentColor" />
+            </pattern>
+          </defs>
+          <rect className="w-full" width="100%" height="100%" fill="url(#9ebea6f4-a1f5-4d96-8c4e-4c2abf658047)" />
+        </svg>
+      </div>
       <Popover className="relative max-w-7xl mx-auto flex items-center justify-between">
         <div className="flex justify-between items-center px-4 py-6 sm:px-6 md:justify-start md:space-x-10">
           <div>
