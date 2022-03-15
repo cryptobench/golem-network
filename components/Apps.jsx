@@ -1,6 +1,42 @@
 export default function Apps() {
+  function addClass(element, className) {
+    const arrayClasses = element.className.split(" ")
+    if (arrayClasses.indexOf(className) === -1) {
+      element.className += " " + className
+    }
+  }
+
+  if (typeof window !== "undefined") {
+    document.addEventListener("scroll", function (event) {
+      const animatedBoxes = document.getElementsByClassName("apps")
+
+      const windowOffsetTop = window.innerHeight + window.scrollY - 500
+      var appsContainer = document.querySelector(".apps")
+      var star = document.getElementsByClassName("animate-me")
+      Array.prototype.forEach.call(animatedBoxes, (animatedBox) => {
+        const animatedBoxOffsetTop = animatedBox.offsetTop
+
+        if (windowOffsetTop >= animatedBoxOffsetTop) {
+          console.log("added class")
+          Array.prototype.forEach.call(star, function (el) {
+            addClass(el, "star")
+          })
+        }
+      })
+    })
+  }
+
   return (
-    <section className="bg-black ">
+    <section className="bg-black relative apps overflow-x-hidden">
+      <div className="absolute  top-0 w-full h-full bind-right">
+        <div className="night">
+          <div className="animate-me"></div>
+          <div className="animate-me"></div>
+          <div className="animate-me"></div>
+          <div className="animate-me"></div>
+          <div className="animate-me"></div>
+        </div>
+      </div>
       <div className="py-24 mx-auto max-w-7xl px-4 sm:px-6  w-full z-40 relative">
         <div className="grid grid-cols-12 ">
           <span className="block col-span-12 text-center text-sm font-semibold uppercase tracking-wide text-white opacity-70">Apps</span>
