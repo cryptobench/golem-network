@@ -1,6 +1,6 @@
 export default function Test() {
   return (
-    <section className="bg-white z-10 relative">
+    <section className="bg-white z-10 relative pb-10">
       <div className="pt-24 mx-auto max-w-7xl px-4 sm:px-6  w-full ">
         <div className="grid grid-cols-12 gap-x-4">
           <span className="block text-sm font-semibold uppercase tracking-wide text-golemblue">News</span>
