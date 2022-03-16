@@ -91,7 +91,7 @@ export default function Footer() {
             </div>
           </div>
           <div className="col-span-12 border-t mt-10"></div>
-          <div className="col-span-12 grid grid-cols-12 mt-4 pb-6">
+          <div className="col-span-12 grid grid-cols-12 py-12">
             <div className="col-span-3 text-gray-700">© 2022 Golem Factory Gmbh.</div>
             <div className="col-span-6 grid grid-cols-12 text-center">
               <div className="col-span-4">Brand Policy</div>
