@@ -11,7 +11,6 @@ export default function Apps() {
       const animatedBoxes = document.getElementsByClassName("apps")
 
       const windowOffsetTop = window.innerHeight + window.scrollY
-      console.log(windowOffsetTop)
       var fader = document.querySelector(".fader")
       var star = document.getElementsByClassName("animate-me")
       Array.prototype.forEach.call(animatedBoxes, (animatedBox) => {
