@@ -19,7 +19,7 @@ export default function Animate() {
     ],
   }))
   return (
-    <div className="-mt-24 ml-12">
+    <div>
       <Globe
         globeImageUrl="//unpkg.com/three-globe/example/img/earth-blue-marble.jpg"
         bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.png"

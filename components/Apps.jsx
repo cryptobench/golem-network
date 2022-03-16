@@ -11,6 +11,7 @@ export default function Apps() {
       const animatedBoxes = document.getElementsByClassName("apps")
 
       const windowOffsetTop = window.innerHeight + window.scrollY
+      console.log(windowOffsetTop)
       var fader = document.querySelector(".fader")
       var star = document.getElementsByClassName("animate-me")
       Array.prototype.forEach.call(animatedBoxes, (animatedBox) => {
@@ -28,7 +29,7 @@ export default function Apps() {
   }
 
   return (
-    <section className="bg-black  shadow-black relative apps overflow-hidden ">
+    <section className="bg-black  shadow-black relative apps ">
       <div className="absolute w-full h-full ">
         <div className="night ">
           <div className="animate-me"></div>

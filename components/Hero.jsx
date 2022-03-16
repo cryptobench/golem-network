@@ -43,9 +43,9 @@ export default function Example() {
   return (
     <div className="relative bggridbottom overflow-hidden w-full  ">
       <div className="relative  ">
-        <main className="mt-16 mx-auto max-w-7xl px-4 sm:px-6">
+        <main className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="lg:grid lg:grid-cols-12 lg:gap-8">
-            <div className="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left">
+            <div className="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 mt-16 lg:text-left">
               <h1>
                 <span className="block text-sm font-semibold uppercase tracking-wide text-gray-500 sm:text-base lg:text-sm xl:text-base">
                   <Typewriter
@@ -117,7 +117,7 @@ export default function Example() {
                 </p>
               </div>
             </div>
-            <div className="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
+            <div className="relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
               <Animate
                 globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
                 arcsData={arcsData}
