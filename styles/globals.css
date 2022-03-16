@@ -28,7 +28,8 @@ article:hover .article-title {
   transition: 0.4s;
 }
 
-article:hover .article-image {
+article:hover .article-image,
+.app {
   @apply transition duration-300 ease-in-out cursor-pointer transform hover:-translate-y-1.5;
 }
 article .article-image {
