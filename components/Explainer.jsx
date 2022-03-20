@@ -36,11 +36,7 @@ export default function Example() {
 
             <div className="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
               <div className="relative mx-auto w-full rounded-lg shadow-lg lg:max-w-md  justify-items-center col-span-12">
-                <button
-                  type="button"
-                  className="relative block w-full  rounded-lg overflow-hidden focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                >
-                  <span className="sr-only">Watch our video to learn more</span>
+                <div>
                   <iframe
                     className="w-full"
                     width="572"
@@ -51,7 +47,7 @@ export default function Example() {
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                   ></iframe>
-                </button>
+                </div>
               </div>
             </div>
           </div>
