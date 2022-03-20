@@ -52,7 +52,7 @@ export default function Apps() {
           <div className="animate-me"></div>
         </div>
       </div>
-      <div className="py-24 mx-auto w-11/12 px-4 sm:px-6 opacity-0 fader  w-full z-40 relative">
+      <div className="py-24 mx-auto max-w-7xl px-4 sm:px-6 opacity-0 fader  w-full z-40 relative">
         <div className="grid grid-cols-12 ">
           <span className="block col-span-12 text-center text-sm font-semibold uppercase tracking-wide text-white opacity-70">Apps</span>
           <div className="col-span-12 text-center mt-1 text-3xl tracking-tight font-extrabold sm:text-3xl xl:text-5xl pb-4 text-white">
