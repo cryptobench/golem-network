@@ -2,10 +2,10 @@ export default function Test() {
   return (
     <section className="bg-white z-10 relative pb-10">
       <div className="pt-24 mx-auto max-w-7xl px-4 sm:px-6  w-full ">
-        <div className="grid grid-cols-12 gap-x-4">
-          <span className="block text-sm font-semibold uppercase tracking-wide text-golemblue">News</span>
+        <div className="grid grid-cols-12 gap-x-4 text-center lg:text-left">
+          <span className="block text-sm col-span-12 font-semibold uppercase tracking-wide text-golemblue">News</span>
           <div className="col-span-12  text-black   text-4xl tracking-tight font-extrabold">Stay up to date with our work</div>
-          <div className="text-white col-span-6 ">
+          <div className="text-white col-span-12 lg:col-span-6 ">
             <div className="col-span-12 py-6 article">
               <article>
                 <div className="article-image">
@@ -28,7 +28,7 @@ export default function Test() {
             </div>
           </div>
 
-          <div className="col-span-6 py-6 article grid grid-cols-12 gap-4">
+          <div className="lg:col-span-6 col-span-12 py-6 article grid grid-cols-12 gap-4">
             <div className="text-white col-span-6">
               <article>
                 <div className="article-image">

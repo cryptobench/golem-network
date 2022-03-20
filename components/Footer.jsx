@@ -2,9 +2,9 @@ export default function Footer() {
   return (
     <section className="bg-white z-10 relative border-t">
       <div className="pt-24 mx-auto max-w-7xl px-4 sm:px-6  w-full ">
-        <div className="grid grid-cols-12 gap-x-10">
-          <div className="col-span-4">
-            <h4 className="text-golemblue   text-2xl  font-semibold">Golem Network</h4>
+        <div className="grid grid-cols-12 lg:gap-x-10 gap-x-0">
+          <div className="lg:col-span-4 col-span-12 text-center lg:text-left mb-10 lg:mb-0">
+            <h4 className="text-golemblue  text-2xl  font-semibold">Golem Network</h4>
             <div className="mt-4 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
               <p className="text-base mb-2font-medium text-gray-900">Sign up to our newsletter.</p>
               <form action="#" method="POST" className="mt-3 sm:flex">
@@ -34,8 +34,8 @@ export default function Footer() {
               </p>
             </div>
           </div>
-          <div className="col-span-8 grid grid-cols-12  gap-y-10">
-            <div className="col-span-3">
+          <div className="lg:col-span-8 col-span-12 grid grid-cols-12 text-center lg:text-left  gap-y-10">
+            <div className="lg:col-span-3 col-span-6">
               <p className="text-base mb-2">Products</p>
               <a className="text-gray-500 text-sm leading-7 block ">Platform</a>
               <a className="text-gray-500 text-sm leading-6 block ">Become a provider</a>
@@ -44,14 +44,14 @@ export default function Footer() {
               <a className="text-gray-500 text-sm leading-6 block ">Clay Golem</a>
               <a className="text-gray-500 text-sm leading-6 block ">Golem Unlimited</a>
             </div>
-            <div className="col-span-3 ">
+            <div className="lg:col-span-3 col-span-6 ">
               <p className="text-base mb-2">Developers</p>
               <a className="text-gray-500 text-sm leading-6 block  ">SDK</a>
               <a className="text-gray-500 text-sm leading-6 block ">Requestor Docs</a>
               <p className="text-gray-500 text-sm leading-6 block  ">Test Harness</p>
               <p className="text-gray-500 text-sm leading-6 block  ">Github</p>
             </div>
-            <div className="col-span-3">
+            <div className="lg:col-span-3 col-span-6">
               <p className="text-base mb-2">Community</p>
               <a className="text-gray-500 text-sm leading-6 block  ">Featured Projects</a>
               <a className="text-gray-500 text-sm leading-6 block ">Awesome Golem</a>
@@ -59,12 +59,12 @@ export default function Footer() {
               <p className="text-gray-500 text-sm leading-6 block  ">Upcoming Events</p>
               <p className="text-gray-500 text-sm leading-6 block  ">Blog</p>
             </div>
-            <div className="col-span-3">
+            <div className="lg:col-span-3 col-span-6">
               <p className="text-base mb-2">GLM</p>
               <a className="text-gray-500 text-sm leading-6 block  ">About the token</a>
               <a className="text-gray-500 text-sm leading-6 block ">Migration</a>
             </div>
-            <div className="col-span-3">
+            <div className="lg:col-span-3 col-span-6">
               <p className="text-base mb-2">Resources</p>
               <a className="text-gray-500 text-sm leading-6 block  ">Privacy Policy</a>
               <a className="text-gray-500 text-sm leading-6 block ">UiG</a>
@@ -72,18 +72,18 @@ export default function Footer() {
               <p className="text-gray-500 text-sm leading-6 block  ">Whitepaper</p>
               <p className="text-gray-500 text-sm leading-6 block  ">Brand Assets</p>
             </div>
-            <div className="col-span-3">
+            <div className="lg:col-span-3 col-span-6">
               <p className="text-base mb-2">About</p>
               <a className="text-gray-500 text-sm leading-6 block  ">Overview</a>
               <a className="text-gray-500 text-sm leading-6 block ">Team</a>
               <p className="text-gray-500 text-sm leading-6 block  ">Contact</p>
             </div>
-            <div className="col-span-3">
+            <div className="lg:col-span-3 col-span-6">
               <p className="text-base mb-2">Get Started</p>
               <a className="text-gray-500 text-sm leading-6 block  ">Provider Tutorial</a>
               <a className="text-gray-500 text-sm leading-6 block ">Requestor Tutorial</a>
             </div>
-            <div className="col-span-3">
+            <div className="lg:col-span-3 col-span-6">
               <p className="text-base mb-2">Socials</p>
               <a className="text-gray-500 text-sm leading-6 block  ">Discord</a>
               <a className="text-gray-500 text-sm leading-6 block ">Twitter</a>
@@ -91,14 +91,14 @@ export default function Footer() {
             </div>
           </div>
           <div className="col-span-12 border-t mt-10"></div>
-          <div className="col-span-12 grid grid-cols-12 py-12">
-            <div className="col-span-3 text-gray-700">© 2022 Golem Factory Gmbh.</div>
-            <div className="col-span-6 grid grid-cols-12 text-center">
-              <div className="col-span-4">Brand Policy</div>
-              <div className="col-span-4">Privacy Policy</div>
-              <div className="col-span-4">Terms of Service</div>
+          <div className="col-span-12 grid grid-cols-12 py-12 gap-y-2 lg:gap-y-0">
+            <div className="lg:col-span-3 col-span-12 text-gray-700 text-center lg:text-left">© 2022 Golem Factory Gmbh.</div>
+            <div className="lg:col-span-6 col-span-12 grid grid-cols-12 text-center">
+              <div className="lg:col-span-4 col-span-12">Brand Policy</div>
+              <div className="lg:col-span-4 col-span-12">Privacy Policy</div>
+              <div className="lg:col-span-4 col-span-12">Terms of Service</div>
             </div>
-            <div className="col-span-3 text-right">Logos</div>
+            <div className="text-center col-span-12 lg:col-span-1 lg:text-right">Logos</div>
           </div>
         </div>
       </div>

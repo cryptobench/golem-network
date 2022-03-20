@@ -45,7 +45,7 @@ export default function Example() {
       <div className="relative  ">
         <main className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="lg:grid lg:grid-cols-12 lg:gap-8">
-            <div className="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 mt-16 lg:text-left">
+            <div className="text-center md:max-w-2xl md:mx-auto lg:col-span-6 mt-16 lg:text-left">
               <h1>
                 <span className="block text-sm font-semibold uppercase tracking-wide text-gray-500 sm:text-base lg:text-sm xl:text-base">
                   <Typewriter
@@ -88,7 +88,7 @@ export default function Example() {
                 learning, CI/CD pipelines and much more at an instant.
               </p>
               <div className="mt-8  sm:mx-auto sm:text-center lg:text-left lg:mx-0">
-                <p className="text-base font-medium text-gray-900 mb-1">Let&apos;s get started</p>
+                <p className="text-base font-medium text-gray-900 mb-1 text-center lg:text-left">Let&apos;s get started</p>
 
                 <button
                   type="submit"
@@ -117,7 +117,7 @@ export default function Example() {
                 </p>
               </div>
             </div>
-            <div className="relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
+            <div className="relative hidden lg:visible sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
               <Animate
                 globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
                 arcsData={arcsData}
