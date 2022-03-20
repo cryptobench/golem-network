@@ -1,7 +1,7 @@
 export default function Test() {
   return (
     <section className="bg-white z-10 relative pb-10">
-      <div className="pt-24 mx-auto max-w-7xl px-4 sm:px-6  w-full ">
+      <div className="pt-24 mx-auto w-11/12 px-4 sm:px-6  w-full ">
         <div className="grid grid-cols-12 gap-x-4 text-center lg:text-left">
           <span className="block text-sm col-span-12 font-semibold uppercase tracking-wide text-golemblue">News</span>
           <div className="col-span-12  text-black   text-4xl tracking-tight font-extrabold">Stay up to date with our work</div>
