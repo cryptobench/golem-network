@@ -45,9 +45,9 @@ export default function Example() {
       <div className="relative  ">
         <main className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="lg:grid lg:grid-cols-12 lg:gap-8">
-            <div className="text-center md:max-w-7xl md:mx-auto lg:col-span-6 mt-16 lg:text-left">
+            <div className="text-center md:max-w-2xl md:mx-auto lg:col-span-6 mt-16 lg:text-left">
               <h1>
-                <span className="block text-sm font-semibold uppercase tracking-wide text-gray-500 sm:text-base lg:text-sm xl:text-base 2xl:text-2xl">
+                <span className="block text-sm font-semibold uppercase tracking-wide text-gray-500 sm:text-base lg:text-sm xl:text-base">
                   <Typewriter
                     onInit={(typewriter) => {
                       typewriter
@@ -68,7 +68,7 @@ export default function Example() {
                     }}
                   />
                 </span>
-                <span className="mt-1 block text-4xl tracking-tight font-extrabold sm:text-5xl xl:text-6xl 2xl:text-9xl">
+                <span className="mt-1 block text-4xl tracking-tight font-extrabold sm:text-5xl xl:text-6xl">
                   <span className="block text-gray-900">
                     <span className="block text-golemblue">Golem</span> is{" "}
                     <span id="typewriter" className="text-black">
@@ -83,32 +83,32 @@ export default function Example() {
                   </span>
                 </span>
               </h1>
-              <p className="mt-3 text-xl 2xl:text-4xl text-slate-600 sm:mt-5 md:max-w-6xl ">
+              <p className="mt-3 text-xl text-slate-600 sm:mt-5 ">
                 Golem is a powerful permissionless supercomputer accessible by anyone. Accelerate workloads like machine learning, deep
                 learning, CI/CD pipelines and much more at an instant.
               </p>
               <div className="mt-8  sm:mx-auto sm:text-center lg:text-left lg:mx-0">
-                <p className="text-base 2xl:text-4xl font-medium text-gray-900 mb-1 text-center lg:text-left">Let&apos;s get started</p>
+                <p className="text-base font-medium text-gray-900 mb-1 text-center lg:text-left">Let&apos;s get started</p>
 
                 <button
                   type="submit"
-                  className="mt-3 w-full px-6 py-3 2xl:py-6 2xl:px-12 border border-transparent text-base 2xl:text-4xl font-medium rounded-md text-white bg-black shadow-sm hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0  sm:flex-shrink-0 sm:inline-flex sm:items-center sm:w-auto"
+                  className="mt-3 w-full px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-black shadow-sm hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0  sm:flex-shrink-0 sm:inline-flex sm:items-center sm:w-auto"
                 >
                   Start Providing
                 </button>
                 <button
                   type="submit"
-                  className="mt-3 w-full px-6 py-3 2xl:py-6 2xl:px-12 border border-transparent text-base 2xl:text-4xl font-medium rounded-md text-white bg-black shadow-sm hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:flex-shrink-0 sm:inline-flex sm:items-center sm:w-auto"
+                  className="mt-3 w-full px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-black shadow-sm hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:flex-shrink-0 sm:inline-flex sm:items-center sm:w-auto"
                 >
                   Start Requesting
                 </button>
                 <button
                   type="submit"
-                  className="mt-3 w-full px-6 py-3 2xl:py-6 2xl:px-12 border border-transparent text-base 2xl:text-4xl font-medium rounded-md text-white bg-black shadow-sm hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:flex-shrink-0 sm:inline-flex sm:items-center sm:w-auto"
+                  className="mt-3 w-full px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-black shadow-sm hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:flex-shrink-0 sm:inline-flex sm:items-center sm:w-auto"
                 >
                   Explore tokenomics
                 </button>
-                <p className="mt-3 text-sm text-gray-500 2xl:text-2xl">
+                <p className="mt-3 text-sm text-gray-500">
                   We care about the protection of your data. Read our
                   <a href="#" className="font-medium text-gray-900 underline ml-1">
                     Privacy Policy
