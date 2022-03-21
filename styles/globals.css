@@ -10,6 +10,31 @@ body {
   padding: 0px;
 }
 
+@screen lg {
+  html,
+  body {
+    font-size: 140%;
+  }
+}
+@screen xl {
+  html,
+  body {
+    font-size: 100%;
+  }
+}
+@screen 2xl {
+  html,
+  body {
+    font-size: 120%;
+  }
+}
+@screen 3xl {
+  html,
+  body {
+    font-size: 140%;
+  }
+}
+
 .Typewriter__wrapper,
 .Typewriter {
   @apply bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent inline-block;
