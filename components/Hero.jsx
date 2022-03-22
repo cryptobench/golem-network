@@ -15,11 +15,11 @@
   ```
 */
 
-import Nav from "../components/Nav"
 import { Fragment } from "react"
 import { Popover, Transition } from "@headlessui/react"
 import { MenuIcon, XIcon } from "@heroicons/react/outline"
 import Typewriter from "typewriter-effect"
+import Animate from "../components/Globe"
 
 const navigation = [
   { name: "Products", href: "#" },
@@ -29,24 +29,23 @@ const navigation = [
 ]
 
 export default function Example() {
+  const N = 20
+  const arcsData = [...Array(N).keys()].map(() => ({
+    startLat: (Math.random() - 0.5) * 180,
+    startLng: (Math.random() - 0.5) * 360,
+    endLat: (Math.random() - 0.5) * 180,
+    endLng: (Math.random() - 0.5) * 360,
+    color: [
+      ["red", "white", "blue", "green"][Math.round(Math.random() * 3)],
+      ["red", "white", "blue", "green"][Math.round(Math.random() * 3)],
+    ],
+  }))
   return (
-    <div className="relative bg-white overflow-hidden w-full">
-      <div className="hidden lg:block lg:absolute lg:inset-0 w-full" aria-hidden="true">
-        <svg className="absolute w-full" width="100%" height="100%" fill="none">
-          <defs>
-            <pattern id="9ebea6f4-a1f5-4d96-8c4e-4c2abf658047" x={118} y={0} width={20} height={20} patternUnits="userSpaceOnUse">
-              <rect x={0} y={0} width={2} height={2} className="text-gray-200" fill="currentColor" />
-            </pattern>
-          </defs>
-          <rect className="w-full" width="100%" height="100%" fill="url(#9ebea6f4-a1f5-4d96-8c4e-4c2abf658047)" />
-        </svg>
-      </div>
-
-      <div className="relative pb-16 sm:pb-24 lg:pb-32 ">
-        <Nav className="w-full"></Nav>
-        <main className="mt-16 mx-auto max-w-7xl px-4 sm:mt-24 sm:px-6 lg:mt-24">
+    <div className="relative bggridbottom overflow-hidden w-full  ">
+      <div className="relative  ">
+        <main className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="lg:grid lg:grid-cols-12 lg:gap-8">
-            <div className="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left">
+            <div className="text-center md:max-w-2xl md:mx-auto lg:col-span-6 mt-16 lg:text-left">
               <h1>
                 <span className="block text-sm font-semibold uppercase tracking-wide text-gray-500 sm:text-base lg:text-sm xl:text-base">
                   <Typewriter
@@ -89,7 +88,7 @@ export default function Example() {
                 learning, CI/CD pipelines and much more at an instant.
               </p>
               <div className="mt-8  sm:mx-auto sm:text-center lg:text-left lg:mx-0">
-                <p className="text-base font-medium text-gray-900 mb-1">Let's get started</p>
+                <p className="text-base font-medium text-gray-900 mb-1 text-center lg:text-left">Let&apos;s get started</p>
 
                 <button
                   type="submit"
@@ -118,41 +117,15 @@ export default function Example() {
                 </p>
               </div>
             </div>
-            <div className="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
-              <svg
-                className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-8 scale-75 origin-top sm:scale-100 lg:hidden"
-                width={640}
-                height={784}
-                fill="none"
-                viewBox="0 0 640 784"
-                aria-hidden="true"
-              >
-                <defs>
-                  <pattern id="4f4f415c-a0e9-44c2-9601-6ded5a34a13e" x={118} y={0} width={20} height={20} patternUnits="userSpaceOnUse">
-                    <rect x={0} y={0} width={4} height={4} className="text-gray-200" fill="currentColor" />
-                  </pattern>
-                </defs>
-                <rect y={72} width={640} height={640} className="text-gray-50" fill="currentColor" />
-                <rect x={118} width={404} height={784} fill="url(#4f4f415c-a0e9-44c2-9601-6ded5a34a13e)" />
-              </svg>
-              <div className="relative mx-auto w-full rounded-lg shadow-lg lg:max-w-md">
-                <button
-                  type="button"
-                  className="relative block w-full bg-white rounded-lg overflow-hidden focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                >
-                  <span className="sr-only">Watch our video to learn more</span>
-                  <iframe
-                    className="w-full"
-                    width="560"
-                    height="315"
-                    src="https://www.youtube.com/embed/FZb_w5JXvJ8?controls=0"
-                    title="YouTube video player"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
-                </button>
-              </div>
+            <div className="relative hidden lg:visible sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
+              <Animate
+                globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
+                arcsData={arcsData}
+                arcColor={"color"}
+                arcDashLength={() => Math.random()}
+                arcDashGap={() => Math.random()}
+                arcDashAnimateTime={() => Math.random() * 4000 + 500}
+              />
             </div>
           </div>
         </main>
