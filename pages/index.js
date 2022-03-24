@@ -32,7 +32,7 @@ const navigation = [
 export default function Example() {
   return (
     <div>
-      <div className="relative bggridbottom  w-full  ">
+      <div className="relative   w-full  ">
         <div className="hidden lg:block lg:absolute h-full w-full overflow-x-hidden" aria-hidden="true">
           <svg className="absolute w-full test " width="100%" height="100%" fill="none">
             <defs>
