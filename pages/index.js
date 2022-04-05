@@ -21,6 +21,7 @@ import Hero from "../components/Hero"
 import Apps from "../components/Apps"
 import Explainer from "../components/Explainer"
 import Footer from "../components/Footer"
+import Cost from "../components/Cost"
 
 const navigation = [
   { name: "Products", href: "#" },
@@ -50,6 +51,7 @@ export default function Example() {
         <Navbar></Navbar>
         <Hero></Hero>
         <Explainer></Explainer>
+        <Cost></Cost>
         <Apps></Apps>
         <Test></Test>
       </div>
