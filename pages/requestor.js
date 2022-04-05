@@ -15,12 +15,9 @@
   ```
 */
 import Head from "next/head"
-import Test from "../components/News"
-import Hero from "../components/Hero"
-import Apps from "../components/Apps"
-import Explainer from "../components/Explainer"
-import Footer from "../components/Footer"
+import Hero from "../components/requestor/Hero"
 import Cost from "../components/Cost"
+import Install from "../components/requestor/Install"
 
 const navigation = [
   { name: "Products", href: "#" },
@@ -37,10 +34,8 @@ export default function Example() {
         <meta name="google-site-verification" content="7TO2YTmVfu0A5AgihId9CSnSrQjFgHxAkZ-k_zIH18g" />
       </Head>
       <Hero></Hero>
-      <Explainer></Explainer>
+      <Install></Install>
       <Cost></Cost>
-      <Apps></Apps>
-      <Test></Test>
     </div>
   )
 }
