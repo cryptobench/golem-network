@@ -29,8 +29,8 @@ export default function Example() {
                 </span>
               </h1>
               <p className="mt-3 text-xl text-slate-600 sm:mt-5 ">
-                The Golem Network is made up by providers all around the world wanting to share their idle resources with you and i. There's
-                no central authority which means it's pure competition, and that drives the super low price!
+                The Golem Network is made up by providers all around the world wanting to share their idle resources with you and i.
+                There&apos;s no central authority which means it&apos;s pure competition, and that drives the super low price!
               </p>
             </div>
 
@@ -63,6 +63,7 @@ export default function Example() {
                     <a
                       href="https://stats.golem.network/network/provider/0x49b04a7a035df0d4f9bbbe853a7c9fc2cb147366"
                       target={"_blank"}
+                      rel="noreferrer"
                       className="col-span-12 grid grid-cols-12 cursor-pointer hover:bg-gray-100 "
                     >
                       <div className="col-span-8 text-black text-lg font-medium border-b border-dashed px-4">
