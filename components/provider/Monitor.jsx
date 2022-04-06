@@ -21,8 +21,8 @@ export default function Example() {
             </div>
 
             <a className="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-12 app">
-              <div class="flex h-full">
-                <div class="m-auto">
+              <div className="flex h-full">
+                <div className="m-auto">
                   <div className="relative mx-auto w-full rounded-lg   col-span-12">
                     <img className="h-full w-auto   rounded-lg" src="https://i.imgur.com/XzLUt2N.png" alt="" />
                   </div>
