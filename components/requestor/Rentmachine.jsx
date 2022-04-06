@@ -234,7 +234,13 @@ export default function Example() {
                       </div>
                     </div>
                   </div>
-                  <div className="col-span-6"></div>
+                  <div className="col-span-6">
+                    <iframe
+                      src="https://carbon.now.sh/embed?bg=rgba%28255%2C255%2C255%2C1%29&t=one-dark&wt=none&l=auto&width=680&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=Code%2520snippet%2520to%2520run%2520SSH%2520example%2520on%2520Requestor%2520here"
+                      className="h-full w-full"
+                      sandbox="allow-scripts allow-same-origin"
+                    ></iframe>
+                  </div>
                 </div>
                 <div className="mt-5 sm:mt-6 sm:grid sm:grid-cols-1 sm:gap-3 sm:grid-flow-row-dense">
                   <button
