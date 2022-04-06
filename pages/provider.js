@@ -15,11 +15,10 @@
   ```
 */
 import Head from "next/head"
-import Hero from "../components/requestor/Hero"
-import Cost from "../components/Cost"
+import Hero from "../components/provider/Hero"
 import Install from "../components/Install"
-import Apis from "../components/requestor/Apis"
-import Rentmachine from "../components/requestor/Rentmachine"
+import Explainer from "../components/provider/Explainer"
+import Monitor from "../components/provider/Monitor"
 
 const navigation = [
   { name: "Products", href: "#" },
@@ -36,10 +35,9 @@ export default function Example() {
         <meta name="google-site-verification" content="7TO2YTmVfu0A5AgihId9CSnSrQjFgHxAkZ-k_zIH18g" />
       </Head>
       <Hero></Hero>
-      <Install command="curl -sSf https://join.golem.network/as-requestor | bash -"></Install>
-      <Cost></Cost>
-      <Apis></Apis>
-      <Rentmachine></Rentmachine>
+      <Install command="curl -sSf https://join.golem.network/as-provider | bash -"></Install>
+      <Explainer></Explainer>
+      <Monitor></Monitor>
     </div>
   )
 }

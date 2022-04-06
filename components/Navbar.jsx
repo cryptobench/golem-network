@@ -67,7 +67,7 @@ const Navbar = () => {
       <Popover className="relative max-w-7xl mx-auto flex items-center justify-between ">
         <div className="flex justify-between items-center px-4 py-6 sm:px-6 md:justify-start md:space-x-10">
           <div>
-            <a href="#" className="flex">
+            <a href="/" className="flex">
               <span className="sr-only">Workflow</span>
               <img className="h-12 w-auto sm:h-14 mt-2   rounded-lg" src="https://i.imgur.com/zcL5vPX.png" alt="" />
             </a>

@@ -19,12 +19,12 @@ import { Fragment } from "react"
 import { Popover, Transition } from "@headlessui/react"
 import { MenuIcon, XIcon } from "@heroicons/react/outline"
 
-export default function Example() {
+export default function Example(props) {
   return (
     <div className=" grid justify-items-center relative ">
       <div className="my-4 rounded  mb-1 ">
         <p className=" border-solid border-l rounded-l border-t border-b py-2 px-4 inline-block bg-gray-800 text-white" id="copyMe">
-          curl -sSf https://join.golem.network/as-requestor | bash -
+          {props.command}
           <button className="  font-bold py-2 pl-4  rounded  text-gray-300 hover:text-white  " onClick="copyMeOnClipboard()">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 inline-block " fill="none" stroke="currentColor" strokeWidth={2}>
               <path
