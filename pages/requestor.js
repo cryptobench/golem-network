@@ -18,6 +18,8 @@ import Head from "next/head"
 import Hero from "../components/requestor/Hero"
 import Cost from "../components/Cost"
 import Install from "../components/requestor/Install"
+import Apis from "../components/requestor/Apis"
+import Rentmachine from "../components/requestor/Rentmachine"
 
 const navigation = [
   { name: "Products", href: "#" },
@@ -36,6 +38,8 @@ export default function Example() {
       <Hero></Hero>
       <Install></Install>
       <Cost></Cost>
+      <Apis></Apis>
+      <Rentmachine></Rentmachine>
     </div>
   )
 }

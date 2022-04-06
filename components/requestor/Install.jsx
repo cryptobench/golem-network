@@ -21,11 +21,11 @@ import { MenuIcon, XIcon } from "@heroicons/react/outline"
 
 export default function Example() {
   return (
-    <div class=" grid justify-items-center relative ">
-      <div class="my-4 rounded  mb-1 ">
-        <p class=" border-solid border-l rounded-l border-t border-b py-2 px-4 inline-block bg-gray-800 text-white" id="copyMe">
+    <div className=" grid justify-items-center relative ">
+      <div className="my-4 rounded  mb-1 ">
+        <p className=" border-solid border-l rounded-l border-t border-b py-2 px-4 inline-block bg-gray-800 text-white" id="copyMe">
           curl -sSf https://join.golem.network/as-requestor | bash -
-          <button class="  font-bold py-2 pl-4  rounded  text-gray-300 hover:text-white  " onclick="copyMeOnClipboard()">
+          <button className="  font-bold py-2 pl-4  rounded  text-gray-300 hover:text-white  " onClick="copyMeOnClipboard()">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 inline-block " fill="none" stroke="currentColor" strokeWidth={2}>
               <path
                 strokeLinecap="round"
@@ -40,7 +40,7 @@ export default function Example() {
         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 inline-block mr-1" fill="none" stroke="currentColor" strokeWidth={1}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
         </svg>
-        <a href="#" className="text-sm inline-block">
+        <a href="#" className="text-sm inline-block font-medium">
           Documentation
         </a>
       </div>
