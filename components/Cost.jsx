@@ -47,16 +47,16 @@ export default function Example() {
                   </div>
                   <div className="col-span-12 grid grid-cols-12 p-4 gap-4">
                     <div className="col-span-3">
-                      <button className="bg-white text-black rounded py-3 px-6">2 vCPU</button>
+                      <button className="bg-white text-black rounded py-3 3xl:text-lg px-5">2 vCPU</button>
                     </div>
                     <div className="col-span-3">
-                      <button className="hover:bg-white hover:text-black rounded py-3 px-6">8 vCPU</button>
+                      <button className="hover:bg-white hover:text-black rounded 3xl:text-lg py-3 px-5">8 vCPU</button>
                     </div>
                     <div className="col-span-3">
-                      <button className="hover:bg-white hover:text-black rounded py-3 px-6">16 vCPU</button>
+                      <button className="hover:bg-white hover:text-black rounded 3xl:text-lg py-3 px-5">16 vCPU</button>
                     </div>
                     <div className="col-span-3">
-                      <button className="hover:bg-white hover:text-black rounded py-3 px-6">64 vCPU</button>
+                      <button className="hover:bg-white hover:text-black rounded 3xl:text-lg py-3 px-5">64 vCPU</button>
                     </div>
                   </div>
                   <div className="col-span-12 grid grid-cols-12 bg-white  shadow rounded-b gap-y-4">

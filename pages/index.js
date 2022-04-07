@@ -22,13 +22,6 @@ import Explainer from "../components/Explainer"
 import Footer from "../components/Footer"
 import Cost from "../components/Cost"
 
-const navigation = [
-  { name: "Products", href: "#" },
-  { name: "Features", href: "#" },
-  { name: "Marketplace", href: "#" },
-  { name: "Company", href: "#" },
-]
-
 export default function Example() {
   return (
     <div>

@@ -105,7 +105,7 @@ export default function Stats() {
     }, 15000)
   }, [])
   return loaded ? (
-    <div className="py-16 mx-auto max-w-7xl px-4 sm:px-6 relative">
+    <div className="py-16 mx-auto max-w-7xl px-4 sm:px-6 relative ">
       <div className="lg:grid lg:grid-cols-12 lg:gap-8">
         <div className="text-center  lg:col-span-12 ">
           <h1>

@@ -33,7 +33,7 @@ export default function Example() {
           <p className="mt-3 text-xl inline-block text-slate-600 sm:mt-5 ">
             Never has is been that easy to access hardware that can run at the speed of a supercomputer. On Golem Network there is no signup
             list and you do not need permission from anyone.
-            <span className="inline-block font-bold text-1xl bg-gradient-to-r from-golemblue via-purple-500 to-pink-500 bg-clip-text text-transparent">
+            <span className="block font-bold text-1xl bg-gradient-to-r from-golemblue via-purple-500 to-pink-500 bg-clip-text text-transparent">
               You are in control of the resources.
             </span>
           </p>
