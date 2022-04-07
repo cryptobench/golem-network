@@ -100,6 +100,9 @@ export default function Stats() {
   }
   useEffect(() => {
     fetchProviders()
+    setInterval(() => {
+      fetchProviders()
+    }, 15000)
   }, [])
   return loaded ? (
     <div className="mt-40 mx-auto max-w-7xl px-4 sm:px-6 relative">
