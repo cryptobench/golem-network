@@ -18,14 +18,8 @@ import Head from "next/head"
 import Hero from "../components/provider/Hero"
 import Install from "../components/Install"
 import Explainer from "../components/provider/Explainer"
-import Monitor from "../components/provider/Monitor"
-
-const navigation = [
-  { name: "Products", href: "#" },
-  { name: "Features", href: "#" },
-  { name: "Marketplace", href: "#" },
-  { name: "Company", href: "#" },
-]
+import Stats from "../components/Stats"
+import Gui from "../components/provider/Gui"
 
 export default function Example() {
   return (
@@ -37,7 +31,8 @@ export default function Example() {
       <Hero></Hero>
       <Install command="curl -sSf https://join.golem.network/as-provider | bash -"></Install>
       <Explainer></Explainer>
-      <Monitor></Monitor>
+      <Gui></Gui>
+      <Stats></Stats>
     </div>
   )
 }
