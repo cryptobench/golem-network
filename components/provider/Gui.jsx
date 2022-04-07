@@ -11,7 +11,8 @@ export default function Example() {
               <div className="mt-6">
                 <h2 className="text-5xl font-extrabold tracking-tight text-gray-900">Not a fan of CLI? Download our GUI</h2>
                 <p className="mt-4 text-lg text-gray-500">
-                  We've created a worldclass provicer GUI for users that want to keep track of things visually. All platforms are supported.
+                  We&apos;ve created a worldclass provicer GUI for users that want to keep track of things visually. All platforms are
+                  supported.
                 </p>
                 <div className="mt-6">
                   <a
