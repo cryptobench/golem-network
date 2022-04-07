@@ -36,7 +36,7 @@ export default function Example() {
 
             <div className="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
               <div className="grid grid-cols-12">
-                <div className="col-span-12 col-start-2 grid grid-cols-12 bg-golemblue w-full h-full rounded-lg text-white">
+                <div className="col-span-12 col-start-2 grid grid-cols-12 bg-black w-full h-full rounded-lg text-white">
                   <div className="col-span-12 text-center">
                     <p className="text-4xl px-4 pt-8 pb-4 font-bold ">Golem Price Comparison</p>
                   </div>
