@@ -64,7 +64,7 @@ function classNames(...classes) {
 
 const Navbar = () => {
   return (
-    <nav className="relative bggridbottom  w-full ">
+    <nav className="relative bggridbottom  w-full h-32 ">
       <Popover className="relative max-w-7xl mx-auto flex items-center justify-between ">
         <div className="flex justify-between items-center px-4 py-6 sm:px-6 md:justify-start md:space-x-10">
           <div>

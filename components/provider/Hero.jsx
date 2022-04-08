@@ -1,28 +1,8 @@
-/*
-  This example requires Tailwind CSS v2.0+ 
-  
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ],
-  }
-  ```
-*/
-
-import { Fragment } from "react"
-import { Popover, Transition } from "@headlessui/react"
-import { MenuIcon, XIcon } from "@heroicons/react/outline"
-
+import Install from "../Install"
 export default function Example() {
   return (
-    <div className="relative    w-full mt-24 ">
-      <main className="mx-auto max-w-7xl px-4 sm:px-6 grid grid-cols-12">
+    <div className="relative   overflow-hidden w-ful ">
+      <main className="mx-auto max-w-7xl px-4 sm:px-6 grid grid-cols-12 min-h-screen -mt-32 content-center relative">
         <div className="text-center  col-span-8 col-start-3 ">
           <h1>
             <span className="block text-sm font-semibold uppercase tracking-wide text-golemblue">Golem Network</span>
@@ -41,6 +21,9 @@ export default function Example() {
               Installing takes under 30 seconds
             </span>
           </p>
+        </div>
+        <div className="text-center  col-span-8 col-start-3 ">
+          <Install command="curl -sSf https://join.golem.network/as-provider | bash -"></Install>
         </div>
       </main>
     </div>

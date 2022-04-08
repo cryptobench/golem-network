@@ -16,7 +16,7 @@
 */
 import Head from "next/head"
 import Hero from "../components/requestor/Hero"
-import Cost from "../components/Cost"
+import Pricing from "../components/Pricing"
 import Install from "../components/Install"
 import Apis from "../components/requestor/Apis"
 import Rentmachine from "../components/requestor/Rentmachine"
@@ -36,8 +36,7 @@ export default function Example() {
         <meta name="google-site-verification" content="7TO2YTmVfu0A5AgihId9CSnSrQjFgHxAkZ-k_zIH18g" />
       </Head>
       <Hero></Hero>
-      <Install command="curl -sSf https://join.golem.network/as-requestor | bash -"></Install>
-      <Cost></Cost>
+      <Pricing></Pricing>
       <Apis></Apis>
       <Rentmachine></Rentmachine>
     </div>
