@@ -30,7 +30,15 @@ export default function Example() {
         <meta name="google-site-verification" content="7TO2YTmVfu0A5AgihId9CSnSrQjFgHxAkZ-k_zIH18g" />
       </Head>
       <Hero></Hero>
-      <LiveStats providers="832" cores="16949" memory="16.37" disk="128.75"></LiveStats>
+      <LiveStats
+        header="Join the network"
+        title="The network is expanding rapidly"
+        providers="832"
+        cores="16949"
+        memory="16.37"
+        disk="128.75"
+        center={true}
+      ></LiveStats>
       <Explainer></Explainer>
       <Pricing></Pricing>
       <Apps></Apps>

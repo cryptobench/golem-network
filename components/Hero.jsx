@@ -22,7 +22,7 @@ export default function Example() {
       <div className="relative  ">
         <main className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="lg:grid lg:grid-cols-12 lg:gap-8">
-            <div className="text-center md:max-w-2xl md:mx-auto lg:col-span-6 mt-16 lg:text-left">
+            <div className="text-center md:max-w-2xl md:mx-auto lg:col-span-6 mt-12 lg:text-left">
               <h1>
                 <span className="block text-sm font-semibold uppercase tracking-wide text-gray-500 sm:text-base lg:text-sm xl:text-base">
                   <Typewriter
