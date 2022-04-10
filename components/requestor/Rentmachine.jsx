@@ -1,23 +1,7 @@
-/*
-  This example requires Tailwind CSS v2.0+ 
-  
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ],
-  }
-  ```
-*/
+import Golem from "../svg/Golem"
 
 import { Fragment } from "react"
-import { Popover, Transition, Dialog } from "@headlessui/react"
-import { MenuIcon, XIcon } from "@heroicons/react/outline"
+import { Transition, Dialog } from "@headlessui/react"
 import React, { useState, useEffect, useRef } from "react"
 import Range from "../Range"
 
@@ -70,7 +54,7 @@ export default function Example() {
     <div>
       <div className="pt-24 pb-24 mx-auto max-w-7xl px-4 sm:px-6 relative  w-full ">
         <div className=" grid justify-items-center relative ">
-          <div className="my-12 rounded  ">
+          <div className="my-6 rounded  ">
             <h4 className="text-4xl font-bold">Rent a provider</h4>
           </div>
         </div>
@@ -110,8 +94,10 @@ export default function Example() {
               foundProviders.slice(0, 5).map((user) => (
                 <div key={user.node_id} className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md ">
                   <div className="flex flex-col items-center pb-10">
-                    <img className="mb-3 mt-6 p-1 h-12 " src="https://i.imgur.com/zcL5vPX.png" />
-                    <h5 className="mb-1 text-xl font-medium text-golemblue">{user.data["golem.node.id.name"]}</h5>
+                    <div className="m-4 bg-golemblue rounded-md p-3">
+                      <Golem className="h-6 w-6"></Golem>
+                    </div>
+                    <h5 className="mb-1 text-xl font-medium text-black">{user.data["golem.node.id.name"]}</h5>
                     <span className="block text-sm text-slate-400 ">{user.data["golem.inf.cpu.threads"]} Cores</span>
                     <span className="block text-sm text-slate-400 ">{Math.round(user.data["golem.inf.mem.gib"] * 100) / 100} GB RAM</span>
                     <span className="block text-sm text-slate-400 ">
@@ -177,16 +163,12 @@ export default function Example() {
                   <div className="h-full overflow-y-auto bg-white p-8 col-span-6">
                     <div className="space-y-6 pb-16">
                       <div>
-                        <div className="aspect-w-10 aspect-h-7 block w-full overflow-hidden rounded-lg">
-                          <img
-                            src="https://images.unsplash.com/photo-1582053433976-25c00369fc93?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=512&q=80"
-                            alt=""
-                            width={24}
-                            className="object-cover"
-                          />
-                        </div>
+                        <div className="aspect-w-10 aspect-h-7 block w-full overflow-hidden rounded-lg"></div>
                         <div className="mt-4 flex items-start justify-between">
                           <div>
+                            <div className="w-auto inline-block bg-golemblue rounded-md p-3">
+                              <Golem className="h-6 w-6"></Golem>
+                            </div>
                             <h2 className="text-lg font-medium text-gray-900">
                               <span className="sr-only">Details for </span>
                               {rentProvider.node_id ? <p>{rentProvider.data["golem.node.id.name"]}</p> : <p>None</p>}

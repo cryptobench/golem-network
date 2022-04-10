@@ -1,8 +1,8 @@
 import Install from "../Install"
 export default function Example() {
   return (
-    <div className="relative   overflow-hidden w-ful ">
-      <main className="mx-auto max-w-7xl px-4 sm:px-6 grid grid-cols-12 min-h-screen -mt-32 content-center relative">
+    <div className="relative   overflow-hidden w-full ">
+      <main className="mx-auto max-w-7xl px-4 sm:px-6 grid grid-cols-12 min-h-screen -mt-24 content-center relative">
         <div className="text-center  col-span-8 col-start-3 ">
           <h1>
             <span className="block text-sm font-semibold uppercase tracking-wide text-golemblue">Golem Network</span>
