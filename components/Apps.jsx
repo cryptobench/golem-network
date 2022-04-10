@@ -14,7 +14,9 @@ export default function Apps() {
             <div className="col-span-12 bg-white rounded-l-lg h-20">
               <div className="flex h-full shadow-lg ">
                 <div className="m-auto">
-                  <span className="block text-sm font-semibold uppercase tracking-wide text-golemblue">Machine Learning</span>
+                  <span className="block text-sm font-semibold uppercase tracking-wide bg-gradient-to-r from-golemblue via-purple-500 to-pink-500 bg-clip-text text-transparent">
+                    Machine Learning
+                  </span>
                 </div>
               </div>
             </div>
