@@ -19,6 +19,7 @@ import { Fragment } from "react"
 import { Popover, Transition, Dialog } from "@headlessui/react"
 import { MenuIcon, XIcon } from "@heroicons/react/outline"
 import React, { useState, useEffect, useRef } from "react"
+import Range from "../Range"
 
 export default function Example() {
   const [data, setData] = useState("")
@@ -48,6 +49,7 @@ export default function Example() {
   // the search result
 
   const filter = (e) => {
+    console.log(e)
     const keyword = e.target.value
 
     if (keyword !== "") {
@@ -72,27 +74,35 @@ export default function Example() {
             <h4 className="text-4xl font-bold">Rent a provider</h4>
           </div>
         </div>
-        <div className="grid grid-cols-12">
+        <div className="grid grid-cols-12 gap-x-4">
+          <div className="col-span-12 mb-2">
+            <p className="font-semibold text-xl">Filters</p>
+          </div>
           <div className="col-span-3">
-            <div className="rounded shadow-xl bg-white">
-              <div className="container">
-                <div className="border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-1 focus-within:ring-indigo-600 focus-within:border-indigo-600">
-                  <label htmlFor="name" className="block text-xs font-medium text-gray-900">
-                    Provider name
-                  </label>
-                  <input
-                    type="search"
-                    value={name}
-                    onChange={filter}
-                    name="name"
-                    id="name"
-                    className="block w-full border-0 p-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm"
-                    placeholder="Node 1"
-                  />
-                </div>
-
-                <div className="user-list"></div>
+            <div className="rounded ">
+              <div className="border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-1 focus-within:ring-indigo-600 focus-within:border-indigo-600">
+                <label htmlFor="name" className="block text-xs font-medium text-gray-900">
+                  Provider name
+                </label>
+                <input
+                  type="search"
+                  value={name}
+                  onChange={filter}
+                  name="name"
+                  id="name"
+                  className="block w-full border-0 p-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm"
+                  placeholder="Node 1"
+                />
               </div>
+            </div>
+            <div className="rounded ">
+              <Range min="1" max="256" step="1" rangeid="cores" onChange={filter} label="Cores" showGB={false}></Range>
+            </div>
+            <div className="rounded ">
+              <Range min="0.1" max="512" step="0.5" rangeid="memory" label="Memory" showGB="true"></Range>
+            </div>
+            <div className="rounded ">
+              <Range min="0.5" max="50000" step="1" rangeid="disk" label="Disk" showGB="true"></Range>
             </div>
           </div>
           <div className="col-span-9 grid grid-cols-3 gap-4">
@@ -100,7 +110,7 @@ export default function Example() {
               foundProviders.slice(0, 5).map((user) => (
                 <div key={user.node_id} className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md ">
                   <div className="flex flex-col items-center pb-10">
-                    <img className="mb-3 mt-6 p-1 h-12 " src="https://i.imgur.com/zcL5vPX.png" alt="Bonnie image" />
+                    <img className="mb-3 mt-6 p-1 h-12 " src="https://i.imgur.com/zcL5vPX.png" />
                     <h5 className="mb-1 text-xl font-medium text-golemblue">{user.data["golem.node.id.name"]}</h5>
                     <span className="block text-sm text-slate-400 ">{user.data["golem.inf.cpu.threads"]} Cores</span>
                     <span className="block text-sm text-slate-400 ">{Math.round(user.data["golem.inf.mem.gib"] * 100) / 100} GB RAM</span>

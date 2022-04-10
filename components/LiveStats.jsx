@@ -1,13 +1,14 @@
 export default function Stats(props) {
   const center = props.center
-  console.log(center)
   return !center ? (
-    <div className="py-16 mx-auto max-w-7xl px-4 sm:px-6 relative ">
+    <div className="py-16 mx-auto max-w-7xl px-4 sm:px-6 relative  ">
       <div className="lg:grid lg:grid-cols-12 lg:gap-8">
-        <div className="  lg:col-span-8">
+        <div className="  lg:col-span-8 apps">
           <h1>
             <span className="block text-sm font-semibold uppercase tracking-wide text-golemblue">{props.header}</span>
-            <span className="mt-1 block text-4xl tracking-tight font-extrabold sm:text-4xl xl:text-6xl">{props.title}</span>
+            <span className="mt-1 block text-4xl tracking-tight font-extrabold sm:text-4xl xl:text-6xl ">
+              <span className="fader">{props.title}</span>
+            </span>
           </h1>
           <p className="mt-3 text-xl text-slate-600 sm:mt-5 "></p>
         </div>
@@ -61,7 +62,7 @@ export default function Stats(props) {
         </div>
 
         <div className="col-span-2 col-start-3 text-center">
-          <p className="text-4xl font-bold block">
+          <p className="text-4xl font-bold block relative">
             {props.providers}{" "}
             <span className="text-xl font-semibold block bg-gradient-to-r from-golemblue via-purple-500 to-pink-500 bg-clip-text text-transparent">
               Providers

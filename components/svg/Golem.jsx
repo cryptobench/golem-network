@@ -14,7 +14,7 @@ const SvgComponent = (props) => (
       cy={468.73}
       r={86.09}
       style={{
-        fill: "#0c14d4",
+        fill: "transparent",
       }}
     />
     <circle
