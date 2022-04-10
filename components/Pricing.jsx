@@ -40,8 +40,8 @@ export default function Example() {
             <span className="mt-1 block text-4xl tracking-tight font-extrabold sm:text-4xl xl:text-6xl">Revolutionary low pricing</span>
           </h1>
           <p className="mt-3 text-xl text-slate-600 sm:mt-5 ">
-            The Golem Network is made up by providers all around the world wanting to share their idle resources with you and i. There's no
-            central authority which means it's pure competition, and that drives the super low price!
+            The Golem Network is made up by providers all around the world wanting to share their idle resources with you and i.
+            There&apos;s no central authority which means it&apos;s pure competition, and that drives the super low price!
           </p>
         </div>
 
