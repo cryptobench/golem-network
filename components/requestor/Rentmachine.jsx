@@ -92,30 +92,32 @@ export default function Example() {
           <div className="col-span-9 grid grid-cols-3 gap-4">
             {foundProviders && foundProviders.length > 0 ? (
               foundProviders.slice(0, 5).map((user) => (
-                <div key={user.node_id} className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md ">
-                  <div className="flex flex-col items-center pb-10">
-                    <div className="m-4 bg-golemblue rounded-md p-3">
-                      <Golem className="h-6 w-6"></Golem>
-                    </div>
-                    <h5 className="mb-1 text-xl font-medium text-black">{user.data["golem.node.id.name"]}</h5>
-                    <span className="block text-sm text-slate-400 ">{user.data["golem.inf.cpu.threads"]} Cores</span>
-                    <span className="block text-sm text-slate-400 ">{Math.round(user.data["golem.inf.mem.gib"] * 100) / 100} GB RAM</span>
-                    <span className="block text-sm text-slate-400 ">
-                      {Math.round(user.data["golem.inf.storage.gib"] * 100) / 100} GB Disk
-                    </span>
-                    <span className="block text-sm text-slate-400 pb-4">Unlimited Bandwidth</span>
-                    <div className="mt-4 space-x-3 lg:mt-6">
-                      <span className="block font-semibold text-sm">0.53 GLM | $0.32 per month</span>
-                    </div>
-                    <div className="flex mt-4 space-x-3 lg:mt-6">
-                      <a
-                        onClick={() => loadModal(user)}
-                        href="#"
-                        className="inline-flex items-center py-2 px-4 text-sm font-medium text-center text-white bg-black rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 "
-                      >
-                        Rent Provider
-                      </a>
-                    </div>
+                <div key={user.node_id} className=" p-6 grid bg-gray-900 rounded-xl">
+                  <div className="inline-block relative">
+                    <img
+                      className="h-20 w-20 rounded-lg shadow-lg mb-2 inline-block"
+                      src="https://dappimg.com/media/image/dapp/4244a929e00d467cbb7f3acb66f07ce5.blob"
+                    ></img>
+
+                    <span className="absolute top-0 right-0 -mr-1 -mt-2 bg-black text-sm px-2 py-1 rounded text-white">Provider</span>
+                  </div>
+                  <h5 className="text-white text-xl tracking-tight font-medium">{user.data["golem.node.id.name"]}</h5>
+                  <span className="text-slate-400 text-sm tracking-tight font-medium mb-1">{user.data["golem.inf.cpu.threads"]} Cores</span>
+                  <span className="text-slate-400 text-sm tracking-tight font-medium mb-1">
+                    {Math.round(user.data["golem.inf.mem.gib"] * 100) / 100} GB RAM
+                  </span>
+                  <span className="text-slate-400 text-sm tracking-tight font-medium mb-1">
+                    {Math.round(user.data["golem.inf.storage.gib"] * 100) / 100} GB Disk
+                  </span>
+                  <span className="text-slate-200 text-lg tracking-tight font-medium mb-1">0.53 GLM / $0.2 per month</span>
+                  <div className="flex mt-4 space-x-3 lg:mt-6">
+                    <a
+                      onClick={() => loadModal(user)}
+                      href="#"
+                      className="w-full py-2 px-4 text-sm font-medium text-center text-white bg-black rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 "
+                    >
+                      Rent Provider
+                    </a>
                   </div>
                 </div>
               ))

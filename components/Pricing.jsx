@@ -36,7 +36,7 @@ export default function Example() {
         <div className="text-center  col-span-12 mb-12 ">
           <h1>
             <span className="block text-sm font-semibold uppercase tracking-wide text-golemblue">Pricing</span>
-            <span className="mt-1 block text-4xl tracking-tight font-extrabold sm:text-4xl xl:text-6xl">Revolutionary low pricing</span>
+            <span className="mt-1 block text-3xl tracking-tight font-extrabold sm:text-4xl xl:text-6xl">Revolutionary low pricing</span>
           </h1>
           <p className="mt-3 text-xl text-slate-600 sm:mt-5 ">
             The Golem Network is made up by providers all around the world wanting to share their idle resources with you and i.

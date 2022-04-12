@@ -16,35 +16,96 @@ import Link from "next/link"
 
 const solutions = [
   {
-    name: "Analytics",
+    name: "Requestor",
     description: "Get a better understanding of where your traffic is coming from.",
-    href: "#",
+    href: "/requestor",
     icon: ChartBarIcon,
   },
   {
-    name: "Engagement",
+    name: "Requestor Portal",
     description: "Speak directly to your customers in a more meaningful way.",
     href: "#",
     icon: CursorClickIcon,
   },
-  { name: "Security", description: "Your customers' data will be safe and secure.", href: "#", icon: ShieldCheckIcon },
+  { name: "Provider", description: "Your customers' data will be safe and secure.", href: "/provider", icon: ShieldCheckIcon },
   {
-    name: "Integrations",
+    name: "Golem Analytics",
+    description: "Connect with third-party tools that you're already using.",
+    href: "https://stats.golem.network",
+    icon: ViewGridIcon,
+  },
+  {
+    name: "Thorg",
+    description: "Build strategic funnels that will drive your customers to convert",
+    href: "https://thorg.io",
+    icon: RefreshIcon,
+  },
+  {
+    name: "GitB",
+    description: "Get detailed reports that will help you make more informed decisions ",
+    href: "#",
+    icon: DocumentReportIcon,
+  },
+  {
+    name: "Blog",
+    description: "Get detailed reports that will help you make more informed decisions ",
+    href: "#",
+    icon: DocumentReportIcon,
+  },
+]
+
+const requestor = [
+  {
+    name: "Requestor Portal",
+    description: "Monitor spendings from the applications you deploy",
+    href: "#",
+    icon: ChartBarIcon,
+  },
+  {
+    name: "SDK Documentation",
+    description: "Speak directly to your customers in a more meaningful way.",
+    href: "#",
+    icon: CursorClickIcon,
+  },
+  {
+    name: "Examples & Tutorials",
+    description: "Speak directly to your customers in a more meaningful way.",
+    href: "#",
+    icon: CursorClickIcon,
+  },
+  {
+    name: "Golem Analytics",
+    description: "Connect with third-party tools that you're already using.",
+    href: "#",
+    icon: ViewGridIcon,
+  },
+]
+
+const provider = [
+  {
+    name: "Documentation",
+    description: "Monitor spendings from the applications you deploy",
+    href: "#",
+    icon: ChartBarIcon,
+  },
+
+  {
+    name: "Examples & Tutorials",
+    description: "Speak directly to your customers in a more meaningful way.",
+    href: "#",
+    icon: CursorClickIcon,
+  },
+  {
+    name: "Golem Analytics",
     description: "Connect with third-party tools that you're already using.",
     href: "#",
     icon: ViewGridIcon,
   },
   {
-    name: "Automations",
-    description: "Build strategic funnels that will drive your customers to convert",
+    name: "Plugins",
+    description: "Connect with third-party tools that you're already using.",
     href: "#",
-    icon: RefreshIcon,
-  },
-  {
-    name: "Reports",
-    description: "Get detailed reports that will help you make more informed decisions ",
-    href: "#",
-    icon: DocumentReportIcon,
+    icon: ViewGridIcon,
   },
 ]
 const resources = [
@@ -149,7 +210,7 @@ const Navbar = () => {
                         "group  rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                       )}
                     >
-                      <span>Developers</span>
+                      <span>Requestor</span>
                       <ChevronDownIcon
                         className={classNames(open ? "text-gray-600" : "text-gray-400", "ml-2 h-5 w-5 group-hover:text-gray-500")}
                         aria-hidden="true"
@@ -168,7 +229,7 @@ const Navbar = () => {
                       <Popover.Panel className="absolute z-10 -ml-4 mt-3 transform w-screen max-w-md lg:max-w-3xl">
                         <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                           <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2">
-                            {solutions.map((item) => (
+                            {requestor.map((item) => (
                               <a key={item.name} href={item.href} className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
                                 <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-golemblue text-white sm:h-12 sm:w-12">
                                   <item.icon className="h-6 w-6" aria-hidden="true" />
@@ -206,7 +267,7 @@ const Navbar = () => {
                         "group  rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                       )}
                     >
-                      <span>Community</span>
+                      <span>Provider</span>
 
                       <ChevronDownIcon
                         className={classNames(open ? "text-gray-600" : "text-gray-400", "ml-2 h-5 w-5 group-hover:text-gray-500")}
@@ -226,7 +287,7 @@ const Navbar = () => {
                       <Popover.Panel className="absolute z-10 bg-white -ml-4 mt-3 transform w-screen max-w-md lg:max-w-3xl">
                         <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                           <div className="relative grid gap-6  px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2">
-                            {solutions.map((item) => (
+                            {provider.map((item) => (
                               <a key={item.name} href={item.href} className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
                                 <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-golemblue text-white sm:h-12 sm:w-12">
                                   <item.icon className="h-6 w-6" aria-hidden="true" />

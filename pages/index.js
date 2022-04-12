@@ -14,6 +14,8 @@ export default function Example() {
         <meta name="google-site-verification" content="7TO2YTmVfu0A5AgihId9CSnSrQjFgHxAkZ-k_zIH18g" />
       </Head>
       <Hero></Hero>
+
+      <Explainer></Explainer>
       <LiveStats
         header="Join the network"
         title="Join the network like hundreds of others"
@@ -23,7 +25,6 @@ export default function Example() {
         disk="128.75"
         center={true}
       ></LiveStats>
-      <Explainer></Explainer>
       <Pricing></Pricing>
       <Apps></Apps>
       <Test></Test>
