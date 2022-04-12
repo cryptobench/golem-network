@@ -47,7 +47,7 @@ export default function Apps() {
                   className="h-20 w-20 rounded-lg shadow-lg mb-2 inline-block"
                   src="https://dappimg.com/media/image/dapp/4244a929e00d467cbb7f3acb66f07ce5.blob"
                 ></img>
-                <span className="absolute top-0 right-0 -mr-1 -mt-2 bg-gray-700 text-sm px-2 py-1 rounded text-white">Rendering</span>
+                <span className="absolute top-0 right-0 -mr-1 -mt-2 bg-black text-sm px-2 py-1 rounded text-white">Rendering</span>
               </div>
               <h5 className="text-white text-lg tracking-tight font-medium">Blender</h5>
               <p className="text-slate-400 text-md tracking-tight font-medium mb-1">Render complex 3D images</p>
