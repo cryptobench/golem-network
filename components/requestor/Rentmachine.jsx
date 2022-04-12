@@ -52,7 +52,7 @@ export default function Example() {
   }
   return (
     <div>
-      <div className="pt-24 pb-24 mx-auto max-w-7xl px-4 sm:px-6 relative  w-full ">
+      <div data-aos="fade-up" data-aos-duration="1000" className="pt-24 pb-24 mx-auto max-w-7xl px-4 sm:px-6 relative  w-full ">
         <div className=" grid justify-items-center relative ">
           <div className="my-6 rounded  ">
             <h4 className="text-4xl font-bold">Rent a provider</h4>

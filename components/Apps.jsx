@@ -1,12 +1,9 @@
 import { SearchIcon } from "@heroicons/react/solid"
-import Stars from "./Stars"
 
 export default function Apps() {
   return (
     <section className="   relative apps ">
-      <Stars></Stars>
-
-      <div className="py-24 mx-auto max-w-7xl px-4 sm:px-6 opacity-0 fader  w-full z-40 relative">
+      <div data-aos="fade-up" data-aos-duration="1000" className="py-24 mx-auto max-w-7xl px-4 sm:px-6   w-full z-40 relative">
         <div className="grid grid-cols-12 ">
           <span className="block col-span-12  text-sm font-semibold uppercase tracking-wide text-golemblue opacity-70">Apps</span>
           <div className="col-span-12  mt-1  ">

@@ -1,4 +1,3 @@
-import Golem from "./svg/Golem"
 const people = [
   {
     name: "Lindsay Walton",
@@ -32,7 +31,7 @@ const people = [
 
 export default function Example() {
   return (
-    <div className="py-24 mx-auto max-w-7xl px-4 sm:px-6 relative ">
+    <div data-aos="fade-up" data-aos-duration="1000" className="py-24 mx-auto max-w-7xl px-4 sm:px-6 relative ">
       <div className="grid grid-cols-12 overflow-scroll">
         <div className="text-center  col-span-12 mb-12 ">
           <h1>

@@ -1,19 +1,3 @@
-/*
-  This example requires Tailwind CSS v2.0+ 
-  
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ],
-  }
-  ```
-*/
 import Head from "next/head"
 import Test from "../components/News"
 import Hero from "../components/Hero"
@@ -32,7 +16,7 @@ export default function Example() {
       <Hero></Hero>
       <LiveStats
         header="Join the network"
-        title="The network is expanding rapidly"
+        title="Join the network like hundreds of others"
         providers="832"
         cores="16949"
         memory="16.37"

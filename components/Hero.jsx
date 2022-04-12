@@ -1,11 +1,14 @@
 import Link from "next/link"
-import { Fragment } from "react"
-import { Popover, Transition } from "@headlessui/react"
-import { MenuIcon, XIcon } from "@heroicons/react/outline"
 import Typewriter from "typewriter-effect"
 import Animate from "../components/Globe"
+import React from "react"
+import { useInView } from "react-intersection-observer"
 
 export default function Example() {
+  const { ref, inView, entry } = useInView({
+    /* Optional options */
+    threshold: 0,
+  })
   const N = 20
   const arcsData = [...Array(N).keys()].map(() => ({
     startLat: (Math.random() - 0.5) * 180,
@@ -18,33 +21,37 @@ export default function Example() {
     ],
   }))
   return (
-    <div className="relative bggridbottom overflow-hidden w-full  ">
+    <div className="relative bggridbottom overflow-hidden w-full  " ref={ref}>
       <div className="relative  ">
         <main className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="lg:grid lg:grid-cols-12 lg:gap-8">
             <div className="text-center md:max-w-2xl md:mx-auto lg:col-span-6 mt-12 lg:text-left">
               <h1>
-                <span className="block text-sm font-semibold uppercase tracking-wide text-gray-500 sm:text-base lg:text-sm xl:text-base">
-                  <Typewriter
-                    onInit={(typewriter) => {
-                      typewriter
+                {inView ? (
+                  <span className="block text-sm font-semibold uppercase tracking-wide text-gray-500 sm:text-base lg:text-sm xl:text-base">
+                    <Typewriter
+                      onInit={(typewriter) => {
+                        typewriter
 
-                        .typeString("Decentralized")
+                          .typeString("Decentralized")
 
-                        .pauseFor(1000)
-                        .deleteAll()
-                        .typeString("Innovative")
-                        .pauseFor(1000)
-                        .deleteAll()
-                        .typeString("Groundbreaking")
+                          .pauseFor(1000)
+                          .deleteAll()
+                          .typeString("Innovative")
+                          .pauseFor(1000)
+                          .deleteAll()
+                          .typeString("Groundbreaking")
 
-                        .pauseFor(1000)
-                        .deleteAll()
-                        .typeString("Futuristic")
-                        .start()
-                    }}
-                  />
-                </span>
+                          .pauseFor(1000)
+                          .deleteAll()
+                          .typeString("Futuristic")
+                          .start()
+                      }}
+                    />
+                  </span>
+                ) : (
+                  <span></span>
+                )}
                 <span className="mt-1 block text-4xl tracking-tight font-extrabold sm:text-5xl xl:text-6xl">
                   <span className="block text-gray-900">
                     <span className="block text-golemblue">Golem</span> is{" "}

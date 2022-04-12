@@ -1,23 +1,14 @@
-/*
-  This example requires Tailwind CSS v2.0+ 
-  
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ],
-  }
-  ```
-*/
+import React, { useEffect } from "react"
+import AOS from "aos"
+import "aos/dist/aos.css"
 
 export default function Example() {
+  useEffect(() => {
+    AOS.init()
+    AOS.refresh()
+  }, [])
   return (
-    <div className="relative bggridbottom overflow-hidden w-full pb-24">
+    <div data-aos="fade-up" data-aos-duration="1000" className="relative bggridbottom overflow-hidden w-full pb-24">
       <div className="relative  ">
         <main className="mt-40 mx-auto max-w-7xl px-4 sm:px-6">
           <div className="lg:grid lg:grid-cols-12 lg:gap-8">

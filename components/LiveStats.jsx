@@ -1,10 +1,22 @@
+import React, { useState, useEffect, useRef } from "react"
+import { useInView } from "react-intersection-observer"
+import AOS from "aos"
+import "aos/dist/aos.css"
 export default function Stats(props) {
   const center = props.center
+  const { ref, inView, entry } = useInView({
+    /* Optional options */
+    threshold: 0,
+  })
+  useEffect(() => {
+    AOS.init()
+    AOS.refresh()
+  }, [])
   return !center ? (
-    <div className="py-16 mx-auto max-w-7xl px-4 sm:px-6 relative  ">
+    <div data-aos="fade-up" data-aos-duration="1000" className="py-16 mx-auto max-w-7xl px-4 sm:px-6 relative  " ref={ref}>
       <div className="lg:grid lg:grid-cols-12 lg:gap-8">
-        <div className="  lg:col-span-8 apps">
-          <h1 data-aos="fade-down">
+        <div className="  lg:col-span-8 ">
+          <h1>
             <span className="block text-sm font-semibold uppercase tracking-wide text-golemblue">{props.header}</span>
             <span className="mt-1 block text-4xl tracking-tight font-extrabold sm:text-4xl xl:text-6xl ">
               <span className="fader">{props.title}</span>
@@ -17,7 +29,7 @@ export default function Stats(props) {
             <p className="text-4xl font-bold block">
               {props.providers}{" "}
               <span className="text-xl font-semibold block bg-gradient-to-r from-golemblue via-purple-500 to-pink-500 bg-clip-text text-transparent">
-                Providers
+                Providers {inView} {inView ? <p>yes</p> : <p>no</p>}
               </span>
             </p>
           </div>
@@ -49,14 +61,12 @@ export default function Stats(props) {
       </div>
     </div>
   ) : (
-    <div className="py-16 mx-auto max-w-7xl px-4 sm:px-6 relative ">
+    <div data-aos="fade-up" className="py-16 mx-auto max-w-7xl px-4 sm:px-6 relative ">
       <div className="lg:grid lg:grid-cols-12 lg:gap-8">
         <div className="text-center  lg:col-span-12 ">
           <h1>
-            <span className="block text-sm font-semibold uppercase tracking-wide text-golemblue">Join the network</span>
-            <span className="mt-1 block text-4xl tracking-tight font-extrabold sm:text-4xl xl:text-6xl">
-              The network is expanding rapidly
-            </span>
+            <span className="block text-sm font-semibold uppercase tracking-wide text-golemblue">{props.header}</span>
+            <span className="mt-1 block text-4xl tracking-tight font-extrabold sm:text-4xl xl:text-6xl">{props.title}</span>
           </h1>
           <p className="mt-3 text-xl text-slate-600 sm:mt-5 "></p>
         </div>

@@ -1,9 +1,21 @@
 import Install from "../Install"
 import Typewriter from "typewriter-effect"
+import React, { useEffect } from "react"
+import { useInView } from "react-intersection-observer"
+import AOS from "aos"
+import "aos/dist/aos.css"
 
 export default function Example() {
+  const { ref, inView, entry } = useInView({
+    /* Optional options */
+    threshold: 0,
+  })
+  useEffect(() => {
+    AOS.init()
+    AOS.refresh()
+  }, [])
   return (
-    <div className="relative bggridbottom overflow-hidden w-full pb-24">
+    <div data-aos="fade-up" data-aos-duration="1000" className="relative bggridbottom overflow-hidden w-full pb-24 " ref={ref}>
       <div className="relative  ">
         <main className="mt-40 mx-auto max-w-7xl px-4 sm:px-6">
           <div className="lg:grid lg:grid-cols-12 lg:gap-8">
@@ -22,27 +34,32 @@ export default function Example() {
               <div className="flex h-full">
                 <div className="m-auto">
                   <div className="relative mx-auto w-full rounded-lg   col-span-12">
-                    <span className="text-sm font-semibold uppercase tracking-wide text-gray-500 sm:text-base lg:text-sm xl:text-base">
-                      <Typewriter
-                        onInit={(typewriter) => {
-                          typewriter
+                    {inView ? (
+                      <span className="text-sm font-semibold uppercase tracking-wide text-gray-500 sm:text-base lg:text-sm xl:text-base">
+                        <Typewriter
+                          onInit={(typewriter) => {
+                            typewriter
 
-                            .typeString("1) Copy")
+                              .typeString("1) Copy")
 
-                            .pauseFor(1000)
-                            .deleteAll()
-                            .typeString("2) Paste")
-                            .pauseFor(1000)
-                            .deleteAll()
-                            .typeString("3) Provide")
+                              .pauseFor(1000)
+                              .deleteAll()
+                              .typeString("2) Paste")
+                              .pauseFor(1000)
+                              .deleteAll()
+                              .typeString("3) Provide")
 
-                            .pauseFor(1000)
-                            .deleteAll()
-                            .typeString("Copy and paste into Linux Terminal")
-                            .start()
-                        }}
-                      />
-                    </span>
+                              .pauseFor(1000)
+                              .deleteAll()
+                              .typeString("Copy and paste into Linux Terminal")
+                              .start()
+                          }}
+                        />
+                      </span>
+                    ) : (
+                      <span>no</span>
+                    )}
+
                     <Install command="curl -sSf https://join.golem.network/as-provider | bash -"></Install>
                   </div>
                 </div>
