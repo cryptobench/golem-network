@@ -99,7 +99,9 @@ export default function Example() {
                       src="https://dappimg.com/media/image/dapp/4244a929e00d467cbb7f3acb66f07ce5.blob"
                     ></img>
 
-                    <span className="absolute top-0 right-0 -mr-1 -mt-2 bg-black text-sm px-2 py-1 rounded text-white">Provider</span>
+                    <span className="absolute top-0 right-0 -mr-1 -mt-2 bg-black text-sm px-2 py-1 rounded text-white">
+                      v{user.version}
+                    </span>
                   </div>
                   <h5 className="text-white text-xl tracking-tight mb-2 font-medium">{user.data["golem.node.id.name"]}</h5>
                   <span className="text-slate-400 text-sm tracking-tight font-medium mb-1">{user.data["golem.inf.cpu.threads"]} Cores</span>
