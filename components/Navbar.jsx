@@ -49,7 +49,7 @@ const solutions = [
   {
     name: "Blog",
     description: "Get detailed reports that will help you make more informed decisions ",
-    href: "#",
+    href: "/blog",
     icon: DocumentReportIcon,
   },
 ]

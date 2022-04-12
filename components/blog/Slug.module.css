@@ -1,0 +1,54 @@
+.blogpost p {
+  @apply text-lg;
+  @apply mb-4;
+}
+
+.blogpost h1 {
+  @apply mt-10;
+  @apply text-3xl;
+  @apply mb-4;
+  @apply text-golemblue;
+}
+.title h1 {
+  @apply mt-2;
+  @apply text-3xl;
+  @apply mb-2;
+  @apply text-black;
+}
+
+.title a {
+  @apply no-underline !important;
+}
+.title a:hover {
+  @apply underline !important;
+}
+
+.title span {
+  @apply text-sm;
+  @apply mb-0;
+}
+
+.title {
+  @apply grid;
+  @apply grid-cols-12;
+  @apply mb-4;
+}
+
+.blogpost h2 {
+  @apply mt-10;
+  @apply text-2xl;
+  @apply mb-4;
+  @apply text-golemblue;
+}
+
+.blogpost a {
+  @apply underline;
+  @apply font-medium;
+}
+
+.blogpost {
+  @apply relative;
+  @apply col-span-8;
+  @apply col-start-3;
+  @apply pb-10;
+}

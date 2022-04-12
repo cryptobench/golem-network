@@ -5,7 +5,7 @@ export default function Apps() {
     <section className="   relative apps ">
       <div data-aos="fade-up" data-aos-duration="1000" className="py-24 mx-auto max-w-7xl px-4 sm:px-6   w-full z-40 relative">
         <div className="grid grid-cols-12 ">
-          <span className="block col-span-12  text-sm font-semibold uppercase tracking-wide text-golemblue opacity-70">Apps</span>
+          <span className="block col-span-12  text-sm font-semibold uppercase tracking-wide text-golemblue ">Apps</span>
           <div className="col-span-12  mt-1  ">
             <h3 className="text-3xl tracking-tight font-extrabold sm:text-3xl xl:text-5xl">Explore the ecosystem of apps</h3>
             <p className="mt-3 text-xl text-slate-600 sm:mt-5 ">Browse and search projects built on the Golem Network. </p>

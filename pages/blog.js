@@ -1,18 +1,8 @@
 import Head from "next/head"
-import Hero from "../components/requestor/Hero"
-import Pricing from "../components/Pricing"
-import Apps from "../components/Apps"
+import Overview from "../components/blog/Overview"
+import Slug from "../components/blog/Slug"
+import News from "../components/News"
 import Navbar from "../components/Navbar"
-import Apis from "../components/requestor/Apis"
-import Rentmachine from "../components/requestor/Rentmachine"
-import LiveStats from "../components/LiveStats"
-
-const navigation = [
-  { name: "Products", href: "#" },
-  { name: "Features", href: "#" },
-  { name: "Marketplace", href: "#" },
-  { name: "Company", href: "#" },
-]
 
 export default function Example() {
   return (
@@ -33,20 +23,8 @@ export default function Example() {
           </svg>
         </div>
         <Navbar></Navbar>
-        <Hero></Hero>
-        <LiveStats
-          header="Unlimited quote on resources"
-          title="Never before has this amount of resources been available for everyone"
-          providers="832"
-          cores="16949"
-          memory="16.37"
-          disk="128.75"
-          center={true}
-        ></LiveStats>
-        <Pricing></Pricing>
-        <Apis></Apis>
-        <Apps></Apps>
-        <Rentmachine></Rentmachine>
+        <Overview></Overview>
+        <News></News>
       </div>
     </>
   )
