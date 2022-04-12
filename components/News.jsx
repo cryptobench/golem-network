@@ -67,11 +67,8 @@ export default function Example(props) {
         ) : null}
         <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
           {posts.map((post) => (
-            <Link href="/blog/test">
-              <div
-                key={post.title}
-                className="flex flex-col rounded-lg shadow-lg overflow-hidden transition duration-500 ease-in-out cursor-pointer transform hover:-translate-y-1 hover:scale-105"
-              >
+            <Link key={post.title} href="/blog/test">
+              <div className="flex flex-col rounded-lg shadow-lg overflow-hidden transition duration-500 ease-in-out cursor-pointer transform hover:-translate-y-1 hover:scale-105">
                 <div className="flex-shrink-0">
                   <img className="h-48 w-full object-cover" src={post.imageUrl} alt="" />
                 </div>
