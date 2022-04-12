@@ -34,7 +34,7 @@ export default function Example() {
   return (
     <div className="py-24 mx-auto max-w-7xl px-4 sm:px-6 relative ">
       <div className="grid grid-cols-12 overflow-scroll">
-        <div className="text-center  lg:col-span-12 mb-12 ">
+        <div className="text-center  col-span-12 mb-12 ">
           <h1>
             <span className="block text-sm font-semibold uppercase tracking-wide text-golemblue">Pricing</span>
             <span className="mt-1 block text-4xl tracking-tight font-extrabold sm:text-4xl xl:text-6xl">Revolutionary low pricing</span>

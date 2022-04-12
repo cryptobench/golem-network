@@ -40,8 +40,8 @@ export default function Apps() {
               </div>
             </div>
           </div>
-          <div className="  col-span-12  py-2  grid grid-cols-12 md:gap-x-2 lg:gap-4 mt-4 rounded-r-lg rounded-bl-lg">
-            <div className="col-span-6 md:col-span-4 lg:col-span-3 p-6  grid app bg-gray-900 rounded-xl">
+          <div className="  col-span-12  py-2  grid grid-cols-12  gap-4 mt-4 rounded-r-lg rounded-bl-lg">
+            <div className="col-span-6 md:col-span-6 lg:col-span-3 p-6  grid app bg-gray-900 rounded-xl">
               <div className="inline-block relative">
                 <img
                   className="h-20 w-20 rounded-lg shadow-lg mb-2 inline-block"
@@ -52,7 +52,7 @@ export default function Apps() {
               <h5 className="text-white text-lg tracking-tight font-medium">Blender</h5>
               <p className="text-slate-400 text-md tracking-tight font-medium mb-1">Render complex 3D images</p>
             </div>
-            <div className="col-span-6 md:col-span-4 lg:col-span-3 p-6  grid app bg-gray-900 rounded-xl">
+            <div className="col-span-6 md:col-span-6 lg:col-span-3 p-6  grid app bg-gray-900 rounded-xl">
               <div className="inline-block relative">
                 <img
                   className="h-20 w-20 rounded-lg shadow-lg mb-2 inline-block"
@@ -63,7 +63,7 @@ export default function Apps() {
               <h5 className="text-white text-lg tracking-tight font-medium">Octane</h5>
               <p className="text-slate-400 text-md tracking-tight font-medium mb-1">Render complex 3D scenes</p>
             </div>
-            <div className="col-span-6 md:col-span-4 lg:col-span-3 p-6  grid app bg-gray-900 rounded-xl">
+            <div className="col-span-6 md:col-span-6 lg:col-span-3 p-6  grid app bg-gray-900 rounded-xl">
               <div className="inline-block relative">
                 <img
                   className="h-20 w-20 rounded-lg shadow-lg mb-2 inline-block"
@@ -74,7 +74,7 @@ export default function Apps() {
               <h5 className="text-white text-lg tracking-tight font-medium">Application 5</h5>
               <p className="text-slate-400 text-md tracking-tight font-medium mb-1">Lorem Ipsum blabla whatup</p>
             </div>
-            <div className="col-span-6 md:col-span-4 lg:col-span-3 p-6  grid app bg-gray-900 rounded-xl">
+            <div className="col-span-6 md:col-span-6 lg:col-span-3 p-6  grid app bg-gray-900 rounded-xl">
               <div className="inline-block relative">
                 <img
                   className="h-20 w-20 rounded-lg shadow-lg mb-2 inline-block"
@@ -87,7 +87,7 @@ export default function Apps() {
                 Decentralized Machine Learning on top of the Golem Network
               </p>
             </div>
-            <div className="col-span-6 md:col-span-4 lg:col-span-3 p-6  grid app bg-gray-900 rounded-xl">
+            <div className="col-span-6 md:col-span-6 lg:col-span-3 p-6  grid app bg-gray-900 rounded-xl">
               <div className="inline-block relative">
                 <img
                   className="h-20 w-20 rounded-lg shadow-lg mb-2 inline-block"

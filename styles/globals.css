@@ -20,7 +20,7 @@ body {
 @screen lg {
   html,
   body {
-    font-size: 140%;
+    font-size: 100%;
   }
 }
 @screen xl {
