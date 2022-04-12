@@ -53,16 +53,19 @@ export default function Example() {
   return (
     <div>
       <div data-aos="fade-up" data-aos-duration="1000" className="pt-24 pb-24 mx-auto max-w-7xl px-4 sm:px-6 relative  w-full ">
-        <div className=" grid justify-items-center relative ">
+        <div className=" grid justify-items-center text-center relative ">
           <div className="my-6 rounded  ">
-            <h4 className="text-4xl font-bold">Rent a provider</h4>
+            <h2 className="text-3xl tracking-tight font-extrabold sm:text-3xl xl:text-5xl ">Rent a provider</h2>
+            <p className="block text-xl mt-1 font-medium text-slate-600 ">
+              Browse the offers from the providers of the network, and click the rent button to get started
+            </p>
           </div>
         </div>
         <div className="grid grid-cols-12 gap-x-4">
           <div className="col-span-12 mb-2">
             <p className="font-semibold text-xl">Filters</p>
           </div>
-          <div className="col-span-12 md:col-span-12 lg:col-span-3">
+          <div className="col-span-12 md:col-span-12 lg:col-span-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-2 gap-x-4 mb-4">
             <div className="rounded ">
               <div className="border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-1 focus-within:ring-indigo-600 focus-within:border-indigo-600">
                 <label htmlFor="name" className="block text-xs font-medium text-gray-900">
@@ -83,13 +86,13 @@ export default function Example() {
               <Range min="1" max="256" step="1" rangeid="cores" onChange={filter} label="Cores" showGB={false}></Range>
             </div>
             <div className="rounded ">
-              <Range min="0.1" max="512" step="0.5" rangeid="memory" label="Memory" showGB="true"></Range>
+              <Range min="0.1" max="512" step="0.5" rangeid="memory" label="Memory" showGB={true}></Range>
             </div>
             <div className="rounded ">
-              <Range min="0.5" max="50000" step="1" rangeid="disk" label="Disk" showGB="true"></Range>
+              <Range min="0.5" max="50000" step="1" rangeid="disk" label="Disk" showGB={true}></Range>
             </div>
           </div>
-          <div className="col-span-9 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="col-span-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {foundProviders && foundProviders.length > 0 ? (
               foundProviders.slice(0, 5).map((user) => (
                 <div key={user.node_id} className=" p-6 grid bg-gray-900 rounded-xl">

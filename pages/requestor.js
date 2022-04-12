@@ -1,6 +1,7 @@
 import Head from "next/head"
 import Hero from "../components/requestor/Hero"
 import Pricing from "../components/Pricing"
+import Apps from "../components/Apps"
 import Install from "../components/Install"
 import Apis from "../components/requestor/Apis"
 import Rentmachine from "../components/requestor/Rentmachine"
@@ -32,6 +33,7 @@ export default function Example() {
       ></LiveStats>
       <Pricing></Pricing>
       <Apis></Apis>
+      <Apps></Apps>
       <Rentmachine></Rentmachine>
     </div>
   )

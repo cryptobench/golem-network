@@ -6,7 +6,7 @@ export default function Slider(props) {
 
   return showGB ? (
     <div className="relative">
-      <label htmlFor="cores" className="inline-block mt-4 font-medium">
+      <label htmlFor="cores" className="inline-block  font-medium">
         {props.label}
       </label>
       <span className="ml-2 relative text-sm inline-block">
@@ -24,7 +24,7 @@ export default function Slider(props) {
     </div>
   ) : (
     <div className="relative">
-      <label htmlFor="cores" className="inline-block mt-4 font-medium">
+      <label htmlFor="cores" className="inline-block  font-medium">
         {props.label}
       </label>
       <span className="ml-2 relative text-sm inline-block">{rangeval}</span>{" "}
