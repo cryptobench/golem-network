@@ -62,7 +62,7 @@ export default function Example() {
           <div className="col-span-12 mb-2">
             <p className="font-semibold text-xl">Filters</p>
           </div>
-          <div className="col-span-3">
+          <div className="col-span-12 md:col-span-12 lg:col-span-3">
             <div className="rounded ">
               <div className="border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-1 focus-within:ring-indigo-600 focus-within:border-indigo-600">
                 <label htmlFor="name" className="block text-xs font-medium text-gray-900">
@@ -89,7 +89,7 @@ export default function Example() {
               <Range min="0.5" max="50000" step="1" rangeid="disk" label="Disk" showGB="true"></Range>
             </div>
           </div>
-          <div className="col-span-9 grid grid-cols-3 gap-4">
+          <div className="col-span-9 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {foundProviders && foundProviders.length > 0 ? (
               foundProviders.slice(0, 5).map((user) => (
                 <div key={user.node_id} className=" p-6 grid bg-gray-900 rounded-xl">
