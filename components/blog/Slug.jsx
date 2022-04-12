@@ -7,7 +7,7 @@ const data = {
 
 export default function Example() {
   return (
-    <div className="bg-white relative mt-4">
+    <div className="bg-white relative mt-4 mb-10">
       <div className="grid grid-cols-12 mx-auto max-w-7xl px-4 sm:px-6 ">
         <article className={styles.blogpost}>
           <div className={styles.title}>
