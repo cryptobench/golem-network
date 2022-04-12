@@ -1,11 +1,4 @@
-import React, { useEffect } from "react"
-import AOS from "aos"
-import "aos/dist/aos.css"
 export default function Stats(props) {
-  useEffect(() => {
-    AOS.init()
-    AOS.refresh()
-  })
   const center = props.center
   return !center ? (
     <div className="py-16 mx-auto max-w-7xl px-4 sm:px-6 relative  ">
