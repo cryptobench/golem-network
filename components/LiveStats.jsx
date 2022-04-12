@@ -1,10 +1,17 @@
+import React, { useEffect } from "react"
+import AOS from "aos"
+import "aos/dist/aos.css"
 export default function Stats(props) {
+  useEffect(() => {
+    AOS.init()
+    AOS.refresh()
+  })
   const center = props.center
   return !center ? (
     <div className="py-16 mx-auto max-w-7xl px-4 sm:px-6 relative  ">
       <div className="lg:grid lg:grid-cols-12 lg:gap-8">
         <div className="  lg:col-span-8 apps">
-          <h1>
+          <h1 data-aos="fade-down">
             <span className="block text-sm font-semibold uppercase tracking-wide text-golemblue">{props.header}</span>
             <span className="mt-1 block text-4xl tracking-tight font-extrabold sm:text-4xl xl:text-6xl ">
               <span className="fader">{props.title}</span>
