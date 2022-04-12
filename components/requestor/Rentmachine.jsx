@@ -101,7 +101,7 @@ export default function Example() {
 
                     <span className="absolute top-0 right-0 -mr-1 -mt-2 bg-black text-sm px-2 py-1 rounded text-white">Provider</span>
                   </div>
-                  <h5 className="text-white text-xl tracking-tight font-medium">{user.data["golem.node.id.name"]}</h5>
+                  <h5 className="text-white text-xl tracking-tight mb-2 font-medium">{user.data["golem.node.id.name"]}</h5>
                   <span className="text-slate-400 text-sm tracking-tight font-medium mb-1">{user.data["golem.inf.cpu.threads"]} Cores</span>
                   <span className="text-slate-400 text-sm tracking-tight font-medium mb-1">
                     {Math.round(user.data["golem.inf.mem.gib"] * 100) / 100} GB RAM
@@ -109,7 +109,7 @@ export default function Example() {
                   <span className="text-slate-400 text-sm tracking-tight font-medium mb-1">
                     {Math.round(user.data["golem.inf.storage.gib"] * 100) / 100} GB Disk
                   </span>
-                  <span className="text-slate-200 text-lg tracking-tight font-medium mb-1">0.53 GLM / $0.2 per month</span>
+                  <span className="text-slate-200 text-lg tracking-tight font-medium mt-1">0.53 GLM / $0.2 per month</span>
                   <div className="flex mt-4 space-x-3 lg:mt-6">
                     <a
                       onClick={() => loadModal(user)}
