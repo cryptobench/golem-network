@@ -116,7 +116,7 @@ export default function Example() {
                     <a
                       onClick={() => loadModal(user)}
                       href="#"
-                      className="w-full py-2 px-4 text-sm font-medium text-center text-white bg-black rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 "
+                      className="w-full py-2 px-4 text-sm font-medium text-center text-white bg-black rounded-lg hover:bg-slate-700 focus:ring-4 focus:outline-none focus:ring-blue-300 "
                     >
                       Rent Provider
                     </a>
