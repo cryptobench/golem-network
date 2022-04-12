@@ -29,7 +29,7 @@ export default function Example() {
         cores="16949"
         memory="16.37"
         disk="128.75"
-        center={false}
+        center={true}
       ></LiveStats>
       <Pricing></Pricing>
       <Apis></Apis>

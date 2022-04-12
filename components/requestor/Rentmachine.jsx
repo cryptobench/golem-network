@@ -1,5 +1,5 @@
 import Golem from "../svg/Golem"
-
+import { SearchIcon } from "@heroicons/react/solid"
 import { Fragment } from "react"
 import { Transition, Dialog } from "@headlessui/react"
 import React, { useState, useEffect, useRef } from "react"
@@ -66,20 +66,21 @@ export default function Example() {
             <p className="font-semibold text-xl">Filters</p>
           </div>
           <div className="col-span-12 md:col-span-12 lg:col-span-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-2 gap-x-4 mb-4">
-            <div className="rounded ">
-              <div className="border border-gray-300 rounded-md px-3 py-2 shadow-sm focus-within:ring-1 focus-within:ring-indigo-600 focus-within:border-indigo-600">
-                <label htmlFor="name" className="block text-xs font-medium text-gray-900">
-                  Provider name
-                </label>
-                <input
-                  type="search"
-                  value={name}
-                  onChange={filter}
-                  name="name"
-                  id="name"
-                  className="block w-full border-0 p-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm"
-                  placeholder="Node 1"
-                />
+            <div className="mt-1 relative flex items-center">
+              <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <SearchIcon className="h-5 w-5 text-gray-400" aria-hidden="true" />
+              </div>
+              <input
+                type="text"
+                name="search"
+                id="search"
+                placeholder="Provider Name..."
+                className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-10 pr-12 sm:text-sm border-gray-300 rounded-md"
+              />
+              <div className="absolute inset-y-0 right-0 flex py-3 pr-1.5">
+                <kbd className="inline-flex items-center border border-gray-200 rounded px-2 text-sm font-sans font-medium text-gray-400">
+                  ⌘K
+                </kbd>
               </div>
             </div>
             <div className="rounded ">
