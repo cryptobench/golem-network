@@ -1,8 +1,9 @@
 import { SearchIcon } from "@heroicons/react/solid"
+import Image from "next/image"
 
 export default function Apps() {
   return (
-    <section className="   relative apps ">
+    <section className=" relative apps ">
       <div data-aos="fade-up" data-aos-duration="1000" className="py-24 mx-auto max-w-7xl px-4 sm:px-6   w-full z-40 relative">
         <div className="grid grid-cols-12 ">
           <span className="block col-span-12  text-sm font-semibold uppercase tracking-wide text-golemblue ">Apps</span>
@@ -40,10 +41,14 @@ export default function Apps() {
           <div className="  col-span-12  py-2  grid grid-cols-12  gap-4 mt-4 rounded-r-lg rounded-bl-lg">
             <div className="col-span-12 md:col-span-6 lg:col-span-3 p-6  grid app bg-gray-900 rounded-xl">
               <div className="inline-block relative">
-                <img
-                  className="h-20 w-20 rounded-lg shadow-lg mb-2 inline-block"
-                  src="https://dappimg.com/media/image/dapp/4244a929e00d467cbb7f3acb66f07ce5.blob"
-                ></img>
+                <div className="h-20 w-20 relative">
+                  <Image
+                    src="https://dappimg.com/media/image/dapp/4244a929e00d467cbb7f3acb66f07ce5.blob"
+                    layout="fill" // required
+                    objectFit="cover" // change to suit your needs
+                    className="rounded-lg shadow-lg mb-2 inline-block"
+                  />
+                </div>
                 <span className="absolute top-0 right-0 -mr-1 -mt-2 bg-black text-sm px-2 py-1 rounded text-white">Rendering</span>
               </div>
               <h5 className="text-white text-lg tracking-tight font-medium">Blender</h5>
@@ -51,10 +56,14 @@ export default function Apps() {
             </div>
             <div className="col-span-12 md:col-span-6 lg:col-span-3 p-6  grid app bg-gray-900 rounded-xl">
               <div className="inline-block relative">
-                <img
-                  className="h-20 w-20 rounded-lg shadow-lg mb-2 inline-block"
-                  src="https://dappimg.com/media/image/app/cdb2d057b5694a2a90f0be82e26a01ed.jpg"
-                ></img>
+                <div className="h-20 w-20 relative">
+                  <Image
+                    src="https://dappimg.com/media/image/app/cdb2d057b5694a2a90f0be82e26a01ed.jpg"
+                    layout="fill" // required
+                    objectFit="cover" // change to suit your needs
+                    className="rounded-lg shadow-lg mb-2 inline-block"
+                  />
+                </div>
                 <span className="absolute top-0 right-0 -mr-1 -mt-2 bg-black text-sm px-2 py-1 rounded text-white">Rendering</span>
               </div>
               <h5 className="text-white text-lg tracking-tight font-medium">Octane</h5>
@@ -62,10 +71,14 @@ export default function Apps() {
             </div>
             <div className="col-span-12 md:col-span-6 lg:col-span-3 p-6  grid app bg-gray-900 rounded-xl">
               <div className="inline-block relative">
-                <img
-                  className="h-20 w-20 rounded-lg shadow-lg mb-2 inline-block"
-                  src="https://dappimg.com/media/image/dapp/c915ac1844814c0f92f7b38ec4fd7d03.jpg"
-                ></img>
+                <div className="h-20 w-20 relative">
+                  <Image
+                    src="https://dappimg.com/media/image/dapp/c915ac1844814c0f92f7b38ec4fd7d03.jpg"
+                    layout="fill" // required
+                    objectFit="cover" // change to suit your needs
+                    className="rounded-lg shadow-lg mb-2 inline-block"
+                  />
+                </div>
                 <span className="absolute top-0 right-0 -mr-1 -mt-2 bg-black text-sm px-2 py-1 rounded text-white">Data Science</span>
               </div>
               <h5 className="text-white text-lg tracking-tight font-medium">Application 5</h5>
@@ -73,10 +86,14 @@ export default function Apps() {
             </div>
             <div className="col-span-12 md:col-span-6 lg:col-span-3 p-6  grid app bg-gray-900 rounded-xl">
               <div className="inline-block relative">
-                <img
-                  className="h-20 w-20 rounded-lg shadow-lg mb-2 inline-block"
-                  src="https://dappimg.com/media/image/dapp/23c1f984fbf94d3b99c6ae6905ecb05d.blob"
-                ></img>
+                <div className="h-20 w-20 relative">
+                  <Image
+                    src="https://dappimg.com/media/image/dapp/23c1f984fbf94d3b99c6ae6905ecb05d.blob"
+                    layout="fill" // required
+                    objectFit="cover" // change to suit your needs
+                    className="rounded-lg shadow-lg mb-2 inline-block"
+                  />
+                </div>
                 <span className="absolute top-0 right-0 -mr-1 -mt-2 bg-black text-sm px-2 py-1 rounded text-white">Machine Learning</span>
               </div>
               <h5 className="text-white text-lg tracking-tight font-medium">DeML</h5>
@@ -86,10 +103,15 @@ export default function Apps() {
             </div>
             <div className="col-span-12 md:col-span-6 lg:col-span-3 p-6  grid app bg-gray-900 rounded-xl">
               <div className="inline-block relative">
-                <img
-                  className="h-20 w-20 rounded-lg shadow-lg mb-2 inline-block"
-                  src="https://dappimg.com/media/image/dapp/8dc747fa286642acb1b7ccbff7a33a9d.blob"
-                ></img>
+                <div className="h-20 w-20 relative">
+                  <Image
+                    src="https://dappimg.com/media/image/dapp/8dc747fa286642acb1b7ccbff7a33a9d.blob"
+                    layout="fill" // required
+                    objectFit="cover" // change to suit your needs
+                    className="rounded-lg shadow-lg mb-2 inline-block"
+                  />
+                </div>
+
                 <span className="absolute top-0 right-0 -mr-1 -mt-2 bg-black text-sm px-2 py-1 rounded text-white">
                   Artifical Intelligence
                 </span>

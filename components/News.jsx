@@ -1,5 +1,6 @@
 import Link from "next/link"
 import dateFormat from "dateformat"
+import Image from "next/image"
 
 export default function Example(props) {
   const posts = props.posts
@@ -24,8 +25,15 @@ export default function Example(props) {
             ? posts.posts.slice(0, 3).map((post) => (
                 <Link key={post.title} href="/blog/test">
                   <div className="flex flex-col rounded-lg shadow-lg overflow-hidden transition duration-500 ease-in-out cursor-pointer transform hover:-translate-y-1 hover:scale-105">
-                    <div className="flex-shrink-0">
-                      <img className="h-48 w-full object-cover" src={post.feature_image} alt="" />
+                    <div className=" h-48 w-full object-cover relative">
+                      <Image
+                        src={post.feature_image}
+                        alt={post.title}
+                        placeholder="blur"
+                        blurDataURL="|6RMlCxuayWF-:-:%Lt7t6?aRkWBoeM|ayayofj[~oRkWBt7IVM|IVj[ay9Ixtj[M|%Lt6xtWCoeIVWBoeWBofxt%LofWC~pRRayxtM|M|IVayWCkBxtj@WCofM|RQRkofRooet6Rkofxt%LfRRkt7Rkoft6ayofWCayRk"
+                        layout="fill" // required
+                        objectFit="cover" // change to suit your needs
+                      />
                     </div>
                     <div className="flex-1 bg-white p-6 flex flex-col justify-between">
                       <div className="flex-1">
@@ -42,15 +50,31 @@ export default function Example(props) {
                       <div className="mt-6 flex items-center">
                         <div className="flex-shrink-0">
                           <a href="#">
-                            <span className="sr-only">Name</span>
+                            <span className="sr-only">{post.primary_author.name}</span>
                             {post.primary_author.profile_image ? (
-                              <img className="h-10 w-10 rounded-full" src={post.primary_author.profile_image} alt="" />
+                              <div className="h-10 w-10 relative">
+                                <Image
+                                  src={post.primary_author.profile_image}
+                                  alt={post.primary_author.name}
+                                  className=" rounded-full"
+                                  placeholder="blur"
+                                  blurDataURL="]97_5.og00M}~oj^ayfQofay02WB_1t79Ha$j[j[WBazM|j[t7WBWBogj[ayWCj[%Lj[IVayt6ogayWCofoft7ayM|j[%L"
+                                  layout="fill" // required
+                                  objectFit="cover" // change to suit your needs
+                                />
+                              </div>
                             ) : (
-                              <img
-                                className="h-10 w-10 rounded-full"
-                                src="https://blog.golemproject.net/content/images/2019/02/logo-golem-5.png"
-                                alt=""
-                              />
+                              <div className="h-10 w-10 relative">
+                                <Image
+                                  src="https://blog.golemproject.net/content/images/2019/02/logo-golem-5.png"
+                                  alt={post.primary_author.name}
+                                  className="rounded-full"
+                                  placeholder="blur"
+                                  blurDataURL="]97_5.og00M}~oj^ayfQofay02WB_1t79Ha$j[j[WBazM|j[t7WBWBogj[ayWCj[%Lj[IVayt6ogayWCofoft7ayM|j[%L"
+                                  layout="fill" // required
+                                  objectFit="cover" // change to suit your needs
+                                />
+                              </div>
                             )}
                           </a>
                         </div>
@@ -77,8 +101,15 @@ export default function Example(props) {
             : posts.posts.slice(1).map((post) => (
                 <Link key={post.title} href="/blog/test">
                   <div className="flex flex-col rounded-lg shadow-lg overflow-hidden transition duration-500 ease-in-out cursor-pointer transform hover:-translate-y-1 hover:scale-105">
-                    <div className="flex-shrink-0">
-                      <img className="h-48 w-full object-cover" src={post.feature_image} alt="" />
+                    <div className=" h-48 w-full object-cover relative">
+                      <Image
+                        src={post.feature_image}
+                        alt={post.title}
+                        placeholder="blur"
+                        blurDataURL="|6RMlCxuayWF-:-:%Lt7t6?aRkWBoeM|ayayofj[~oRkWBt7IVM|IVj[ay9Ixtj[M|%Lt6xtWCoeIVWBoeWBofxt%LofWC~pRRayxtM|M|IVayWCkBxtj@WCofM|RQRkofRooet6Rkofxt%LfRRkt7Rkoft6ayofWCayRk"
+                        layout="fill" // required
+                        objectFit="cover" // change to suit your needs
+                      />
                     </div>
                     <div className="flex-1 bg-white p-6 flex flex-col justify-between">
                       <div className="flex-1">
@@ -95,15 +126,31 @@ export default function Example(props) {
                       <div className="mt-6 flex items-center">
                         <div className="flex-shrink-0">
                           <a href="#">
-                            <span className="sr-only">Name</span>
+                            <span className="sr-only">{post.primary_author.name}</span>
                             {post.primary_author.profile_image ? (
-                              <img className="h-10 w-10 rounded-full" src={post.primary_author.profile_image} alt="" />
+                              <div className="h-10 w-10 relative">
+                                <Image
+                                  src={post.primary_author.profile_image}
+                                  alt={post.primary_author.name}
+                                  className=" rounded-full"
+                                  placeholder="blur"
+                                  blurDataURL="]97_5.og00M}~oj^ayfQofay02WB_1t79Ha$j[j[WBazM|j[t7WBWBogj[ayWCj[%Lj[IVayt6ogayWCofoft7ayM|j[%L"
+                                  layout="fill" // required
+                                  objectFit="cover" // change to suit your needs
+                                />
+                              </div>
                             ) : (
-                              <img
-                                className="h-10 w-10 rounded-full"
-                                src="https://blog.golemproject.net/content/images/2019/02/logo-golem-5.png"
-                                alt=""
-                              />
+                              <div className="h-10 w-10 relative">
+                                <Image
+                                  src="https://blog.golemproject.net/content/images/2019/02/logo-golem-5.png"
+                                  alt={post.primary_author.name}
+                                  className="rounded-full"
+                                  placeholder="blur"
+                                  blurDataURL="]97_5.og00M}~oj^ayfQofay02WB_1t79Ha$j[j[WBazM|j[t7WBWBogj[ayWCj[%Lj[IVayt6ogayWCofoft7ayM|j[%L"
+                                  layout="fill" // required
+                                  objectFit="cover" // change to suit your needs
+                                />
+                              </div>
                             )}
                           </a>
                         </div>
