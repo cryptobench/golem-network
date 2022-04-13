@@ -1,10 +1,10 @@
+import { Fragment, useState, useRef } from "react"
 import Head from "next/head"
-import Overview from "../components/blog/Overview"
-import Slug from "../components/blog/Slug"
+import Featured from "../components/blog/Featured"
 import News from "../components/News"
 import Navbar from "../components/Navbar"
 
-export default function Example() {
+function Page({ data }) {
   return (
     <>
       <Head>
@@ -12,7 +12,7 @@ export default function Example() {
         <meta name="google-site-verification" content="7TO2YTmVfu0A5AgihId9CSnSrQjFgHxAkZ-k_zIH18g" />
       </Head>
       <div className="relative   w-full  ">
-        <div className="hidden lg:block lg:absolute h-full w-full overflow-x-hidden" aria-hidden="true">
+        <div className="hidden lg:block lg:absolute h-full w-full overflow-hidden" aria-hidden="true">
           <svg className="absolute w-full test " width="100%" height="100%" fill="none">
             <defs>
               <pattern id="9ebea6f4-a1f5-4d96-8c4e-4c2abf658047" x={118} y={0} width={20} height={20} patternUnits="userSpaceOnUse">
@@ -23,9 +23,21 @@ export default function Example() {
           </svg>
         </div>
         <Navbar></Navbar>
-        <Overview></Overview>
-        <News></News>
+        <Featured post={Object.values(data.posts)[0]}></Featured>
+        <News posts={data}></News>
       </div>
     </>
   )
 }
+
+// This gets called on every request
+export async function getServerSideProps() {
+  // Fetch data from external API
+  const res = await fetch(`https://blog.golemproject.net/ghost/api/v3/content/posts/?key=${process.env.BLOG_API_KEY}&include=tags,authors`)
+  const data = await res.json()
+
+  // Pass data to the page via props
+  return { props: { data } }
+}
+
+export default Page
