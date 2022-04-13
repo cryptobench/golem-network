@@ -9,7 +9,7 @@ export default function Example(props) {
     <main className="mx-auto max-w-7xl px-4 sm:px-6 relative">
       <Link href={"/blog/" + post.slug}>
         <div className="col-span-12 grid grid-cols-12 shadow-lg rounded-lg transition duration-500 ease-in-out cursor-pointer transform hover:-translate-y-1 hover:scale-105">
-          <div className="col-span-12 lg:col-span-8 md:col-span-12 relative">
+          <div className="col-span-12 lg:col-span-8  md:col-span-12 h-48 md:h-52 lg:h-auto relative">
             <Image
               src={post.feature_image}
               alt={post.title}
@@ -17,7 +17,7 @@ export default function Example(props) {
               blurDataURL="data:image/webp;base64,UklGRnICAABXRUJQVlA4WAoAAAAgAAAAJQAAEgAASUNDUBgCAAAAAAIYAAAAAAQwAABtbnRyUkdCIFhZWiAAAAAAAAAAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAAHRyWFlaAAABZAAAABRnWFlaAAABeAAAABRiWFlaAAABjAAAABRyVFJDAAABoAAAAChnVFJDAAABoAAAAChiVFJDAAABoAAAACh3dHB0AAAByAAAABRjcHJ0AAAB3AAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAFgAAAAcAHMAUgBHAEIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFhZWiAAAAAAAABvogAAOPUAAAOQWFlaIAAAAAAAAGKZAAC3hQAAGNpYWVogAAAAAAAAJKAAAA+EAAC2z3BhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABYWVogAAAAAAAA9tYAAQAAAADTLW1sdWMAAAAAAAAAAQAAAAxlblVTAAAAIAAAABwARwBvAG8AZwBsAGUAIABJAG4AYwAuACAAMgAwADEANlZQOCA0AAAAMAMAnQEqJgATAD9xrs1fO62qJSVrM3AuCWkAACfv517YAAD+7KlwNDQqvF+qJHYAQAAAAA=="
               layout="fill" // required
               objectFit="cover" // change to suit your needs
-              className="rounded-l-lg "
+              className="rounded-l-lg  "
             />
           </div>
           <div className="col-span-12 lg:col-span-4 md:col-span-12  bg-white rounded-r-lg  p-4">
