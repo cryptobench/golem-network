@@ -36,7 +36,7 @@ export default function Example(props) {
                     </a>
                   </div>
                   <div className="ml-3">
-                    <span>
+                    <span className="-ml-20">
                       <a className="hover:underline">{post.primary_author.name}</a>
                     </span>
 
