@@ -1,6 +1,7 @@
 .blogpost p {
   @apply text-lg;
   @apply mb-4;
+  @apply text-gray-800;
 }
 
 .blogpost h1 {
