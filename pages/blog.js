@@ -5,7 +5,6 @@ import News from "../components/News"
 import Navbar from "../components/Navbar"
 
 function Page({ data }) {
-  console.log(data)
   return (
     <>
       <Head>

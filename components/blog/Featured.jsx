@@ -4,7 +4,6 @@ import Link from "next/link"
 
 export default function Example(props) {
   const post = props.post
-  console.log(post)
   return (
     <main className="mx-auto max-w-7xl px-4 sm:px-6 relative">
       <Link href="/blog/test">

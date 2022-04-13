@@ -8,7 +8,6 @@ import LiveStats from "../components/LiveStats"
 import Navbar from "../components/Navbar"
 
 function Page({ data }) {
-  console.log(data)
   return (
     <>
       <Head>
@@ -50,7 +49,9 @@ function Page({ data }) {
 // This gets called on every request
 export async function getServerSideProps() {
   // Fetch data from external API
-  const res = await fetch(`https://blog.golemproject.net/ghost/api/v3/content/posts/?key=${process.env.BLOG_API_KEY}&include=tags,authors`)
+  const res = await fetch(
+    `https://blog.golemproject.net/ghost/api/v3/content/posts/?key=${process.env.BLOG_API_KEY}&include=tags,authors&limit=3`
+  )
   const data = await res.json()
 
   // Pass data to the page via props
