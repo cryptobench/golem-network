@@ -6,7 +6,7 @@ export default function Example(props) {
   const post = props.post
   return (
     <main className="mx-auto max-w-7xl px-4 sm:px-6 relative">
-      <Link href="/blog/test">
+      <Link href={"/blog/" + post.slug}>
         <div className="col-span-12 grid grid-cols-12 shadow-lg rounded-lg transition duration-500 ease-in-out cursor-pointer transform hover:-translate-y-1 hover:scale-105">
           <div className="col-span-12 lg:col-span-8 md:col-span-12">
             <img

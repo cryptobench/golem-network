@@ -23,7 +23,7 @@ export default function Example(props) {
         <div className="mt-12 max-w-lg lg:mx-auto grid gap-6 lg:grid-cols-3 md:grid-cols-2 md:max-w-full lg:max-w-none">
           {frontpage
             ? posts.posts.slice(0, 3).map((post) => (
-                <Link key={post.title} href="/blog/test">
+                <Link key={post.title} href={"/blog/" + post.slug}>
                   <div className="flex flex-col rounded-lg shadow-lg overflow-hidden transition duration-500 ease-in-out cursor-pointer transform hover:-translate-y-1 hover:scale-105">
                     <div className=" h-48 w-full object-cover relative">
                       <Image
