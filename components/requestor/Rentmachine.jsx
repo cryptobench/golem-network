@@ -74,6 +74,7 @@ export default function Example() {
                 type="text"
                 name="search"
                 id="search"
+                onChange={filter}
                 placeholder="Provider Name..."
                 className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-10 pr-12 sm:text-sm border-gray-300 rounded-md"
               />
