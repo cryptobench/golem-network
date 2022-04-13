@@ -3,7 +3,8 @@ import dateFormat from "dateformat"
 
 export default function Example(props) {
   const posts = props.posts
-  console.log(posts)
+  const frontpage = props.frontpage
+
   const title = props.displayTitle
   const paddingtop = props.paddingTop
   return (
@@ -19,59 +20,113 @@ export default function Example(props) {
           </div>
         ) : null}
         <div className="mt-12 max-w-lg lg:mx-auto grid gap-6 lg:grid-cols-3 md:grid-cols-2 md:max-w-full lg:max-w-none">
-          {posts.posts.slice(1).map((post) => (
-            <Link key={post.title} href="/blog/test">
-              <div className="flex flex-col rounded-lg shadow-lg overflow-hidden transition duration-500 ease-in-out cursor-pointer transform hover:-translate-y-1 hover:scale-105">
-                <div className="flex-shrink-0">
-                  <img className="h-48 w-full object-cover" src={post.feature_image} alt="" />
-                </div>
-                <div className="flex-1 bg-white p-6 flex flex-col justify-between">
-                  <div className="flex-1">
-                    {post.tags.map((tag) => (
-                      <p key={tag.id} className="text-sm font-medium text-indigo-600 inline-block mr-2">
-                        #{tag.name}
-                      </p>
-                    ))}
-                    <a href="#" className="block mt-2">
-                      <p className="text-xl font-semibold text-gray-900">{post.title}</p>
-                      <p className="mt-3 text-base text-gray-500">{post.excerpt}</p>
-                    </a>
-                  </div>
-                  <div className="mt-6 flex items-center">
+          {frontpage
+            ? posts.posts.slice(0, 3).map((post) => (
+                <Link key={post.title} href="/blog/test">
+                  <div className="flex flex-col rounded-lg shadow-lg overflow-hidden transition duration-500 ease-in-out cursor-pointer transform hover:-translate-y-1 hover:scale-105">
                     <div className="flex-shrink-0">
-                      <a href="#">
-                        <span className="sr-only">Name</span>
-                        {post.primary_author.profile_image ? (
-                          <img className="h-10 w-10 rounded-full" src={post.primary_author.profile_image} alt="" />
-                        ) : (
-                          <img
-                            className="h-10 w-10 rounded-full"
-                            src="https://blog.golemproject.net/content/images/2019/02/logo-golem-5.png"
-                            alt=""
-                          />
-                        )}
-                      </a>
+                      <img className="h-48 w-full object-cover" src={post.feature_image} alt="" />
                     </div>
-                    <div className="ml-3">
-                      <p className="text-sm font-medium text-gray-900">
-                        <a href="#" className="hover:underline">
-                          {post.primary_author.name}
+                    <div className="flex-1 bg-white p-6 flex flex-col justify-between">
+                      <div className="flex-1">
+                        {post.tags.map((tag) => (
+                          <p key={tag.id} className="text-sm font-medium text-indigo-600 inline-block mr-2">
+                            #{tag.name}
+                          </p>
+                        ))}
+                        <a href="#" className="block mt-2">
+                          <p className="text-xl font-semibold text-gray-900">{post.title}</p>
+                          <p className="mt-3 text-base text-gray-500">{post.excerpt}</p>
                         </a>
-                      </p>
-                      <div className="flex space-x-1 text-sm text-gray-500">
-                        <time dateTime={post.published_at}>
-                          {post.date}
-                          {dateFormat(post.date, "dS mmm, yyyy")}
-                        </time>
-                        <span aria-hidden="true">&middot;</span>
-                        <span>{post.reading_time} min read</span>
+                      </div>
+                      <div className="mt-6 flex items-center">
+                        <div className="flex-shrink-0">
+                          <a href="#">
+                            <span className="sr-only">Name</span>
+                            {post.primary_author.profile_image ? (
+                              <img className="h-10 w-10 rounded-full" src={post.primary_author.profile_image} alt="" />
+                            ) : (
+                              <img
+                                className="h-10 w-10 rounded-full"
+                                src="https://blog.golemproject.net/content/images/2019/02/logo-golem-5.png"
+                                alt=""
+                              />
+                            )}
+                          </a>
+                        </div>
+                        <div className="ml-3">
+                          <p className="text-sm font-medium text-gray-900">
+                            <a href="#" className="hover:underline">
+                              {post.primary_author.name}
+                            </a>
+                          </p>
+                          <div className="flex space-x-1 text-sm text-gray-500">
+                            <time dateTime={post.published_at}>
+                              {post.date}
+                              {dateFormat(post.date, "dS mmm, yyyy")}
+                            </time>
+                            <span aria-hidden="true">&middot;</span>
+                            <span>{post.reading_time} min read</span>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
-            </Link>
-          ))}
+                </Link>
+              ))
+            : posts.posts.slice(1).map((post) => (
+                <Link key={post.title} href="/blog/test">
+                  <div className="flex flex-col rounded-lg shadow-lg overflow-hidden transition duration-500 ease-in-out cursor-pointer transform hover:-translate-y-1 hover:scale-105">
+                    <div className="flex-shrink-0">
+                      <img className="h-48 w-full object-cover" src={post.feature_image} alt="" />
+                    </div>
+                    <div className="flex-1 bg-white p-6 flex flex-col justify-between">
+                      <div className="flex-1">
+                        {post.tags.map((tag) => (
+                          <p key={tag.id} className="text-sm font-medium text-indigo-600 inline-block mr-2">
+                            #{tag.name}
+                          </p>
+                        ))}
+                        <a href="#" className="block mt-2">
+                          <p className="text-xl font-semibold text-gray-900">{post.title}</p>
+                          <p className="mt-3 text-base text-gray-500">{post.excerpt}</p>
+                        </a>
+                      </div>
+                      <div className="mt-6 flex items-center">
+                        <div className="flex-shrink-0">
+                          <a href="#">
+                            <span className="sr-only">Name</span>
+                            {post.primary_author.profile_image ? (
+                              <img className="h-10 w-10 rounded-full" src={post.primary_author.profile_image} alt="" />
+                            ) : (
+                              <img
+                                className="h-10 w-10 rounded-full"
+                                src="https://blog.golemproject.net/content/images/2019/02/logo-golem-5.png"
+                                alt=""
+                              />
+                            )}
+                          </a>
+                        </div>
+                        <div className="ml-3">
+                          <p className="text-sm font-medium text-gray-900">
+                            <a href="#" className="hover:underline">
+                              {post.primary_author.name}
+                            </a>
+                          </p>
+                          <div className="flex space-x-1 text-sm text-gray-500">
+                            <time dateTime={post.published_at}>
+                              {post.date}
+                              {dateFormat(post.date, "dS mmm, yyyy")}
+                            </time>
+                            <span aria-hidden="true">&middot;</span>
+                            <span>{post.reading_time} min read</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+              ))}
         </div>
       </div>
     </div>

@@ -7,7 +7,8 @@ import Pricing from "../components/Pricing"
 import LiveStats from "../components/LiveStats"
 import Navbar from "../components/Navbar"
 
-export default function Example() {
+function Page({ data }) {
+  console.log(data)
   return (
     <>
       <Head>
@@ -40,8 +41,20 @@ export default function Example() {
         ></LiveStats>
         <Pricing></Pricing>
         <Apps></Apps>
-        <Blog displayTitle={true}></Blog>
+        <Blog displayTitle={true} posts={data} frontpage={true}></Blog>
       </div>
     </>
   )
 }
+
+// This gets called on every request
+export async function getServerSideProps() {
+  // Fetch data from external API
+  const res = await fetch(`https://blog.golemproject.net/ghost/api/v3/content/posts/?key=${process.env.BLOG_API_KEY}&include=tags,authors`)
+  const data = await res.json()
+
+  // Pass data to the page via props
+  return { props: { data } }
+}
+
+export default Page

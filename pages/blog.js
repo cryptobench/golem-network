@@ -5,6 +5,7 @@ import News from "../components/News"
 import Navbar from "../components/Navbar"
 
 function Page({ data }) {
+  console.log(data)
   return (
     <>
       <Head>
@@ -24,7 +25,7 @@ function Page({ data }) {
         </div>
         <Navbar></Navbar>
         <Featured post={Object.values(data.posts)[0]}></Featured>
-        <News posts={data}></News>
+        <News posts={data} frontpage={false}></News>
       </div>
     </>
   )
