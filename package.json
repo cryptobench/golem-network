@@ -17,6 +17,7 @@
     "dateformat": "^5.0.3",
     "globe.gl": "^2.26.1",
     "next": "12.1.0",
+    "nextjs-progressbar": "0.0.14",
     "react": "17.0.2",
     "react-apexcharts": "^1.4.0",
     "react-dom": "17.0.2",

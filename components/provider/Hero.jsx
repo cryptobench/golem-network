@@ -2,8 +2,8 @@ import Install from "../Install"
 export default function Example() {
   return (
     <div className="relative   overflow-hidden w-full ">
-      <main className="mx-auto max-w-7xl px-4 sm:px-6 grid grid-cols-12 min-h-screen -mt-24 content-center relative">
-        <div className="text-center  col-span-8 col-start-3 ">
+      <main className="mx-auto max-w-7xl px-4 sm:px-6 grid grid-cols-12 min-h-screen mt-0 lg:-mt-24 lg:content-center relative">
+        <div className="text-center col-span-12 lg:col-span-8 lg:col-start-3 ">
           <h1>
             <span className="block text-sm font-semibold uppercase tracking-wide text-golemblue">Golem Network</span>
             <span className="mt-1 block text-4xl tracking-tight font-extrabold sm:text-4xl xl:text-6xl ">
@@ -22,7 +22,7 @@ export default function Example() {
             </span>
           </p>
         </div>
-        <div className="text-center  col-span-8 col-start-3 ">
+        <div className="text-center  col-span-12 lg:col-span-8 lg:col-start-3 ">
           <Install command="curl -sSf https://join.golem.network/as-provider | bash -"></Install>
         </div>
       </main>

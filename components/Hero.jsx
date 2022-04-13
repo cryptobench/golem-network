@@ -71,25 +71,26 @@ export default function Example() {
                 Golem is a powerful permissionless supercomputer accessible by anyone. Accelerate workloads like machine learning, deep
                 learning, CI/CD pipelines and much more at an instant.
               </p>
-              <div className="mt-8  sm:mx-auto sm:text-center lg:text-left lg:mx-0">
-                <p className="text-base font-medium text-gray-900 mb-1 text-center lg:text-left">Let&apos;s get started</p>
+              <p className="text-base mt-8 -mb-2 col-span-12 font-medium text-gray-900  text-center lg:text-left ">
+                Let&apos;s get started
+              </p>
+              <div className=" grid grid-cols-12 gap-x-1 gap-y-1">
                 <Link href="/provider">
-                  <a className="mt-3 w-full px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-black shadow-sm hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0  sm:flex-shrink-0 sm:inline-flex sm:items-center sm:w-auto">
+                  <a className="mt-3 lg:col-span-4 col-span-6 md:col-span-6 text-center w-full px-6 py-3 border border-transparent text-sm lg:text-base font-medium rounded-md text-white bg-black shadow-sm hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 ">
                     Start Providing
                   </a>
                 </Link>
                 <Link href="/requestor">
-                  <a className="mt-3 w-full px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-black shadow-sm hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:flex-shrink-0 sm:inline-flex sm:items-center sm:w-auto">
+                  <a className="mt-3 lg:col-span-4 col-span-6 md:col-span-6 text-center w-full px-6 py-3 border border-transparent text-sm lg:text-base font-medium rounded-md text-white bg-black shadow-sm hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 ">
                     Start Requesting
                   </a>
                 </Link>
-                <button
-                  type="submit"
-                  className="mt-3 w-full px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-black shadow-sm hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:flex-shrink-0 sm:inline-flex sm:items-center sm:w-auto"
-                >
-                  Explore tokenomics
-                </button>
-                <p className="mt-3 text-sm text-gray-500">
+                <Link href="/requestor">
+                  <a className="lg:mt-3 lg:col-span-4 col-span-12 md:col-span-12 text-center w-full px-6 py-3 border border-transparent text-base lg:text-base font-medium rounded-md text-white bg-black shadow-sm hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 ">
+                    Explore tokenomics
+                  </a>
+                </Link>
+                <p className=" text-sm text-gray-500 col-span-12">
                   We care about the protection of your data. Read our
                   <a href="#" className="font-medium text-gray-900 underline ml-1">
                     Privacy Policy
