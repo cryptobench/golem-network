@@ -17,7 +17,9 @@ export default function Example(props) {
               <div className="grid text-center">
                 <div className="tags text-center text-golemblue">
                   {post.tags.map((tag) => (
-                    <a className="hover:underline text-sm inline-block mr-1">#{tag.name}</a>
+                    <a key={tag.id} className="hover:underline text-sm inline-block mr-1">
+                      #{tag.name}
+                    </a>
                   ))}
                 </div>
                 <h1 className="text-9xl font-semibold text-black">{post.title}</h1>
