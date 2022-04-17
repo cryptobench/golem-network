@@ -15,7 +15,7 @@ export default function Example() {
     AOS.refresh()
   }, [])
   return (
-    <div data-aos="fade-up" data-aos-duration="1000" className="relative bggridbottom overflow-hidden w-full pb-24 " ref={ref}>
+    <div data-aos="fade-up" data-aos-duration="1000" className="relative bggridbottom overflow-hidden w-full  " ref={ref}>
       <div className="relative  ">
         <main className="mt-40 mx-auto max-w-7xl px-4 sm:px-6">
           <div className="lg:grid lg:grid-cols-12 lg:gap-8">

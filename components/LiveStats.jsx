@@ -9,7 +9,7 @@ export default function Stats(props) {
     AOS.refresh()
   }, [])
   return !center ? (
-    <div data-aos="fade-up" data-aos-duration="1000" className="py-16 mx-auto max-w-7xl px-4 sm:px-6 relative  ">
+    <div data-aos="fade-up" data-aos-duration="1000" className=" mx-auto max-w-7xl px-4 sm:px-6 relative  ">
       <div className="lg:grid lg:grid-cols-12 lg:gap-8">
         <div className="  lg:col-span-8 ">
           <h1>
@@ -38,7 +38,7 @@ export default function Stats(props) {
             </p>
           </div>
           <div>
-            <p className="text-4xl font-bold block">
+            <p className="text-4xl text-center font-bold block">
               {props.memory} <span className="text-sm text-gray-500">TB</span>{" "}
               <span className="text-xl font-semibold block bg-gradient-to-r from-golemblue via-purple-500 to-pink-500 bg-clip-text text-transparent">
                 Memory
@@ -57,7 +57,7 @@ export default function Stats(props) {
       </div>
     </div>
   ) : (
-    <div data-aos="fade-up" className="md:py-16 lg:py-16 pt-1 mx-auto max-w-7xl px-4 sm:px-6 relative ">
+    <div data-aos="fade-up" className="py-24 mx-auto max-w-7xl px-4 sm:px-6 relative ">
       <div className="grid grid-cols-12 lg:gap-8 gap-x-2 gap-y-4">
         <div className="text-center  lg:col-span-12 col-span-12 ">
           <h1>
@@ -84,7 +84,7 @@ export default function Stats(props) {
           </p>
         </div>
         <div className="col-span-12 md:col-span-3 lg:col-span-2 text-center">
-          <p className="text-4xl font-bold block">
+          <p className="text-4xl font-bold block text-center">
             {props.memory} <span className="text-sm text-gray-500">TB</span>{" "}
             <span className="text-xl font-semibold block bg-gradient-to-r from-golemblue via-purple-500 to-pink-500 bg-clip-text text-transparent">
               Memory

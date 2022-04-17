@@ -26,7 +26,8 @@ export default function Animate() {
         arcsData={arcsData}
         arcColor={"color"}
         backgroundColor="rgba(255, 0, 0, 0)"
-        width={600}
+        width={800}
+        height={600}
         arcDashLength={() => Math.random()}
         arcDashGap={() => Math.random()}
         arcDashAnimateTime={() => Math.random() * 4000 + 500}

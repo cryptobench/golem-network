@@ -3,8 +3,8 @@ import Image from "next/image"
 
 export default function Apps() {
   return (
-    <section className=" relative apps ">
-      <div data-aos="fade-up" data-aos-duration="1000" className="py-24 mx-auto max-w-7xl px-4 sm:px-6   w-full z-40 relative">
+    <section className=" relative apps py-24 ">
+      <div data-aos="fade-up" data-aos-duration="1000" className=" mx-auto max-w-7xl px-4 sm:px-6   w-full z-40 relative">
         <div className="grid grid-cols-12 ">
           <span className="block col-span-12  text-sm font-semibold uppercase tracking-wide text-golemblue ">Apps</span>
           <div className="col-span-12  mt-1  ">
@@ -39,7 +39,11 @@ export default function Apps() {
             </div>
           </div>
           <div className="  col-span-12  py-2  grid grid-cols-12  gap-4 mt-4 rounded-r-lg rounded-bl-lg">
-            <div className="col-span-12 md:col-span-6 lg:col-span-3 p-6  grid app bg-gray-900 rounded-xl">
+            <div
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              className="col-span-12 md:col-span-6 lg:col-span-3 p-6  grid app bg-gray-900 rounded-xl"
+            >
               <div className="inline-block relative">
                 <div className="h-20 w-20 relative">
                   <Image
@@ -54,7 +58,11 @@ export default function Apps() {
               <h5 className="text-white text-lg tracking-tight font-medium">Blender</h5>
               <p className="text-slate-400 text-md tracking-tight font-medium mb-1">Render complex 3D images</p>
             </div>
-            <div className="col-span-12 md:col-span-6 lg:col-span-3 p-6  grid app bg-gray-900 rounded-xl">
+            <div
+              data-aos="fade-up"
+              data-aos-duration="1400"
+              className="col-span-12 md:col-span-6 lg:col-span-3 p-6  grid app bg-gray-900 rounded-xl"
+            >
               <div className="inline-block relative">
                 <div className="h-20 w-20 relative">
                   <Image
@@ -69,7 +77,11 @@ export default function Apps() {
               <h5 className="text-white text-lg tracking-tight font-medium">Octane</h5>
               <p className="text-slate-400 text-md tracking-tight font-medium mb-1">Render complex 3D scenes</p>
             </div>
-            <div className="col-span-12 md:col-span-6 lg:col-span-3 p-6  grid app bg-gray-900 rounded-xl">
+            <div
+              data-aos="fade-up"
+              data-aos-duration="1800"
+              className="col-span-12 md:col-span-6 lg:col-span-3 p-6  grid app bg-gray-900 rounded-xl"
+            >
               <div className="inline-block relative">
                 <div className="h-20 w-20 relative">
                   <Image
@@ -84,7 +96,11 @@ export default function Apps() {
               <h5 className="text-white text-lg tracking-tight font-medium">Application 5</h5>
               <p className="text-slate-400 text-md tracking-tight font-medium mb-1">Lorem Ipsum blabla whatup</p>
             </div>
-            <div className="col-span-12 md:col-span-6 lg:col-span-3 p-6  grid app bg-gray-900 rounded-xl">
+            <div
+              data-aos="fade-up"
+              data-aos-duration="2000"
+              className="col-span-12 md:col-span-6 lg:col-span-3 p-6  grid app bg-gray-900 rounded-xl"
+            >
               <div className="inline-block relative">
                 <div className="h-20 w-20 relative">
                   <Image
@@ -101,7 +117,11 @@ export default function Apps() {
                 Decentralized Machine Learning on top of the Golem Network
               </p>
             </div>
-            <div className="col-span-12 md:col-span-6 lg:col-span-3 p-6  grid app bg-gray-900 rounded-xl">
+            <div
+              data-aos="fade-up"
+              data-aos-duration="2200"
+              className="col-span-12 md:col-span-6 lg:col-span-3 p-6  grid app bg-gray-900 rounded-xl"
+            >
               <div className="inline-block relative">
                 <div className="h-20 w-20 relative">
                   <Image

@@ -18,7 +18,7 @@ export default function Example(props) {
           </button>
         </p>
       </div>
-      <div className="text-gray-400 hover:text-black inline-block">
+      <div className="text-gray-400 hover:text-black inline-block ">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="2xl:h-4 2xl:w-4 3xl:w-4 3xl:h-3 lg:h-6 lg:w-6 inline-block  mr-1"
