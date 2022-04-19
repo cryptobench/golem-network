@@ -6,8 +6,6 @@ import Confetti from "react-dom-confetti"
 
 const Pre = styled.pre`
   text-align: left;
-  margin: 1em 0;
-  padding: 0.5em;
   overflow: scroll;
 `
 
@@ -18,7 +16,7 @@ const Line = styled.div`
 const LineNo = styled.span`
   display: table-cell;
   text-align: right;
-  padding-right: 1em;
+  padding-right: 1rem;
   user-select: none;
   opacity: 0.5;
 `
@@ -83,35 +81,70 @@ const copyToClipboard = (str) => {
 
 export default function Code(props) {
   const [isCopied, setIsCopied] = React.useState(false)
-
+  const center = props.center
   return (
     <>
       <Confetti className="z-40 w-full left-52" active={isCopied} config={config} />
-      <Highlight {...defaultProps} theme={theme} code={props.code} language={props.language}>
-        {({ className, style, tokens, getLineProps, getTokenProps }) => (
-          <Pre className={(className, "rounded-lg  relative p-2")} style={style}>
-            <Button
-              onClick={() => {
-                copyToClipboard(props.code)
-                setIsCopied(true)
-                setTimeout(() => setIsCopied(false), 3000)
-              }}
-            >
-              {isCopied ? "🎉 Copied!" : "Copy"}
-            </Button>
-            {tokens.map((line, i) => (
-              <Line key={i} {...getLineProps({ line, key: i })}>
-                <LineNo>{i + 1}</LineNo>
-                <LineContent>
-                  {line.map((token, key) => (
-                    <span key={key} {...getTokenProps({ token, key })} />
-                  ))}
-                </LineContent>
-              </Line>
-            ))}
-          </Pre>
-        )}
-      </Highlight>
+      {center ? (
+        <div className="grid grid-cols-12">
+          <Highlight {...defaultProps} theme={theme} code={props.code} language={props.language}>
+            {({ className, style, tokens, getLineProps, getTokenProps }) => (
+              <Pre className={(className, "rounded-l-lg  relative p-4 col-span-10 overflow-scroll")} style={style}>
+                {tokens.map((line, i) => (
+                  <Line key={i} {...getLineProps({ line, key: i })}>
+                    <LineNo>{i + 1}</LineNo>
+                    <LineContent>
+                      {line.map((token, key) => (
+                        <span key={key} {...getTokenProps({ token, key })} />
+                      ))}
+                    </LineContent>
+                  </Line>
+                ))}
+              </Pre>
+            )}
+          </Highlight>
+          <button
+            className="bg-gray-900 rounded-r-lg col-span-2 block text-white border-l"
+            onCopy={(e) => {
+              e.preventDefault()
+              return false
+            }}
+            onClick={() => {
+              copyToClipboard(props.code)
+              setIsCopied(true)
+              setTimeout(() => setIsCopied(false), 3000)
+            }}
+          >
+            {isCopied ? "🎉 Copied!" : "Copy"}
+          </button>
+        </div>
+      ) : (
+        <Highlight {...defaultProps} theme={theme} code={props.code} language={props.language}>
+          {({ className, style, tokens, getLineProps, getTokenProps }) => (
+            <Pre className={(className, "rounded-lg  relative p-2")} style={style}>
+              <Button
+                onClick={() => {
+                  copyToClipboard(props.code)
+                  setIsCopied(true)
+                  setTimeout(() => setIsCopied(false), 3000)
+                }}
+              >
+                {isCopied ? "🎉 Copied!" : "Copy"}
+              </Button>
+              {tokens.map((line, i) => (
+                <Line key={i} {...getLineProps({ line, key: i })}>
+                  <LineNo>{i + 1}</LineNo>
+                  <LineContent>
+                    {line.map((token, key) => (
+                      <span key={key} {...getTokenProps({ token, key })} />
+                    ))}
+                  </LineContent>
+                </Line>
+              ))}
+            </Pre>
+          )}
+        </Highlight>
+      )}
     </>
   )
 }

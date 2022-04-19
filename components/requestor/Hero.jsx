@@ -19,8 +19,12 @@ export default function Example() {
             </span>
           </p>
         </div>
-        <div className="  col-span-12 lg:col-span-8 lg:col-start-3 ">
-          <WithLineNumbers language="bash" code="curl -sSf https://join.golem.network/as-requestor | bash -"></WithLineNumbers>
+        <div className="  col-span-12 lg:col-span-6 lg:col-start-4 mt-4 md:col-span-8 md:col-start-3">
+          <WithLineNumbers
+            center={true}
+            language="bash"
+            code="curl -sSf https://join.golem.network/as-requestor | bash -"
+          ></WithLineNumbers>
         </div>
       </main>
     </div>

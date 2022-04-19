@@ -1,8 +1,8 @@
-import Install from "../Install"
+import WithLineNumbers from "../Code"
 export default function Example() {
   return (
     <div className="relative   overflow-hidden w-full ">
-      <main className="mx-auto max-w-7xl px-4 sm:px-6 grid grid-cols-12 min-h-screen mt-0 lg:-mt-24 lg:content-center relative">
+      <main className="mx-auto max-w-7xl px-4 sm:px-6 grid grid-cols-12 lg:min-h-screen mt-0 lg:-mt-24 lg:content-center relative">
         <div className="text-center col-span-12 lg:col-span-8 lg:col-start-3 ">
           <h1>
             <span className="block text-sm font-semibold uppercase tracking-wide text-golemblue">Golem Network</span>
@@ -22,8 +22,8 @@ export default function Example() {
             </span>
           </p>
         </div>
-        <div className="text-center  col-span-12 lg:col-span-8 lg:col-start-3 ">
-          <Install command="curl -sSf https://join.golem.network/as-provider | bash -"></Install>
+        <div className="  col-span-12 lg:col-span-6 lg:col-start-4 mt-4 md:col-span-8 md:col-start-3">
+          <WithLineNumbers center={true} language="bash" code="curl -sSf https://join.golem.network/as-provider | bash -"></WithLineNumbers>
         </div>
       </main>
     </div>
