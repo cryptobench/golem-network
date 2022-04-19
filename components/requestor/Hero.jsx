@@ -1,4 +1,5 @@
 import Install from "../Install"
+import WithLineNumbers from "../Code"
 export default function Example() {
   return (
     <div className="relative   overflow-hidden w-ful ">
@@ -18,8 +19,8 @@ export default function Example() {
             </span>
           </p>
         </div>
-        <div className="text-center  col-span-12 lg:col-span-8 lg:col-start-3 ">
-          <Install command="curl -sSf https://join.golem.network/as-requestor | bash -"></Install>
+        <div className="  col-span-12 lg:col-span-8 lg:col-start-3 ">
+          <WithLineNumbers language="bash" code="curl -sSf https://join.golem.network/as-requestor | bash -"></WithLineNumbers>
         </div>
       </main>
     </div>
