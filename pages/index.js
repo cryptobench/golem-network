@@ -6,8 +6,23 @@ import Explainer from "../components/Explainer"
 import Pricing from "../components/Pricing"
 import LiveStats from "../components/LiveStats"
 import Navbar from "../components/Navbar"
+import { useEffect, useState } from "react"
 
-function Page({ data, memory, disk, online, cores }) {
+function Page({ data, stats }) {
+  const [stat, setStat] = useState(stats)
+  const fetchStats = () => {
+    fetch("https://api.stats.golem.network/v1/network/online/stats")
+      .then((r) => r.json())
+
+      .then((response) => {
+        setStat({ memory: response.memory / 1024, disk: response.disk / 1024, cores: response.threads, online: response.online })
+      })
+  }
+  useEffect(() => {
+    setInterval(() => {
+      fetchStats()
+    }, 15000)
+  }, [])
   return (
     <>
       <Head>
@@ -32,10 +47,10 @@ function Page({ data, memory, disk, online, cores }) {
         <LiveStats
           header="Join the network"
           title="Join the network like hundreds of others"
-          providers={online}
-          cores={cores}
-          memory={Math.round(memory * 100) / 100}
-          disk={Math.round(disk * 100) / 100}
+          providers={stat.online}
+          cores={stat.cores}
+          memory={Math.round(stat.memory * 100) / 100}
+          disk={Math.round(stat.disk * 100) / 100}
           center={true}
         ></LiveStats>
         <Pricing></Pricing>
@@ -53,17 +68,19 @@ export async function getServerSideProps() {
     `https://blog.golemproject.net/ghost/api/v3/content/posts/?key=${process.env.BLOG_API_KEY}&include=tags,authors&limit=3`
   )
   const data = await res.json()
-  const stats = await fetch(`https://api.stats.golem.network/v1/network/online/stats`)
-  const statsdata = await stats.json()
-
+  const fetchstats = await fetch(`https://api.stats.golem.network/v1/network/online/stats`)
+  const statsdata = await fetchstats.json()
+  const statsformatted = {
+    memory: statsdata.memory / 1024,
+    disk: statsdata.disk / 1024,
+    cores: statsdata.threads,
+    online: statsdata.online,
+  }
   // Pass data to the page via props
   return {
     props: {
       data: data,
-      memory: statsdata.memory / 1024,
-      disk: statsdata.disk / 1024,
-      cores: statsdata.threads,
-      online: statsdata.online,
+      stats: statsformatted,
     },
   }
 }
