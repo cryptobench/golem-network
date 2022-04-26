@@ -7,7 +7,7 @@ import Pricing from "../components/Pricing"
 import LiveStats from "../components/LiveStats"
 import Navbar from "../components/Navbar"
 
-function Page({ data }) {
+function Page({ data, memory, disk, online, cores }) {
   return (
     <>
       <Head>
@@ -32,10 +32,10 @@ function Page({ data }) {
         <LiveStats
           header="Join the network"
           title="Join the network like hundreds of others"
-          providers="832"
-          cores="16949"
-          memory="16.37"
-          disk="128.75"
+          providers={online}
+          cores={cores}
+          memory={Math.round(memory * 100) / 100}
+          disk={Math.round(disk * 100) / 100}
           center={true}
         ></LiveStats>
         <Pricing></Pricing>
@@ -53,9 +53,19 @@ export async function getServerSideProps() {
     `https://blog.golemproject.net/ghost/api/v3/content/posts/?key=${process.env.BLOG_API_KEY}&include=tags,authors&limit=3`
   )
   const data = await res.json()
+  const stats = await fetch(`https://api.stats.golem.network/v1/network/online/stats`)
+  const statsdata = await stats.json()
 
   // Pass data to the page via props
-  return { props: { data } }
+  return {
+    props: {
+      data: data,
+      memory: statsdata.memory / 1024,
+      disk: statsdata.disk / 1024,
+      cores: statsdata.threads,
+      online: statsdata.online,
+    },
+  }
 }
 
 export default Page
