@@ -1,7 +1,6 @@
 import Head from "next/head"
 import Hero from "../components/provider/Hero"
 import Navbar from "../components/Navbar"
-import Explainer from "../components/provider/Explainer"
 import Stats from "../components/Stats"
 import Gui from "../components/provider/Gui"
 
@@ -25,7 +24,6 @@ export default function Example() {
         </div>
         <Navbar></Navbar>
         <Hero></Hero>
-        <Explainer></Explainer>
         <Gui></Gui>
         <Stats></Stats>
       </div>

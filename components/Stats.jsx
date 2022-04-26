@@ -105,12 +105,14 @@ export default function Stats() {
     }, 15000)
   }, [])
   return loaded ? (
-    <div data-aos="fade-up" data-aos-duration="1000" className="py-16 mx-auto max-w-7xl px-4 sm:px-6 relative ">
+    <div data-aos="fade-up" data-aos-duration="1000" className="py-24 mx-auto max-w-7xl px-4 sm:px-6 relative ">
       <div className="lg:grid lg:grid-cols-12 lg:gap-8">
         <div className="text-center  lg:col-span-12 ">
           <h1>
             <span className="block text-sm font-semibold uppercase tracking-wide text-golemblue">Monitoring</span>
-            <span className="mt-1 block text-4xl tracking-tight font-extrabold sm:text-4xl xl:text-6xl">Monitor live via Golem Stats</span>
+            <span className="mt-1 block text-4xl tracking-tight font-extrabold sm:text-4xl xl:text-6xl">
+              Monitor your node via Golem Stats
+            </span>
           </h1>
           <p className="mt-3 text-xl text-slate-600 sm:mt-5 ">
             The Golem Network provides a stats page for the network. Explore data from competing providers and monitor your own provider.
