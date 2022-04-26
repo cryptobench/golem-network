@@ -92,7 +92,7 @@ export default function Code(props) {
               <Pre className={(className, "rounded-l-lg  relative p-4 col-span-10 overflow-scroll")} style={style}>
                 {tokens.map((line, i) => (
                   <Line key={i} {...getLineProps({ line, key: i })}>
-                    <LineNo>{i + 1}</LineNo>
+                    {props.showLines ? <LineNo>{i + 1}</LineNo> : null}
                     <LineContent>
                       {line.map((token, key) => (
                         <span key={key} {...getTokenProps({ token, key })} />

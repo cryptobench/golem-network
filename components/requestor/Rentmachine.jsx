@@ -374,7 +374,7 @@ export default function Example() {
                     </div>
                   </div>
                   <div className="col-span-12 overflow-y-scroll  rounded-lg">
-                    <WithLineNumbers language="python" code={exampleCode}></WithLineNumbers>
+                    <WithLineNumbers showLines={true} language="python" code={exampleCode}></WithLineNumbers>
                   </div>
                 </div>
                 <div className="mt-5 sm:mt-6 sm:grid sm:grid-cols-1 sm:gap-3 sm:grid-flow-row-dense">
