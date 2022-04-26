@@ -80,94 +80,88 @@ export default function Example() {
                   <div className="absolute transform sm:left-1/2 sm:top-0 sm:translate-x-8 lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-8">
                     <div className="flex items-center space-x-6 lg:space-x-8">
                       <div className="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-24 scroller">
-                        {foundProviders && foundProviders.length > 0 ? (
-                          foundProviders.slice(50, 75).map((user, index) => (
-                            <div
-                              key={user.node_id}
-                              className={
-                                "p-6 grid text-center bg-gray-900 rounded-xl w-44 h-64 overflow-hidden " + (index == 1 ? "mt-48" : "")
-                              }
-                            >
-                              <div className="inline-block relative">
-                                <img
-                                  className="h-20 w-20 rounded-lg shadow-lg mb-2 inline-block"
-                                  src="https://dappimg.com/media/image/dapp/4244a929e00d467cbb7f3acb66f07ce5.blob"
-                                ></img>
+                        {foundProviders && foundProviders.length > 0
+                          ? foundProviders.slice(50, 75).map((user, index) => (
+                              <div
+                                key={user.node_id}
+                                className={
+                                  "p-6 grid text-center bg-gray-900 rounded-xl w-44 h-64 overflow-hidden " + (index == 1 ? "mt-48" : "")
+                                }
+                              >
+                                <div className="inline-block relative">
+                                  <img
+                                    className="h-20 w-20 rounded-lg shadow-lg mb-2 inline-block"
+                                    src="https://dappimg.com/media/image/dapp/4244a929e00d467cbb7f3acb66f07ce5.blob"
+                                  ></img>
+                                </div>
+                                <h5 className="text-white text-xl tracking-tight mb-2 font-medium">{user.data["golem.node.id.name"]}</h5>
+                                <span className="text-slate-400 text-sm tracking-tight font-medium mb-1">
+                                  {user.data["golem.inf.cpu.threads"]} Cores
+                                </span>
+                                <span className="text-slate-400 text-sm tracking-tight font-medium mb-1">
+                                  {Math.round(user.data["golem.inf.mem.gib"] * 100) / 100} GB RAM
+                                </span>
+                                <span className="text-slate-400 text-sm tracking-tight font-medium mb-1">
+                                  {Math.round(user.data["golem.inf.storage.gib"] * 100) / 100} GB Disk
+                                </span>
                               </div>
-                              <h5 className="text-white text-xl tracking-tight mb-2 font-medium">{user.data["golem.node.id.name"]}</h5>
-                              <span className="text-slate-400 text-sm tracking-tight font-medium mb-1">
-                                {user.data["golem.inf.cpu.threads"]} Cores
-                              </span>
-                              <span className="text-slate-400 text-sm tracking-tight font-medium mb-1">
-                                {Math.round(user.data["golem.inf.mem.gib"] * 100) / 100} GB RAM
-                              </span>
-                              <span className="text-slate-400 text-sm tracking-tight font-medium mb-1">
-                                {Math.round(user.data["golem.inf.storage.gib"] * 100) / 100} GB Disk
-                              </span>
-                            </div>
-                          ))
-                        ) : (
-                          <h1>No results found!</h1>
-                        )}
+                            ))
+                          : null}
                       </div>
                       <div className="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8 scroller">
-                        {foundProviders && foundProviders.length > 0 ? (
-                          foundProviders.slice(0, 25).map((user) => (
-                            <div key={user.node_id} className="p-6 grid bg-gray-900 text-center rounded-xl w-44 h-64 overflow-hidden">
-                              <div className="inline-block relative">
-                                <img
-                                  className="h-20 w-20 rounded-lg shadow-lg mb-2 inline-block"
-                                  src="https://dappimg.com/media/image/dapp/4244a929e00d467cbb7f3acb66f07ce5.blob"
-                                ></img>
+                        {foundProviders && foundProviders.length > 0
+                          ? foundProviders.slice(0, 25).map((user) => (
+                              <div key={user.node_id} className="p-6 grid bg-gray-900 text-center rounded-xl w-44 h-64 overflow-hidden">
+                                <div className="inline-block relative">
+                                  <img
+                                    className="h-20 w-20 rounded-lg shadow-lg mb-2 inline-block"
+                                    src="https://dappimg.com/media/image/dapp/4244a929e00d467cbb7f3acb66f07ce5.blob"
+                                  ></img>
+                                </div>
+                                <h5 className="text-white text-xl tracking-tight mb-2 font-medium overflow-scroll">
+                                  {user.data["golem.node.id.name"].slice(0, 10)}
+                                </h5>
+                                <span className="text-slate-400 text-sm tracking-tight font-medium mb-1">
+                                  {user.data["golem.inf.cpu.threads"]} Cores
+                                </span>
+                                <span className="text-slate-400 text-sm tracking-tight font-medium mb-1">
+                                  {Math.round(user.data["golem.inf.mem.gib"] * 100) / 100} GB RAM
+                                </span>
+                                <span className="text-slate-400 text-sm tracking-tight font-medium mb-1">
+                                  {Math.round(user.data["golem.inf.storage.gib"] * 100) / 100} GB Disk
+                                </span>
                               </div>
-                              <h5 className="text-white text-xl tracking-tight mb-2 font-medium overflow-scroll">
-                                {user.data["golem.node.id.name"].slice(0, 10)}
-                              </h5>
-                              <span className="text-slate-400 text-sm tracking-tight font-medium mb-1">
-                                {user.data["golem.inf.cpu.threads"]} Cores
-                              </span>
-                              <span className="text-slate-400 text-sm tracking-tight font-medium mb-1">
-                                {Math.round(user.data["golem.inf.mem.gib"] * 100) / 100} GB RAM
-                              </span>
-                              <span className="text-slate-400 text-sm tracking-tight font-medium mb-1">
-                                {Math.round(user.data["golem.inf.storage.gib"] * 100) / 100} GB Disk
-                              </span>
-                            </div>
-                          ))
-                        ) : (
-                          <h1>No results found!</h1>
-                        )}
+                            ))
+                          : null}
                       </div>
                       <div className="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-24 scroller">
-                        {foundProviders && foundProviders.length > 0 ? (
-                          foundProviders.slice(25, 50).map((user, index) => (
-                            <div
-                              key={user.node_id}
-                              className={
-                                "p-6 grid text-center bg-gray-900 rounded-xl w-44 h-64 overflow-hidden " + (index == 1 ? "mt-48" : "")
-                              }
-                            >
-                              <div className="inline-block relative">
-                                <img
-                                  className="h-20 w-20 rounded-lg shadow-lg mb-2 inline-block"
-                                  src="https://dappimg.com/media/image/dapp/4244a929e00d467cbb7f3acb66f07ce5.blob"
-                                ></img>
+                        {foundProviders && foundProviders.length > 0
+                          ? foundProviders.slice(25, 50).map((user, index) => (
+                              <div
+                                key={user.node_id}
+                                className={
+                                  "p-6 grid text-center bg-gray-900 rounded-xl w-44 h-64 overflow-hidden " + (index == 1 ? "mt-48" : "")
+                                }
+                              >
+                                <div className="inline-block relative">
+                                  <img
+                                    className="h-20 w-20 rounded-lg shadow-lg mb-2 inline-block"
+                                    src="https://dappimg.com/media/image/dapp/4244a929e00d467cbb7f3acb66f07ce5.blob"
+                                  ></img>
+                                </div>
+                                <h5 className="text-white text-xl tracking-tight mb-2 font-medium">{user.data["golem.node.id.name"]}</h5>
+                                <span className="text-slate-400 text-sm tracking-tight font-medium mb-1">
+                                  {user.data["golem.inf.cpu.threads"]} Cores
+                                </span>
+                                <span className="text-slate-400 text-sm tracking-tight font-medium mb-1">
+                                  {Math.round(user.data["golem.inf.mem.gib"] * 100) / 100} GB RAM
+                                </span>
+                                <span className="text-slate-400 text-sm tracking-tight font-medium mb-1">
+                                  {Math.round(user.data["golem.inf.storage.gib"] * 100) / 100} GB Disk
+                                </span>
                               </div>
-                              <h5 className="text-white text-xl tracking-tight mb-2 font-medium">{user.data["golem.node.id.name"]}</h5>
-                              <span className="text-slate-400 text-sm tracking-tight font-medium mb-1">
-                                {user.data["golem.inf.cpu.threads"]} Cores
-                              </span>
-                              <span className="text-slate-400 text-sm tracking-tight font-medium mb-1">
-                                {Math.round(user.data["golem.inf.mem.gib"] * 100) / 100} GB RAM
-                              </span>
-                              <span className="text-slate-400 text-sm tracking-tight font-medium mb-1">
-                                {Math.round(user.data["golem.inf.storage.gib"] * 100) / 100} GB Disk
-                              </span>
-                            </div>
-                          ))
-                        ) : (
-                          <h1>No results found!</h1>
-                        )}
+                            ))
+                          : null}
                       </div>
                     </div>
                   </div>
