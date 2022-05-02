@@ -120,8 +120,8 @@ export default function Example() {
                   <span className="mt-1 block text-4xl tracking-tight font-extrabold sm:text-4xl xl:text-6xl">Celebrate!</span>
                 </h1>
                 <p className="mt-3 text-xl text-slate-600 sm:mt-5 ">
-                  Congratulations, you've completed the migration of your GNT tokens to GLM tokens. You can now use new ERC-20 standard GLM
-                  tokens on networks like Polygon to facilitate ultra cheap transactions and swaps!
+                  Congratulations, you&apos;ve completed the migration of your GNT tokens to GLM tokens. You can now use new ERC-20 standard
+                  GLM tokens on networks like Polygon to facilitate ultra cheap transactions and swaps!
                 </p>
               </div>
 
