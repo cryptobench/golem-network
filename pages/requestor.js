@@ -7,13 +7,6 @@ import Apis from "../components/requestor/Apis"
 import Rentmachine from "../components/requestor/Rentmachine"
 import LiveStats from "../components/LiveStats"
 
-const navigation = [
-  { name: "Products", href: "#" },
-  { name: "Features", href: "#" },
-  { name: "Marketplace", href: "#" },
-  { name: "Company", href: "#" },
-]
-
 export default function Example() {
   return (
     <>

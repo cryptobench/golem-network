@@ -38,7 +38,7 @@ const solutions = [
     name: "Thorg",
     description: "Build strategic funnels that will drive your customers to convert",
     href: "https://thorg.io",
-    icon: RefreshIcon,
+    icon: DocumentReportIcon,
   },
   {
     name: "Square",
@@ -51,6 +51,12 @@ const solutions = [
     description: "Get detailed reports that will help you make more informed decisions ",
     href: "/blog",
     icon: DocumentReportIcon,
+  },
+  {
+    name: "Migrate GNT",
+    description: "Migrate your old GNT tokens to the new ERC20 token GLM",
+    href: "/migrate",
+    icon: RefreshIcon,
   },
 ]
 

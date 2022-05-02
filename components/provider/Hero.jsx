@@ -23,7 +23,7 @@ export default function Example() {
     fetchProviders()
   }, [])
   return (
-    <div className="bg-white" ref={ref}>
+    <div className="bg-white pb-24 " ref={ref}>
       <header className="relative overflow-hidden">
         {/* Hero section */}
         <div className=" py-24">
@@ -77,8 +77,8 @@ export default function Example() {
               <div className="mt-10">
                 {/* Decorative image grid */}
                 <div aria-hidden="true" className="pointer-events-none lg:absolute lg:inset-y-0 lg:max-w-7xl lg:mx-auto lg:w-full">
-                  <div className="absolute transform sm:left-1/2 sm:top-0 sm:translate-x-8 lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-8">
-                    <div className="flex items-center space-x-6 lg:space-x-8">
+                  <div className="absolute transform sm:left-1/2 sm:top-0 sm:translate-x-8 lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-8 ">
+                    <div className="flex items-center space-x-6 lg:space-x-8 ">
                       <div className="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-24 scroller">
                         {foundProviders && foundProviders.length > 0
                           ? foundProviders.slice(50, 75).map((user, index) => (
