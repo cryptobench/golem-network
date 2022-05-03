@@ -126,7 +126,7 @@ const about = [
   {
     name: "Team",
     description: "See the Golem team",
-    href: "#",
+    href: "/about/team",
     icon: CursorClickIcon,
   },
   {
