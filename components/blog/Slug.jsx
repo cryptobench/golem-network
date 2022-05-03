@@ -8,6 +8,7 @@ const data = {
 
 export default function Example(props) {
   const post = props.post
+
   return (
     <div className="bg-white relative mt-4 mb-10">
       <div className="grid grid-cols-12 mx-auto max-w-7xl px-4 sm:px-6 ">
@@ -55,7 +56,7 @@ export default function Example(props) {
           </div>
           <img className="mb-10 rounded-lg" src="https://blog.golemproject.net/content/images/2022/04/GRP-MarchAsset-1-1.png"></img>
 
-          <div dangerouslySetInnerHTML={{ __html: data.html }}></div>
+          <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
         </article>
       </div>
     </div>
