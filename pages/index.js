@@ -5,6 +5,7 @@ import Apps from "../components/Apps"
 import Explainer from "../components/Explainer"
 import Pricing from "../components/Pricing"
 import LiveStats from "../components/LiveStats"
+import Banner from "../components/Banner"
 import Navbar from "../components/Navbar"
 import { useEffect, useState } from "react"
 
@@ -41,6 +42,7 @@ function Page({ data, stats }) {
           </svg>
         </div>
         <Navbar></Navbar>
+        <Banner cta="Read More" title="New Release! Beta V is out now!" titlesm="We are hiring!" href="/about/jobs"></Banner>
         <Hero></Hero>
 
         <Explainer></Explainer>

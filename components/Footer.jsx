@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <section className="bg-white z-10 relative border-t">
+    <section className="bg-white z-10 pb-20 relative border-t">
       <div className="pt-24 mx-auto max-w-7xl px-4 sm:px-6  w-full ">
         <div className="grid grid-cols-12 lg:gap-x-10 gap-x-0">
           <div className="lg:col-span-4 col-span-12 text-center lg:text-left mb-10 lg:mb-0">
