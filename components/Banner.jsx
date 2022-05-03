@@ -10,7 +10,7 @@ export default function Example(props) {
   return (
     <>
       {open ? (
-        <div className="fixed inset-x-0 bottom-0 z-40">
+        <div className="fixed inset-x-0 bottom-0 z-50">
           <div className="bg-black">
             <div className="max-w-7xl mx-auto py-3 px-3 sm:px-6 lg:px-8">
               <div className="flex items-center justify-between flex-wrap">
