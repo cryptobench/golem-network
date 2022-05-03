@@ -41,8 +41,8 @@ const solutions = [
     icon: DocumentReportIcon,
   },
   {
-    name: "Square",
-    description: "Get detailed reports that will help you make more informed decisions ",
+    name: "Golem Registry",
+    description: "A platform to store and publish Golem VM Images",
     href: "#",
     icon: DocumentReportIcon,
   },
