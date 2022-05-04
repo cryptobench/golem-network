@@ -16,6 +16,10 @@
 
 }
 
+.blogpost strong {
+  @apply font-semibold ;
+}
+
 .blogpost figcaption {
   
   @apply text-sm text-center text-gray-600 my-4;
