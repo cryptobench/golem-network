@@ -42,7 +42,12 @@ function Page({ data, stats }) {
           </svg>
         </div>
         <Navbar></Navbar>
-        <Banner cta="Read More" title="New Release! Beta V is out now!" titlesm="We are hiring!" href="/about/jobs"></Banner>
+        <Banner
+          cta="Read More"
+          title="New Release! Beta V is out now, featuring new development tools for "
+          titlesm="We are hiring!"
+          href="/blog/beta-v-release"
+        ></Banner>
         <Hero></Hero>
 
         <Explainer></Explainer>
