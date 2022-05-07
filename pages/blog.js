@@ -37,7 +37,7 @@ export async function getServerSideProps() {
   const data = await res.json()
 
   // Pass data to the page via props
-  return { props: { data } }
+  return { props: { data }, revalidate: 60 }
 }
 
 export default Page

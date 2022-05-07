@@ -143,3 +143,9 @@ export default function Example() {
     </>
   )
 }
+export async function getStaticProps() {
+  // Pass data to the page via props
+  return {
+    props: {}, // will be passed to the page component as props
+  }
+}

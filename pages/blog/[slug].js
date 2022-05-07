@@ -16,7 +16,7 @@ function Page({ data }) {
 }
 
 // This gets called on every request
-export async function getServerSideProps(context) {
+export async function getStaticProps(context) {
   // Fetch data from external API
   const { slug } = context.params
   const res = await fetch(
@@ -25,7 +25,14 @@ export async function getServerSideProps(context) {
   const data = await res.json()
 
   // Pass data to the page via props
-  return { props: { data } }
+  return { props: { data }, revalidate: 1800 }
+}
+
+export async function getStaticPaths() {
+  // We'll pre-render only these paths at build time.
+  // { fallback: blocking } will server-render pages
+  // on-demand if the path doesn't exist.
+  return { paths: [], fallback: "blocking" }
 }
 
 export default Page
