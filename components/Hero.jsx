@@ -1,8 +1,9 @@
 import Link from "next/link"
 import Typewriter from "typewriter-effect"
-import Animate from "../components/Globe"
 import React from "react"
 import { useInView } from "react-intersection-observer"
+import dynamic from "next/dynamic"
+const GolemGlobe = dynamic(import("../components/Globe"), { ssr: false })
 
 export default function Example() {
   const { ref, inView, entry } = useInView({
@@ -100,14 +101,7 @@ export default function Example() {
               </div>
             </div>
             <div className="relative hidden lg:visible sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
-              <Animate
-                globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
-                arcsData={arcsData}
-                arcColor={"color"}
-                arcDashLength={() => Math.random()}
-                arcDashGap={() => Math.random()}
-                arcDashAnimateTime={() => Math.random() * 4000 + 500}
-              />
+              <GolemGlobe />
             </div>
           </div>
         </main>

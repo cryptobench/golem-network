@@ -1,13 +1,30 @@
 import ReactDOM from "react-dom"
+import React from "react"
 import dynamic from "next/dynamic"
-const Globe = dynamic(import("react-globe.gl"), { ssr: false })
+import Globe from "react-globe.gl"
+import { useEffect, useState, useRef } from "react"
 
-export default function Animate() {
-  const markerSvg = `<svg viewBox="-4 0 36 36">
-  <path fill="currentColor" d="M14,0 C21.732,0 28,5.641 28,12.6 C28,23.963 14,36 14,36 C14,36 0,24.064 0,12.6 C0,5.641 6.268,0 14,0 Z"></path>
-  <circle fill="black" cx="14" cy="14" r="7"></circle>
-</svg>`
+const MAP_CENTER = { lat: 37.6, lng: -16.6, altitude: 1.5 }
+
+const Animate = () => {
+  const globeEl = useRef()
+  const [countries, setCountries] = useState({ features: [] })
+
+  useEffect(() => {
+    // load data
+    fetch(
+      "https://gist.githubusercontent.com/cryptobench/fc9f8791e8ec2197aaf14b1edf996abc/raw/5d5cbebc0efc3d7b84ca9f041dd0d107add1cf11/test.geojson"
+    )
+      .then((res) => res.json())
+      .then(setCountries)
+    globeEl.current.pointOfView(MAP_CENTER, 4000)
+    globeEl.current.controls().autoRotate = true
+    globeEl.current.controls().autoRotateSpeed = 0.7
+    globeEl.current.controls().enableZoom = false
+  }, [])
+
   const N = 20
+
   const arcsData = [...Array(N).keys()].map(() => ({
     startLat: (Math.random() - 0.5) * 180,
     startLng: (Math.random() - 0.5) * 360,
@@ -18,21 +35,29 @@ export default function Animate() {
       ["red", "white", "blue", "green"][Math.round(Math.random() * 3)],
     ],
   }))
+  const colors = ["#000000", "#ffffff"]
   return (
-    <div>
-      <Globe
-        globeImageUrl="//unpkg.com/three-globe/example/img/earth-blue-marble.jpg"
-        bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.png"
-        arcsData={arcsData}
-        arcColor={"color"}
-        backgroundColor="rgba(255, 0, 0, 0)"
-        width={800}
-        height={600}
-        arcDashLength={() => Math.random()}
-        arcDashGap={() => Math.random()}
-        arcDashAnimateTime={() => Math.random() * 4000 + 500}
-      />
-      <div id="globe"></div>
-    </div>
+    <Globe
+      className="globelort"
+      ref={globeEl}
+      globeImageUrl="/earth.jpeg"
+      atmosphereColor="#09238A"
+      atmosphereAltitude={0.13}
+      backgroundColor="rgba(255, 0, 0, 0)"
+      hexPolygonsData={countries.features}
+      width={800}
+      height={600}
+      hexPolygonResolution={4}
+      pointOfView={MAP_CENTER}
+      hexPolygonMargin={0.1}
+      arcDashLength={() => Math.random()}
+      arcDashGap={() => Math.random()}
+      arcDashAnimateTime={() => Math.random() * 4000 + 500}
+      hexPolygonColor={() => colors[Math.floor(Math.random() * colors.length)]}
+      arcsData={arcsData}
+      arcColor={"color"}
+    />
   )
 }
+
+export default React.memo(Animate)
