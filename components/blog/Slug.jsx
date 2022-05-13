@@ -13,6 +13,8 @@ export default function Example(props) {
         <meta name="description" content={post.excerpt} />
         <meta property="og:type" content="article" />
         <meta property="og:image" content={post.feature_image} />
+        <link rel="canonical" href={"golem-network.vercel.app/blog/" + post.slug} />
+
         <meta name="twitter:title" content={post.title} />
         <meta name="twitter:description" content={post.excerpt} />
         <meta name="twitter:image" content={post.feature_image} />
@@ -26,12 +28,15 @@ export default function Example(props) {
         <meta name="robots" content="index, follow" />
 
         <meta property="article:published_time" content={post.published_at} />
+        <meta property="article:publisher" content="https://www.facebook.com/golemproject/" />
         <meta property="article:modified_time" content={post.updated_at} />
         <meta property="article:author" content={post.primary_author.name} />
         <meta property="article:section" content="HTML" />
         {post.tags.map((tag) => (
           <meta key={tag.id} property="article:tag" content={tag.name} />
         ))}
+
+        <meta name="HandheldFriendly" content="True"></meta>
       </Head>
 
       <div className="bg-white relative mt-4 mb-10">
@@ -78,7 +83,7 @@ export default function Example(props) {
                 </div>
               </div>
             </div>
-            <img className="mb-10 rounded-lg" src={post.feature_image}></img>
+            <img className="mb-10 rounded-lg" alt={post.title} src={post.feature_image}></img>
 
             <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
           </article>
