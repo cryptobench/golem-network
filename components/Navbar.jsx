@@ -156,7 +156,7 @@ const Navbar = () => {
             <Link href="/">
               <a className="flex">
                 <span className="sr-only">Workflow</span>
-                <img className="h-12 w-auto sm:h-14 mt-2   rounded-lg" src="https://i.imgur.com/zcL5vPX.png" alt="" />
+                <img className="h-12 w-auto sm:h-14 mt-2   rounded-lg" src="/golem.png" alt="" />
               </a>
             </Link>
           </div>

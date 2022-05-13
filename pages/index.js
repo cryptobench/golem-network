@@ -43,7 +43,7 @@ function Page({ data, stats }) {
         </div>
         <Navbar></Navbar>
         <Banner
-          cta="Read More"
+          cta="Click to read"
           title="New Release! Beta V is out now, featuring new development tools for "
           titlesm="We are hiring!"
           href="/blog/beta-v-release"

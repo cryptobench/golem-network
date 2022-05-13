@@ -37,6 +37,7 @@ export default function Example() {
                 >
                   <span className="sr-only">Watch our video to learn more</span>
                   <iframe
+                    loading="lazy"
                     className="w-full"
                     width="572"
                     height="315"

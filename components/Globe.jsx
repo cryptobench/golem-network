@@ -12,9 +12,7 @@ const Animate = () => {
 
   useEffect(() => {
     // load data
-    fetch(
-      "https://gist.githubusercontent.com/cryptobench/9bf07d45b5350b700fddcf2634b91e96/raw/d8bfb37ae4cdb3bd5b3bd4adbe0735267e9282cc/data.geojson"
-    )
+    fetch("https://api.stats.golem.network/v2/website/globe_data")
       .then((res) => res.json())
       .then(setCountries)
     globeEl.current.pointOfView(MAP_CENTER, 4000)
@@ -36,16 +34,20 @@ const Animate = () => {
     ],
   }))
   const colors = ["#0c14d4", "#ffffff"]
+  const gData = [...Array(N).keys()].map(() => ({
+    lat: (Math.random() - 0.5) * 180,
+    lng: (Math.random() - 0.5) * 360,
+    size: Math.random() / 3,
+    color: ["red", "white", "blue", "green"][Math.round(Math.random() * 3)],
+  }))
 
   return (
     <Globe
       ref={globeEl}
-      globeImageUrl="/earth2.jpg"
+      globeImageUrl="/earthreal-min.jpeg"
       atmosphereColor="#09238A"
       polygonCapColor={() => "transparent"}
       polygonSideColor={() => "transparent"}
-      polygonStrokeColor={true}
-      hexPolygonColor={() => "#0a14b4"}
       polygonLabel={({ properties: d }) => `
         
         <div class="bg-black bg-opacity-80 p-6 w-96 rounded text-sm">
@@ -78,17 +80,19 @@ const Animate = () => {
       polygonsData={countries.features.filter((d) => d.properties.ISO_A2 !== "AQ")}
       atmosphereAltitude={0.13}
       backgroundColor="rgba(255, 0, 0, 0)"
-      hexPolygonsData={countries.features}
       width={800}
       height={600}
       hexPolygonResolution={4}
-      hexPolygonMargin={0.3}
+      hexPolygonMargin={0.2}
       arcDashLength={() => Math.random()}
       arcLabel="test"
       arcDashGap={() => Math.random()}
       arcDashAnimateTime={() => Math.random() * 4000 + 500}
       arcsData={arcsData}
       arcColor={"color"}
+      pointsData={gData}
+      pointAltitude="size"
+      pointColor="#ffffff"
     />
   )
 }
