@@ -45,10 +45,35 @@ const Animate = () => {
       polygonCapColor={() => "transparent"}
       polygonSideColor={() => "transparent"}
       polygonStrokeColor={true}
-      hexPolygonColor={() => "#0c14d4"}
+      hexPolygonColor={() => "#0a14b4"}
       polygonLabel={({ properties: d }) => `
-        <b>${d.ADMIN} (${d.ISO_A2})</b> <br />
-        Providers: <i>${Math.round(+d.POP_EST / 1e4) / 1e2}M</i>
+        
+        <div class="bg-black bg-opacity-80 p-6 w-96 rounded text-sm">
+        <p class=" font-bold text-2xl mb-2">${d.ADMIN} (${d.ISO_A2})</p>
+        <div class="grid grid-cols-2 gap-4">
+            <div>
+              <p class="text-xl font-bold block">
+              ${Math.round(+d.POP_EST / 1e4) / 1e2 || 913} <span class="text-base font-semibold block ">Providers</span>
+              </p>
+            </div>
+            <div>
+              <p class="text-xl font-bold block">
+                839 <span class=" font-semibold block text-base ">Cores</span>
+              </p>
+            </div>
+            <div>
+              <p class="text-xl font-bold inline-block">
+                30.4 <span class=" font-semibold inline-block text-sm text-gray-400">TB</span><span class=" font-semibold block text-base">Memory</span>
+              </p>
+            </div>
+            <div>
+            <p class="text-xl font-bold inline-block">
+                84.1 <span class=" font-semibold inline-block text-sm text-gray-400">TB</span><span class=" font-semibold block text-base">Disk</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        
       `}
       polygonsData={countries.features.filter((d) => d.properties.ISO_A2 !== "AQ")}
       atmosphereAltitude={0.13}
@@ -57,7 +82,7 @@ const Animate = () => {
       width={800}
       height={600}
       hexPolygonResolution={4}
-      hexPolygonMargin={0.2}
+      hexPolygonMargin={0.3}
       arcDashLength={() => Math.random()}
       arcLabel="test"
       arcDashGap={() => Math.random()}
