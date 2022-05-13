@@ -1,6 +1,4 @@
-import ReactDOM from "react-dom"
 import React from "react"
-import dynamic from "next/dynamic"
 import Globe from "react-globe.gl"
 import { useEffect, useState, useRef } from "react"
 
@@ -33,7 +31,6 @@ const Animate = () => {
       ["red", "white", "blue", "green"][Math.round(Math.random() * 3)],
     ],
   }))
-  const colors = ["#0c14d4", "#ffffff"]
   const gData = [...Array(N).keys()].map(() => ({
     lat: (Math.random() - 0.5) * 180,
     lng: (Math.random() - 0.5) * 360,

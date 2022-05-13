@@ -89,7 +89,7 @@ export async function getStaticProps() {
       data: data,
       stats: statsformatted,
     },
-    revalidate: 60, // In seconds
+    revalidate: 300, // In seconds
   }
 }
 

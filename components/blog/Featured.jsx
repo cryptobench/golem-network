@@ -1,4 +1,3 @@
-import React, { useEffect } from "react"
 import dateFormat from "dateformat"
 import Link from "next/link"
 import Image from "next/image"

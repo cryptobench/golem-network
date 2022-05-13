@@ -1,4 +1,3 @@
-import { Fragment, useState, useRef } from "react"
 import Head from "next/head"
 import Featured from "../components/blog/Featured"
 import News from "../components/News"

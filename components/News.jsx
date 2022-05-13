@@ -7,7 +7,6 @@ export default function Example(props) {
   const frontpage = props.frontpage
 
   const title = props.displayTitle
-  const paddingtop = props.paddingTop
   return (
     <div data-aos="fade-up" data-aos-duration="1000" className="relative  pb-20 px-4 sm:px-6  lg:pb-28 lg:px-8">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">

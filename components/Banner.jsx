@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { SpeakerphoneIcon, XIcon } from "@heroicons/react/outline"
+import { XIcon } from "@heroicons/react/outline"
 import Link from "next/link"
 
 export default function Example(props) {

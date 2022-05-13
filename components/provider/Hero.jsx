@@ -1,5 +1,5 @@
 import WithLineNumbers from "../Code"
-import { Fragment, useState, useEffect } from "react"
+import { useState, useEffect } from "react"
 import Typewriter from "typewriter-effect"
 import { useInView } from "react-intersection-observer"
 
@@ -9,13 +9,11 @@ export default function Example() {
     threshold: 0,
   })
   const [foundProviders, setFoundProviders] = useState("")
-  const [data, setData] = useState("")
   const fetchProviders = () => {
     fetch("https://api.stats.golem.network/v1/network/online")
       .then((r) => r.json())
 
       .then((data) => {
-        setData(data)
         setFoundProviders(data)
       })
   }

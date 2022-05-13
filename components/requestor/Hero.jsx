@@ -1,4 +1,3 @@
-import Install from "../Install"
 import WithLineNumbers from "../Code"
 export default function Example() {
   return (
