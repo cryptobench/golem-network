@@ -38,6 +38,11 @@
   
 }
 
+.blogpost figure img {
+  @apply w-full mb-2 rounded-lg;
+  
+}
+
 
 
 .blogpost h1 {
