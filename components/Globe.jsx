@@ -41,7 +41,7 @@ const Animate = () => {
   return (
     <Globe
       ref={globeEl}
-      globeImageUrl="/earthreal-min.jpeg"
+      globeImageUrl="/earthreal-min.webp"
       atmosphereColor="#09238A"
       polygonCapColor={() => "transparent"}
       polygonSideColor={() => "transparent"}
