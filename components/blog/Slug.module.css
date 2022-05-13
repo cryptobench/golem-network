@@ -39,7 +39,7 @@
 }
 
 .blogpost figure img {
-  @apply w-1/2 mx-auto mb-2 rounded-lg;
+  @apply w-full mx-auto lg:w-1/2 mb-2 rounded-lg;
   
 }
 
