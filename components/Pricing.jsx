@@ -43,7 +43,7 @@ export default function Example() {
               <td className="px-6 py-4 rounded-l-lg">
                 <div className="flex items-center">
                   <div className="flex-shrink-0 h-12 w-12  rounded-md p-2 relative">
-                    <img className="inline-block mr-1 max-w-full" alt="do-logo" src="https://i.imgur.com/hrXL0p8.png"></img>
+                    <img className="inline-block mr-1 max-w-full" alt="do-logo" src="/golem.png"></img>
                   </div>
                   <div className="ml-4">
                     <div className="text-sm font-medium text-gray-900 golemtext ">Golem Network</div>
