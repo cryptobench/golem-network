@@ -9,7 +9,7 @@ import Banner from "../components/Banner"
 import Navbar from "../components/Navbar"
 import { useEffect, useState } from "react"
 
-function Page({ data, stats }) {
+function Page({ blogs, stats }) {
   const [stat, setStat] = useState(stats)
   const fetchStats = () => {
     fetch("https://api.stats.golem.network/v1/network/online/stats")
@@ -62,7 +62,7 @@ function Page({ data, stats }) {
         ></LiveStats>
         <Pricing></Pricing>
         <Apps></Apps>
-        <Blog displayTitle={true} posts={data} frontpage={true}></Blog>
+        <Blog displayTitle={true} posts={blogs} frontpage={true}></Blog>
       </div>
     </>
   )
@@ -71,22 +71,18 @@ function Page({ data, stats }) {
 // This gets called on every request
 export async function getStaticProps() {
   // Fetch data from external API
-  const res = await fetch(
-    `https://blog.golemproject.net/ghost/api/v3/content/posts/?key=${process.env.BLOG_API_KEY}&include=tags,authors&limit=3`
-  )
+  const res = await fetch(`https://api.stats.golem.network/v2/website/index`)
   const data = await res.json()
-  const fetchstats = await fetch(`https://api.stats.golem.network/v1/network/online/stats`)
-  const statsdata = await fetchstats.json()
   const statsformatted = {
-    memory: statsdata.memory / 1024,
-    disk: statsdata.disk / 1024,
-    cores: statsdata.threads,
-    online: statsdata.online,
+    memory: data.stats.memory / 1024,
+    disk: data.stats.disk / 1024,
+    cores: data.stats.threads,
+    online: data.stats.online,
   }
   // Pass data to the page via props
   return {
     props: {
-      data: data,
+      blogs: data.blogs,
       stats: statsformatted,
     },
     revalidate: 300, // In seconds
