@@ -132,7 +132,7 @@ export default function Example(props) {
                   </span>
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                  {pricing[cores][keyName].cores == "unlimited" ? (
+                  {pricing[cores][keyName].bandwidth == "Unlimited" ? (
                     <span className="text-sm font-medium text-gray-900 golemtext">Unlimited</span>
                   ) : (
                     <span className="text-sm font-medium text-gray-900 golemtext">{pricing[cores][keyName].bandwidth} TB</span>
