@@ -8,7 +8,7 @@ import Rentmachine from "../components/requestor/Rentmachine"
 import LiveStats from "../components/LiveStats"
 import { useEffect, useState } from "react"
 
-export default function Page({ stats }) {
+export default function Page({ stats, pricing }) {
   const [stat, setStat] = useState(stats)
   const fetchStats = () => {
     fetch("https://api.stats.golem.network/v1/network/online/stats")
@@ -52,7 +52,7 @@ export default function Page({ stats }) {
           disk={Math.round(stat.disk * 100) / 100}
           center={true}
         ></LiveStats>
-        <Pricing></Pricing>
+        <Pricing providers={pricing}></Pricing>
         <Apis></Apis>
         <Apps></Apps>
         <Rentmachine></Rentmachine>
@@ -60,22 +60,23 @@ export default function Page({ stats }) {
     </>
   )
 }
+
 export async function getStaticProps() {
   // Fetch data from external API
-
-  const fetchstats = await fetch(`https://api.stats.golem.network/v1/network/online/stats`)
-  const statsdata = await fetchstats.json()
+  const res = await fetch(`https://api.stats.golem.network/v2/website/index`)
+  const data = await res.json()
   const statsformatted = {
-    memory: statsdata.memory / 1024,
-    disk: statsdata.disk / 1024,
-    cores: statsdata.threads,
-    online: statsdata.online,
+    memory: data.stats.memory / 1024,
+    disk: data.stats.disk / 1024,
+    cores: data.stats.threads,
+    online: data.stats.online,
   }
   // Pass data to the page via props
   return {
     props: {
       stats: statsformatted,
+      pricing: data.providers,
     },
-    revalidate: 60, // In seconds
+    revalidate: 300, // In seconds
   }
 }
