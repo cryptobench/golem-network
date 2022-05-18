@@ -119,9 +119,24 @@ export default function Example(props) {
                       </div>
                     )}
 
-                    <div className="ml-4">
-                      <div className="text-sm font-medium text-gray-900 golemtext ">{pricing[cores][keyName].name}</div>
+                    <div className="ml-4 relative">
+                      {pricing[cores][keyName].name == "Golem Network" ? (
+                        <div className="text-sm font-medium text-gray-900 golemtext ">{pricing[cores][keyName].name} </div>
+                      ) : (
+                        <div className="text-sm font-medium text-gray-900 golemtext ">{pricing[cores][keyName].name} </div>
+                      )}
+
                       <div className="text-sm text-gray-500 golemtext">Available Globally</div>
+
+                      {i == 0 ? (
+                        <div className="text-sm text-green-600 font-bold golemtext">
+                          {Math.round((pricing[cores][1].usd_monthly / pricing[cores][keyName].usd_monthly) * 100) / 100}x cheaper
+                        </div>
+                      ) : (
+                        <div className="text-sm text-red-500 font-bold golemtext ">
+                          {Math.round((pricing[cores][keyName].usd_monthly / pricing[cores][0].usd_monthly) * 100) / 100}x expensive
+                        </div>
+                      )}
                     </div>
                   </div>
                 </td>
@@ -146,7 +161,7 @@ export default function Example(props) {
                   )}
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm font-medium rounded-r-lg">
-                  <span className={classNames(i == 0 ? "text-green-500" : "text-rose-600", "text-xl font-medium  golemtext")}>
+                  <span className={classNames(i == 0 ? "text-green-600" : "text-rose-600", "text-xl font-medium  golemtext")}>
                     ${Math.round(pricing[cores][keyName].usd_monthly * 100) / 100}
                   </span>
                   <span className="text-sm font-medium block text-gray-900 golemtext">
