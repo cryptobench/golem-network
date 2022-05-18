@@ -100,6 +100,7 @@ export default function Example(props) {
           <tbody className="">
             {Object.keys(pricing[cores]).map((keyName, i) => (
               <tr
+                key={i}
                 onClick={() => {
                   if (pricing[cores][keyName].name == "Golem Network") {
                     window.open("https://stats.golem.network/network/provider/" + pricing[cores][keyName].node_id, "_blank")
