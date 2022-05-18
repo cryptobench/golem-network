@@ -99,7 +99,14 @@ export default function Example(props) {
           </thead>
           <tbody className="">
             {Object.keys(pricing[cores]).map((keyName, i) => (
-              <tr className="hover:bg-gray-300  cursor-pointer my-12 golemtr">
+              <tr
+                onClick={() => {
+                  if (pricing[cores][keyName].name == "Golem Network") {
+                    window.open("https://stats.golem.network/network/provider/" + pricing[cores][keyName].node_id, "_blank")
+                  }
+                }}
+                className={classNames(i == 0 ? "hover:bg-gray-300  cursor-pointer my-12 golemtr" : " my-12 golemtr")}
+              >
                 <td className="px-6 py-4 rounded-l-lg">
                   <div className="flex items-center">
                     {pricing[cores][keyName].name == "Golem Network" ? (
