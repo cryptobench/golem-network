@@ -9,7 +9,7 @@ import Banner from "../components/Banner"
 import Navbar from "../components/Navbar"
 import { useEffect, useState } from "react"
 
-function Page({ blogs, stats }) {
+function Page({ blogs, stats, pricing }) {
   const [stat, setStat] = useState(stats)
   const fetchStats = () => {
     fetch("https://api.stats.golem.network/v1/network/online/stats")
@@ -60,7 +60,7 @@ function Page({ blogs, stats }) {
           disk={Math.round(stat.disk * 100) / 100}
           center={true}
         ></LiveStats>
-        <Pricing></Pricing>
+        <Pricing providers={pricing}></Pricing>
         <Apps></Apps>
         <Blog displayTitle={true} posts={blogs} frontpage={true}></Blog>
       </div>
@@ -84,6 +84,7 @@ export async function getStaticProps() {
     props: {
       blogs: data.blogs,
       stats: statsformatted,
+      pricing: data.providers,
     },
     revalidate: 300, // In seconds
   }
