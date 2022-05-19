@@ -116,7 +116,7 @@ export default function Example() {
                                     src="https://dappimg.com/media/image/dapp/4244a929e00d467cbb7f3acb66f07ce5.blob"
                                   ></img>
                                 </div>
-                                <h5 className="text-white text-xl tracking-tight mb-2 font-medium overflow-scroll">
+                                <h5 className="text-white text-xl tracking-tight mb-2 font-medium overflow-scroll no-scrollbar">
                                   {user.data["golem.node.id.name"].slice(0, 10)}
                                 </h5>
                                 <span className="text-slate-400 text-sm tracking-tight font-medium mb-1">

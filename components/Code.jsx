@@ -89,7 +89,7 @@ export default function Code(props) {
         <div className="grid grid-cols-12">
           <Highlight {...defaultProps} theme={theme} code={props.code} language={props.language}>
             {({ className, style, tokens, getLineProps, getTokenProps }) => (
-              <Pre className={(className, "rounded-l-lg  relative p-4 col-span-10 overflow-scroll")} style={style}>
+              <Pre className={(className, "rounded-l-lg  relative p-4 col-span-10 overflow-scroll no-scrollbar")} style={style}>
                 {tokens.map((line, i) => (
                   <Line key={i} {...getLineProps({ line, key: i })}>
                     {props.showLines ? <LineNo>{i + 1}</LineNo> : null}

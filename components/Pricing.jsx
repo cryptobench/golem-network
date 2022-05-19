@@ -10,7 +10,7 @@ export default function Example(props) {
 
   return (
     <div data-aos="fade-up" data-aos-duration="1000" className="py-24 mx-auto max-w-7xl px-4 sm:px-6 relative ">
-      <div className="grid grid-cols-12 overflow-scroll">
+      <div className="grid grid-cols-12 overflow-scroll no-scrollbar">
         <div className="text-center  col-span-12">
           <h1>
             <span className="block text-sm font-semibold uppercase tracking-wide text-golemblue">Pricing</span>
