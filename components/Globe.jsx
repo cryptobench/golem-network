@@ -33,7 +33,7 @@ const Animate = () => {
       .then(setCountries)
 
     globeEl.current.pointOfView(MAP_CENTER, 4000)
-    globeEl.current.controls().autoRotate = false
+    globeEl.current.controls().autoRotate = true
     globeEl.current.controls().autoRotateSpeed = 0.7
     globeEl.current.controls().enableZoom = false
   }, [])
