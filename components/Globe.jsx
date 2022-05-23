@@ -1,8 +1,26 @@
 import React from "react"
 import Globe from "react-globe.gl"
 import { useEffect, useState, useRef } from "react"
+import { Color, MeshPhongMaterial, SpotLight } from "three"
+import {
+  PerspectiveCamera,
+  AmbientLight,
+  DirectionalLight,
+  Fog,
+  // AxesHelper,
+  // DirectionalLightHelper,
+  // CameraHelper,
+  PointLight,
+  SphereGeometry,
+} from "three"
 
 const MAP_CENTER = { lat: 37.6, lng: -16.6, altitude: 1.6 }
+
+const globeMaterial = new MeshPhongMaterial()
+globeMaterial.color = new Color(0x071f6d)
+globeMaterial.emissive = new Color(0x1832f2)
+globeMaterial.emissiveIntensity = 0.1
+globeMaterial.shininess = 0.7
 
 const Animate = () => {
   const globeEl = useRef()
@@ -13,8 +31,9 @@ const Animate = () => {
     fetch("https://api.stats.golem.network/v2/website/globe_data")
       .then((res) => res.json())
       .then(setCountries)
+
     globeEl.current.pointOfView(MAP_CENTER, 4000)
-    globeEl.current.controls().autoRotate = true
+    globeEl.current.controls().autoRotate = false
     globeEl.current.controls().autoRotateSpeed = 0.7
     globeEl.current.controls().enableZoom = false
   }, [])
@@ -41,8 +60,7 @@ const Animate = () => {
   return (
     <Globe
       ref={globeEl}
-      globeImageUrl="/earthreal-min.webp"
-      atmosphereColor="#09238A"
+      globeMaterial={globeMaterial}
       polygonCapColor={() => "transparent"}
       polygonSideColor={() => "transparent"}
       polygonLabel={({ properties: d }) => `
@@ -75,12 +93,16 @@ const Animate = () => {
         
       `}
       polygonsData={countries.features.filter((d) => d.properties.ISO_A2 !== "AQ")}
-      atmosphereAltitude={0.13}
       backgroundColor="rgba(255, 0, 0, 0)"
       width={800}
-      height={600}
-      hexPolygonResolution={4}
-      hexPolygonMargin={0.2}
+      height={500}
+      hexPolygonsData={countries.features}
+      hexPolygonResolution={3}
+      hexPolygonMargin={0.7}
+      showAtmosphere={true}
+      atmosphereColor="#3a228a"
+      atmosphereAltitude={0.2}
+      hexPolygonColor={() => `#a0ffff`}
       arcDashLength={() => Math.random()}
       arcLabel="test"
       arcDashGap={() => Math.random()}
