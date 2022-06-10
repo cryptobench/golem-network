@@ -23,7 +23,11 @@ export default function Example(props) {
             <div className="flex-1 bg-white p-6 mt-4 flex flex-col justify-between">
               <div className="flex-1">
                 <p className="text-sm font-medium text-indigo-600">
-                  <a className="hover:underline">Guide</a>
+                  {post.tags.map((tag) => (
+                    <p key={tag.id} className="text-sm font-medium text-indigo-600 inline-block mr-2">
+                      #{tag.name}
+                    </p>
+                  ))}
                 </p>
                 <a className="block mt-2">
                   <p className="text-2xl font-semibold text-gray-900">{post.title}</p>
