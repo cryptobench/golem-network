@@ -5,23 +5,20 @@
 }
 
 .blogpost iframe {
-  @apply min-w-full !important ;
+  @apply min-w-full !important;
   @apply h-96 !important;
   @apply rounded-lg;
-  
 }
 
 .blogpost video {
   @apply h-96 my-8 rounded-lg;
-
 }
 
 .blogpost strong {
-  @apply font-semibold ;
+  @apply font-semibold;
 }
 
 .blogpost figcaption {
-  
   @apply text-sm text-center text-gray-600 my-4;
 }
 
@@ -35,15 +32,11 @@
 
 .blogpost ol {
   @apply list-decimal text-lg text-gray-900 pl-6 my-6  space-y-2;
-  
 }
 
 .blogpost figure img {
-  @apply w-full mx-auto lg:w-1/2 mb-2 rounded-lg;
-  
+  @apply w-full mx-auto lg:w-1/2 mb-2 rounded-lg !important;
 }
-
-
 
 .blogpost h1 {
   @apply mt-10;
