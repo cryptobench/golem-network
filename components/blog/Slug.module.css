@@ -35,7 +35,7 @@
 }
 
 .blogpost figure img {
-  @apply w-full mx-auto lg:w-1/2 mb-2 rounded-lg !important;
+  @apply w-full mx-auto mb-2 rounded-lg;
 }
 
 .blogpost h1 {
