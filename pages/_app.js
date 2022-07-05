@@ -12,15 +12,9 @@ function MyApp({ Component, pageProps, router }) {
         <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
       </Head>
       <NextNProgress color="#0c14d4" />
-      <motion.div
-        key={router.pathname}
-        exit={{ opacity: 0 }}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1.2 }}
-      >
-        <Component {...pageProps} />
-      </motion.div>
+
+      <Component {...pageProps} />
+
       <Footer></Footer>
     </>
   )
