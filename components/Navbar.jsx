@@ -23,7 +23,7 @@ const solutions = [
   {
     name: "Requestor Portal",
     description: "Speak directly to your customers in a more meaningful way.",
-    href: "#",
+    href: "https://pmonitor.golem.network/",
     icon: CursorClickIcon,
   },
   { name: "Provider", description: "Your customers' data will be safe and secure.", href: "/provider", icon: ShieldCheckIcon },
@@ -42,7 +42,7 @@ const solutions = [
   {
     name: "Golem Registry",
     description: "A platform to store and publish Golem VM Images",
-    href: "#",
+    href: "https://registry.golem.network/",
     icon: DocumentReportIcon,
   },
   {
@@ -63,13 +63,13 @@ const requestor = [
   {
     name: "Requestor Portal",
     description: "Monitor spendings from the applications you deploy",
-    href: "#",
+    href: "https://pmonitor.golem.network/",
     icon: ChartBarIcon,
   },
   {
     name: "SDK Documentation",
     description: "Speak directly to your customers in a more meaningful way.",
-    href: "#",
+    href: "https://handbook.golem.network",
     icon: CursorClickIcon,
   },
   {
@@ -81,7 +81,7 @@ const requestor = [
   {
     name: "Golem Analytics",
     description: "Connect with third-party tools that you're already using.",
-    href: "#",
+    href: "https://stats.golem.network/",
     icon: ViewGridIcon,
   },
 ]
@@ -90,7 +90,7 @@ const provider = [
   {
     name: "Documentation",
     description: "Monitor spendings from the applications you deploy",
-    href: "#",
+    href: "https://handbook.golem.network/",
     icon: ChartBarIcon,
   },
 
@@ -103,7 +103,7 @@ const provider = [
   {
     name: "Golem Analytics",
     description: "Connect with third-party tools that you're already using.",
-    href: "#",
+    href: "https://stats.golem.network/",
     icon: ViewGridIcon,
   },
   {
