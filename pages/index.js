@@ -7,6 +7,7 @@ import Pricing from "../components/Pricing"
 import LiveStats from "../components/LiveStats"
 import Banner from "../components/Banner"
 import Navbar from "../components/Navbar"
+import Discordbutton from "../components/Discordbutton"
 import { useEffect, useState } from "react"
 
 function Page({ blogs, stats, pricing }) {
@@ -30,7 +31,9 @@ function Page({ blogs, stats, pricing }) {
         <title>Golem Network</title>
         <meta name="google-site-verification" content="7TO2YTmVfu0A5AgihId9CSnSrQjFgHxAkZ-k_zIH18g" />
       </Head>
-      <div className="relative   w-full  ">
+      <div className="relative  w-full  ">
+        <Discordbutton></Discordbutton>
+
         <div className="hidden lg:block lg:absolute h-full w-full overflow-hidden" aria-hidden="true">
           <svg className="absolute w-full test " width="100%" height="100%" fill="none">
             <defs>
@@ -68,7 +71,6 @@ function Page({ blogs, stats, pricing }) {
   )
 }
 
-// This gets called on every request
 export async function getStaticProps() {
   // Fetch data from external API
   const res = await fetch(`https://api.stats.golem.network/v2/website/index`)

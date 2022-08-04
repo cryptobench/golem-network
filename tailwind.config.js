@@ -23,6 +23,7 @@ module.exports = {
     extend: {
       colors: {
         golemblue: "#0c14d4",
+        discordblue: "#404eed",
       },
     },
   },
