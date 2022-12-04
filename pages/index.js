@@ -88,7 +88,6 @@ export async function getServerSideProps() {
       stats: statsformatted,
       pricing: data.providers,
     },
-    revalidate: 300, // In seconds
   }
 }
 
