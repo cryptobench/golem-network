@@ -65,7 +65,7 @@ function Page({ blogs, stats, pricing }) {
         ></LiveStats>
         <Pricing providers={pricing}></Pricing>
         <Apps></Apps>
-        <Blog displayTitle={true} posts={blogs} frontpage={true}></Blog>
+        {blogs.errors ? null : <Blog displayTitle={true} posts={blogs} frontpage={true}></Blog>}
       </div>
     </>
   )
