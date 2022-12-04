@@ -65,7 +65,7 @@ function Page({ blogs, stats, pricing }) {
         ></LiveStats>
         <Pricing providers={pricing}></Pricing>
         <Apps></Apps>
-        {blogs.errors ? null : <Blog displayTitle={true} posts={blogs} frontpage={true}></Blog>}
+        {blogs ? null : <Blog displayTitle={true} posts={blogs} frontpage={true}></Blog>}
       </div>
     </>
   )
@@ -84,7 +84,7 @@ export async function getServerSideProps() {
   // Pass data to the page via props
   return {
     props: {
-      blogs: data.blogs,
+      blogs: undefined,
       stats: statsformatted,
       pricing: data.providers,
     },
