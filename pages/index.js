@@ -71,7 +71,7 @@ function Page({ blogs, stats, pricing }) {
   )
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   // Fetch data from external API
   const res = await fetch(`https://api.stats.golem.network/v2/website/index`)
   const data = await res.json()

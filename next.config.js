@@ -5,10 +5,6 @@ const nextConfig = {
     domains: ["blog.golemproject.net", "dappimg.com"],
     formats: ["image/webp"],
   },
-  i18n: {
-    locales: ["en"],
-    defaultLocale: "en",
-  },
 }
 
 module.exports = nextConfig
