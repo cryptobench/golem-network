@@ -48,11 +48,7 @@ export default function Example() {
                                         Start Requesting
                                     </a>
                                 </Link>
-                                <Link href="/requestor">
-                                    <a className="lg:mt-3 lg:col-span-4 col-span-12 md:col-span-12 text-center w-full px-6 py-3 border border-transparent text-base lg:text-base font-medium rounded-md text-white bg-golemblue shadow-sm hover:bg-golemblue/80 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 ">
-                                        Explore tokenomics
-                                    </a>
-                                </Link>
+                             
                                 <p className=" text-sm text-gray-500 col-span-12">
                                     We care about the protection of your data. Read our
                                     <a href="#" className="font-medium text-gray-900 underline ml-1">
