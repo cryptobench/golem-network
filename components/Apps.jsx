@@ -1,6 +1,36 @@
 import { SearchIcon } from "@heroicons/react/solid"
 import Image from "next/image"
-
+const frameworks = [
+    {
+        id: 1,
+        type: "Javascript",
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsDxI08KhrPx6HHfIQdxILFjI--bni9ZBPCtG_hsqg4w&s",
+        title: "golem-js",
+        description: "A JavaScript library for building apps on top of Golem Network.",
+    },
+    {
+        id: 2,
+        type: "Javascript",
+        img: "https://banner2.cleanpng.com/20180604/pol/kisspng-react-javascript-angularjs-ionic-atom-5b154be6709500.6532453515281223424611.jpg",
+        
+        title: "React SDK",
+        description: "A React library for building apps on top of Golem Network.",
+    },
+    {
+        id: 3,
+        type: "Python",
+        img: "https://cdn3.iconfinder.com/data/icons/logos-and-brands-adobe/512/267_Python-512.png",
+        title: "Yapapi",
+        description: "A Python library for building apps on top of Golem Network.",
+    },
+    {
+        id: 3,
+        type: "Python",
+        img: "https://avatars.githubusercontent.com/u/22125274?s=200&v=4",
+        title: "Ray on Golem",
+        description: "A Python library for quickly scaling applications on the Golem Network using Ray.",
+    },
+]
 export default function Apps() {
     return (
         <section className=" relative apps py-24 ">
@@ -8,15 +38,20 @@ export default function Apps() {
                 <div className="grid grid-cols-12 ">
                     <span className="block col-span-12  text-sm font-semibold uppercase tracking-wide text-golemblue ">Apps</span>
                     <div className="col-span-12  mt-1  ">
-                        <h3 className="text-3xl tracking-tight font-extrabold sm:text-3xl xl:text-5xl">Explore the ecosystem of apps</h3>
-                        <p className="mt-3 text-xl text-slate-600 sm:mt-5 ">Browse and search projects built on the Golem Network. </p>
+                        <h3 className="text-3xl tracking-tight font-extrabold sm:text-3xl xl:text-5xl">Develop using our SDK&apos;s</h3>
+                    </div>
+                    <div className="col-span-12 md:col-span-6  mt-1  ">
+                        <p className="mt-3 text-xl text-slate-600 sm:mt-5 ">
+                            Step into the next-gen of cloud computing. Our SDK&apos;s are tailored for both JavaScript and Python developers,
+                            ensuring a smooth transition to the decentralized world of Golem Network.
+                        </p>
                     </div>
                     <div className="col-span-12  mt-1  "></div>
 
                     <div className="col-span-12 lg:col-span-4 md:col-span-6 mt-8">
                         <div>
                             <label htmlFor="search" className="block text-sm font-medium text-gray-700">
-                                Find Application
+                                Find framework
                             </label>
 
                             <div className="mt-1 relative flex items-center">
@@ -39,116 +74,30 @@ export default function Apps() {
                         </div>
                     </div>
                     <div className="  col-span-12  py-2  grid grid-cols-12  gap-4 mt-4 rounded-r-lg rounded-bl-lg">
-                        <div
-                            data-aos="fade-up"
-                            data-aos-duration="1000"
-                            className="col-span-12 md:col-span-6 lg:col-span-3 p-6  grid app bg-gray-900 rounded-xl"
-                        >
-                            <div className="inline-block relative">
-                                <div className="h-20 w-20 relative">
-                                    <Image
-                                        src="https://dappimg.com/media/image/dapp/4244a929e00d467cbb7f3acb66f07ce5.blob"
-                                        layout="fill" // required
-                                        objectFit="cover" // change to suit your needs
-                                        className="rounded-lg shadow-lg mb-2 inline-block"
-                                    />
+                        {frameworks.map((app) => (
+                            <div
+                                key={app.id}
+                                data-aos="fade-up"
+                                data-aos-duration="1000"
+                                className="col-span-12 md:col-span-6 lg:col-span-3 p-6 grid app bg-gray-900 rounded-xl"
+                            >
+                                <div className="inline-block relative">
+                                    <div className="h-20 w-20 relative">
+                                        <Image
+                                            src={app.img}
+                                            layout="fill"
+                                            objectFit="cover"
+                                            className="rounded-lg shadow-lg mb-2 inline-block"
+                                        />
+                                    </div>
+                                    <span className="absolute top-0 right-0 -mr-1 -mt-2 bg-golemblue text-sm px-2 py-1 rounded text-white">
+                                        {app.type}
+                                    </span>
                                 </div>
-                                <span className="absolute top-0 right-0 -mr-1 -mt-2 bg-golemblue text-sm px-2 py-1 rounded text-white">
-                                    Rendering
-                                </span>
+                                <h5 className="text-white text-lg tracking-tight font-medium">{app.title}</h5>
+                                <p className="text-slate-400 text-md tracking-tight font-medium mb-1">{app.description}</p>
                             </div>
-                            <h5 className="text-white text-lg tracking-tight font-medium">Blender</h5>
-                            <p className="text-slate-400 text-md tracking-tight font-medium mb-1">Render complex 3D images</p>
-                        </div>
-                        <div
-                            data-aos="fade-up"
-                            data-aos-duration="1400"
-                            className="col-span-12 md:col-span-6 lg:col-span-3 p-6  grid app bg-gray-900 rounded-xl"
-                        >
-                            <div className="inline-block relative">
-                                <div className="h-20 w-20 relative">
-                                    <Image
-                                        src="https://dappimg.com/media/image/app/cdb2d057b5694a2a90f0be82e26a01ed.jpg"
-                                        layout="fill" // required
-                                        objectFit="cover" // change to suit your needs
-                                        className="rounded-lg shadow-lg mb-2 inline-block"
-                                    />
-                                </div>
-                                <span className="absolute top-0 right-0 -mr-1 -mt-2 bg-golemblue text-sm px-2 py-1 rounded text-white">
-                                    Rendering
-                                </span>
-                            </div>
-                            <h5 className="text-white text-lg tracking-tight font-medium">Octane</h5>
-                            <p className="text-slate-400 text-md tracking-tight font-medium mb-1">Render complex 3D scenes</p>
-                        </div>
-                        <div
-                            data-aos="fade-up"
-                            data-aos-duration="1800"
-                            className="col-span-12 md:col-span-6 lg:col-span-3 p-6  grid app bg-gray-900 rounded-xl"
-                        >
-                            <div className="inline-block relative">
-                                <div className="h-20 w-20 relative">
-                                    <Image
-                                        src="https://dappimg.com/media/image/dapp/c915ac1844814c0f92f7b38ec4fd7d03.jpg"
-                                        layout="fill" // required
-                                        objectFit="cover" // change to suit your needs
-                                        className="rounded-lg shadow-lg mb-2 inline-block"
-                                    />
-                                </div>
-                                <span className="absolute top-0 right-0 -mr-1 -mt-2 bg-golemblue text-sm px-2 py-1 rounded text-white">
-                                    Data Science
-                                </span>
-                            </div>
-                            <h5 className="text-white text-lg tracking-tight font-medium">Application 5</h5>
-                            <p className="text-slate-400 text-md tracking-tight font-medium mb-1">Lorem Ipsum blabla whatup</p>
-                        </div>
-                        <div
-                            data-aos="fade-up"
-                            data-aos-duration="2000"
-                            className="col-span-12 md:col-span-6 lg:col-span-3 p-6  grid app bg-gray-900 rounded-xl"
-                        >
-                            <div className="inline-block relative">
-                                <div className="h-20 w-20 relative">
-                                    <Image
-                                        src="https://dappimg.com/media/image/dapp/23c1f984fbf94d3b99c6ae6905ecb05d.blob"
-                                        layout="fill" // required
-                                        objectFit="cover" // change to suit your needs
-                                        className="rounded-lg shadow-lg mb-2 inline-block"
-                                    />
-                                </div>
-                                <span className="absolute top-0 right-0 -mr-1 -mt-2 bg-golemblue text-sm px-2 py-1 rounded text-white">
-                                    Machine Learning
-                                </span>
-                            </div>
-                            <h5 className="text-white text-lg tracking-tight font-medium">DeML</h5>
-                            <p className="text-slate-400 text-md tracking-tight font-medium mb-1">
-                                Decentralized Machine Learning on top of the Golem Network
-                            </p>
-                        </div>
-                        <div
-                            data-aos="fade-up"
-                            data-aos-duration="2200"
-                            className="col-span-12 md:col-span-6 lg:col-span-3 p-6  grid app bg-gray-900 rounded-xl"
-                        >
-                            <div className="inline-block relative">
-                                <div className="h-20 w-20 relative">
-                                    <Image
-                                        src="https://dappimg.com/media/image/dapp/8dc747fa286642acb1b7ccbff7a33a9d.blob"
-                                        layout="fill" // required
-                                        objectFit="cover" // change to suit your needs
-                                        className="rounded-lg shadow-lg mb-2 inline-block"
-                                    />
-                                </div>
-
-                                <span className="absolute top-0 right-0 -mr-1 -mt-2 bg-golemblue text-sm px-2 py-1 rounded text-white">
-                                    Artifical Intelligence
-                                </span>
-                            </div>
-                            <h5 className="text-white text-lg tracking-tight font-medium">Badger</h5>
-                            <p className="text-slate-400 text-md tracking-tight font-medium mb-1">
-                                Artificial intelligence on pair with OpenAI
-                            </p>
-                        </div>
+                        ))}
                     </div>
                 </div>
             </div>

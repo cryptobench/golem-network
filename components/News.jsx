@@ -12,10 +12,15 @@ export default function Example(props) {
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         {title ? (
           <div className="">
-            <span className="block text-sm font-semibold uppercase tracking-wide text-golemblue">Blog</span>
-            <h2 className="text-3xl mt-1 tracking-tight font-extrabold text-gray-900 sm:text-4xl">Latest News from Golem</h2>
+            <span className="block text-sm font-semibold uppercase tracking-wide text-golemblue">News</span>
+            <h2 className="text-3xl mt-1 tracking-tight font-extrabold text-gray-900 sm:text-4xl">
+
+              Stay informed
+
+            </h2>
             <p className="mt-3 max-w-2xl  text-xl text-slate-600 sm:mt-4">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa libero labore natus atque, ducimus sed.
+            Dive into the most recent breakthroughs, projects, and collaborations happening in the Golem ecosystem. Stay informed about how we&apos;re reshaping the future of computing, one block at a time.
+
             </p>
           </div>
         ) : null}
@@ -42,7 +47,7 @@ export default function Example(props) {
                           </p>
                         ))}
                         <a href="#" className="block mt-2">
-                          <p className="text-xl font-semibold text-gray-900">{post.title}</p>
+                          <p className="text-xl font-semibold text-golemblue">{post.title}</p>
                           <p className="mt-3 text-base text-gray-500">{post.excerpt}</p>
                         </a>
                       </div>

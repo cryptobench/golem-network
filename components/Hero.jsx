@@ -39,17 +39,17 @@ export default function Example() {
                             </p>
                             <div className=" grid grid-cols-12 gap-x-1 gap-y-1">
                                 <Link href="/provider">
-                                    <a className="mt-3 lg:col-span-4 col-span-6 md:col-span-6 text-center w-full px-6 py-3 border border-transparent text-sm lg:text-base font-medium rounded-md text-white bg-golemblue shadow-sm hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 ">
+                                    <a className="mt-3 lg:col-span-4 col-span-6 md:col-span-6 text-center w-full px-6 py-3 border border-transparent text-sm lg:text-base font-medium rounded-md text-white bg-golemblue shadow-sm hover:bg-golemblue/80 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 ">
                                         Start Providing
                                     </a>
                                 </Link>
                                 <Link href="/requestor">
-                                    <a className="mt-3 lg:col-span-4 col-span-6 md:col-span-6 text-center w-full px-6 py-3 border border-transparent text-sm lg:text-base font-medium rounded-md text-white bg-golemblue shadow-sm hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 ">
+                                    <a className="mt-3 lg:col-span-4 col-span-6 md:col-span-6 text-center w-full px-6 py-3 border border-transparent text-sm lg:text-base font-medium rounded-md text-white bg-golemblue shadow-sm hover:bg-golemblue/80 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 ">
                                         Start Requesting
                                     </a>
                                 </Link>
                                 <Link href="/requestor">
-                                    <a className="lg:mt-3 lg:col-span-4 col-span-12 md:col-span-12 text-center w-full px-6 py-3 border border-transparent text-base lg:text-base font-medium rounded-md text-white bg-golemblue shadow-sm hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 ">
+                                    <a className="lg:mt-3 lg:col-span-4 col-span-12 md:col-span-12 text-center w-full px-6 py-3 border border-transparent text-base lg:text-base font-medium rounded-md text-white bg-golemblue shadow-sm hover:bg-golemblue/80 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 ">
                                         Explore tokenomics
                                     </a>
                                 </Link>

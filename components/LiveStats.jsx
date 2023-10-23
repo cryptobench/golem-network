@@ -24,7 +24,7 @@ export default function Stats(props) {
           <div>
             <p className="text-4xl font-bold block">
               {props.providers}{" "}
-              <span className="text-xl font-semibold block bg-gradient-to-r from-golemblue via-purple-500 to-pink-500 bg-clip-text text-transparent">
+              <span className="text-xl font-semibold block text-golemblue">
                 Providers
               </span>
             </p>
@@ -32,7 +32,7 @@ export default function Stats(props) {
           <div>
             <p className="text-4xl font-bold block">
               {props.cores}{" "}
-              <span className="text-xl font-semibold block bg-gradient-to-r from-golemblue via-purple-500 to-pink-500 bg-clip-text text-transparent">
+              <span className="text-xl font-semibold block text-golemblue">
                 Cores
               </span>
             </p>
@@ -40,7 +40,7 @@ export default function Stats(props) {
           <div>
             <p className="text-4xl text-center font-bold block">
               {props.memory} <span className="text-sm text-gray-500">TB</span>{" "}
-              <span className="text-xl font-semibold block bg-gradient-to-r from-golemblue via-purple-500 to-pink-500 bg-clip-text text-transparent">
+              <span className="text-xl font-semibold block text-golemblue">
                 Memory
               </span>
             </p>
@@ -48,7 +48,7 @@ export default function Stats(props) {
           <div>
             <p className="text-4xl font-bold block">
               {props.disk} <span className="text-sm text-gray-500">TB</span>{" "}
-              <span className="text-xl font-semibold block bg-gradient-to-r from-golemblue via-purple-500 to-pink-500 bg-clip-text text-transparent">
+              <span className="text-xl font-semibold block text-golemblue">
                 Disk
               </span>
             </p>
@@ -70,7 +70,7 @@ export default function Stats(props) {
         <div className="col-span-12 md:col-span-3 lg:col-span-2 lg:col-start-3 text-center">
           <p className="text-4xl font-bold block relative">
             {props.providers}{" "}
-            <span className="text-xl font-semibold block bg-gradient-to-r from-golemblue via-purple-500 to-pink-500 bg-clip-text text-transparent">
+            <span className="text-xl font-semibold block text-golemblue">
               Providers
             </span>
           </p>
@@ -78,7 +78,7 @@ export default function Stats(props) {
         <div className="col-span-12 md:col-span-3 lg:col-span-2 text-center">
           <p className="text-4xl font-bold block">
             {props.cores}{" "}
-            <span className="text-xl font-semibold block bg-gradient-to-r from-golemblue via-purple-500 to-pink-500 bg-clip-text text-transparent">
+            <span className="text-xl font-semibold block text-golemblue">
               Cores
             </span>
           </p>
@@ -86,7 +86,7 @@ export default function Stats(props) {
         <div className="col-span-12 md:col-span-3 lg:col-span-2 text-center">
           <p className="text-4xl font-bold block text-center">
             {props.memory} <span className="text-sm text-gray-500">TB</span>{" "}
-            <span className="text-xl font-semibold block bg-gradient-to-r from-golemblue via-purple-500 to-pink-500 bg-clip-text text-transparent">
+            <span className="text-xl font-semibold block text-golemblue">
               Memory
             </span>
           </p>
@@ -94,7 +94,7 @@ export default function Stats(props) {
         <div className="col-span-12 md:col-span-3 lg:col-span-2 text-center">
           <p className="text-4xl font-bold block">
             {props.disk} <span className="text-sm text-gray-500">TB</span>{" "}
-            <span className="text-xl font-semibold block bg-gradient-to-r from-golemblue via-purple-500 to-pink-500 bg-clip-text text-transparent">
+            <span className="text-xl font-semibold block text-golemblue">
               Disk
             </span>
           </p>

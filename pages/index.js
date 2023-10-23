@@ -61,6 +61,8 @@ function Page({ blogs, stats, pricing }) {
                 <Hero></Hero>
 
                 <Explainer></Explainer>
+                <Pricing providers={pricing}></Pricing>
+                <Apps></Apps>
                 <LiveStats
                     header="Join the network"
                     title="Join the network like hundreds of others"
@@ -70,9 +72,7 @@ function Page({ blogs, stats, pricing }) {
                     disk={Math.round(stat.disk * 100) / 100}
                     center={true}
                 ></LiveStats>
-                <Pricing providers={pricing}></Pricing>
-                <Apps></Apps>
-                {/* <Blog displayTitle={true} posts={blogs} frontpage={true}></Blog> */}
+                <Blog displayTitle={true} posts={blogs} frontpage={true}></Blog>
             </div>
         </>
     )
