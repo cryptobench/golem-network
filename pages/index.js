@@ -54,9 +54,9 @@ function Page({ blogs, stats, pricing }) {
                 <Navbar></Navbar>
                 <Banner
                     cta="Click to read"
-                    title="New Release! Beta V is out now, featuring new development tools for "
-                    titlesm="We are hiring!"
-                    href="/blog/beta-v-release"
+                    title={blogs.posts[0].title}
+                    titlesm={blogs.posts[0].title}
+                    href={"/blog/" + blogs.posts[0].slug}
                 ></Banner>
                 <Hero></Hero>
 
@@ -80,7 +80,7 @@ function Page({ blogs, stats, pricing }) {
 
 export async function getServerSideProps() {
     // Fetch data from external API
-    const res = await fetch(`http://api.localhost/v2/website/index`)
+    const res = await fetch(`https://api.stats.golem.network/v2/website/index`)
     const data = await res.json()
     const statsformatted = {
         memory: data.stats.memory / 1024,
@@ -94,6 +94,7 @@ export async function getServerSideProps() {
             // blogs: data.blogs,
             stats: statsformatted,
             pricing: data.providers,
+            blogs: data.blogs,
         },
     }
 }

@@ -242,7 +242,7 @@ export default function Example() {
                                             src="https://dappimg.com/media/image/dapp/4244a929e00d467cbb7f3acb66f07ce5.blob"
                                         ></img>
 
-                                        <span className="absolute top-0 right-0 -mr-1 -mt-2 bg-black text-sm px-2 py-1 rounded text-white">
+                                        <span className="absolute top-0 right-0 -mr-1 -mt-2 bg-golemblue text-sm px-2 py-1 rounded text-white">
                                             v{user.version}
                                         </span>
                                     </div>
@@ -264,7 +264,7 @@ export default function Example() {
                                     <div className="flex mt-4 space-x-3 lg:mt-6">
                                         <button
                                             onClick={() => loadModal(user)}
-                                            className="w-full py-2 px-4 text-sm font-medium text-center text-white bg-black rounded-lg hover:bg-slate-700 focus:ring-4 focus:outline-none focus:ring-blue-300 "
+                                            className="w-full py-2 px-4 text-sm font-medium text-center text-white bg-golemblue rounded-lg hover:bg-slate-700 focus:ring-4 focus:outline-none focus:ring-blue-300 "
                                         >
                                             Rent Provider
                                         </button>

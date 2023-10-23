@@ -70,7 +70,7 @@ export default function Page({ stats, pricing }) {
 
 export async function getStaticProps() {
     // Fetch data from external API
-    const res = await fetch(`http://api.localhost/v2/website/index`)
+    const res = await fetch(`https://api.stats.golem.network/v2/website/index`)
     const data = await res.json()
     const statsformatted = {
         memory: data.stats.memory / 1024,
