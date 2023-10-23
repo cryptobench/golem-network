@@ -30,7 +30,7 @@ export default function Example(props) {
                             className={classNames(
                                 cores == 2
                                     ? "p-2 col-span-6 lg:col-span-2 lg:col-start-3 bg-golemblue text-white rounded-lg"
-                                    : "p-2  col-span-6 lg:col-span-2 lg:col-start-3 hover:bg-opacity-100 hover:cursor-pointer bg-golemblue bg-opacity-10 text-white rounded-lg"
+                                    : "p-2  col-span-6 lg:col-span-2 lg:col-start-3 hover:bg-opacity-100 hover:cursor-pointer bg-golemblue bg-opacity-20 text-white rounded-lg"
                             )}
                         >
                             <p>2 vCores</p>
@@ -42,7 +42,7 @@ export default function Example(props) {
                             className={classNames(
                                 cores == 8
                                     ? "p-2 col-span-6 lg:col-span-2  bg-golemblue text-white rounded-lg"
-                                    : "p-2 col-span-6 lg:col-span-2 hover:bg-opacity-100 hover:cursor-pointer bg-golemblue bg-opacity-10 text-white rounded-lg"
+                                    : "p-2 col-span-6 lg:col-span-2 hover:bg-opacity-100 hover:cursor-pointer bg-golemblue bg-opacity-20 text-white rounded-lg"
                             )}
                         >
                             <p>8 vCores</p>
@@ -54,7 +54,7 @@ export default function Example(props) {
                             className={classNames(
                                 cores == 32
                                     ? "p-2 col-span-6 lg:col-span-2  bg-golemblue text-white rounded-lg"
-                                    : "p-2 col-span-6 lg:col-span-2 hover:bg-opacity-100 hover:cursor-pointer bg-golemblue bg-opacity-10 text-white rounded-lg"
+                                    : "p-2 col-span-6 lg:col-span-2 hover:bg-opacity-100 hover:cursor-pointer bg-golemblue bg-opacity-20 text-white rounded-lg"
                             )}
                         >
                             <p>32 vCores</p>
@@ -66,7 +66,7 @@ export default function Example(props) {
                             className={classNames(
                                 cores == 64
                                     ? "p-2 col-span-6 lg:col-span-2 bg-golemblue text-white rounded-lg"
-                                    : "p-2 col-span-6 lg:col-span-2 hover:bg-opacity-100 hover:cursor-pointer bg-golemblue bg-opacity-10 text-white rounded-lg"
+                                    : "p-2 col-span-6 lg:col-span-2 hover:bg-opacity-100 hover:cursor-pointer bg-golemblue bg-opacity-20 text-white rounded-lg"
                             )}
                         >
                             <p>64 vCores</p>
