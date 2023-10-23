@@ -79,7 +79,7 @@ export default function Apps() {
                                 key={app.id}
                                 data-aos="fade-up"
                                 data-aos-duration="1000"
-                                className="col-span-12 md:col-span-6 lg:col-span-3 p-6 grid app bg-gray-900 rounded-xl"
+                                className="col-span-12 md:col-span-6 lg:col-span-3 p-6 grid app bg-gray-900 rounded-xl "
                             >
                                 <div className="inline-block relative">
                                     <div className="h-20 w-20 relative">

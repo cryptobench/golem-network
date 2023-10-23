@@ -72,7 +72,9 @@ function Page({ blogs, stats, pricing }) {
                     disk={Math.round(stat.disk * 100) / 100}
                     center={true}
                 ></LiveStats>
+                <div className="mt-24">
                 <Blog displayTitle={true} posts={blogs} frontpage={true}></Blog>
+                </div>
             </div>
         </>
     )

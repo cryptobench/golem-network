@@ -6,7 +6,6 @@ import Link from "next/link"
 
 export default function Example(props) {
   const post = props.post
-  console.log(post)
   return (
     <>
       <Head>
@@ -54,7 +53,7 @@ export default function Example(props) {
                       </a>
                     ))}
                   </div>
-                  <h1 className="text-9xl font-semibold text-black">{post.title}</h1>
+                  <h1 className="text-9xl font-semibold text-golemblue title">{post.title}</h1>
                   <p className="mt-3 text-gray-500">{post.excerpt}</p>
                   <div className="mt-6 flex items-center">
                     <div className="flex-shrink-0">
