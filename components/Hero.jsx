@@ -31,7 +31,7 @@ export default function Example() {
                                     Decentralizing the Web with Golem
                             </h1>
                             <p className="mt-3 text-xl text-slate-600 sm:mt-5 ">
-                                Golem is a powerful permissionless supercomputer accessible by anyone. Accelerate workloads like machine
+                                Golem Network is a powerful permissionless supercomputer accessible by anyone. Accelerate workloads like machine
                                 learning, deep learning, CI/CD pipelines and much more at an instant.
                             </p>
                             <p className="text-base mt-8 -mb-2 col-span-12 font-medium text-gray-900  text-center lg:text-left ">
