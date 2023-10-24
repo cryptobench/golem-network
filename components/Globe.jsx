@@ -65,7 +65,7 @@ const Animate = () => {
             polygonSideColor={() => "transparent"}
             polygonLabel={({ properties: d }) => `
         
-        <div class="bg-golemblue bg-opacity-80 p-6 w-96 rounded text-sm">
+        <div class="bg-black bg-opacity-80 p-6 w-96 rounded text-sm">
         <p class=" font-bold text-2xl mb-2">${d.ADMIN} (${d.ISO_A2})</p>
         <div class="grid grid-cols-2 gap-4">
             <div>
